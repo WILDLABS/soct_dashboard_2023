@@ -2,7 +2,7 @@
 import pandas as pd
 import streamlit as st
 import numpy as np
-from plotnine import ggplot, aes, geom_bar, geom_text, coord_flip, ggtitle, theme, element_text, labs, scale_fill_manual, theme_minimal, geom_point, geom_line, position_stack, reorder
+from plotnine import ggplot, aes, geom_bar, geom_text, coord_flip, ggtitle, theme, element_text, labs, scale_fill_manual, theme_minimal, geom_point, geom_line, position_stack
 import matplotlib.pyplot as plt
 import geopandas as gpd
 import plotly.express as px
@@ -243,7 +243,7 @@ st.markdown('Most survey respondents indicated they frquently engage with one or
 ### Proficiency plot
 ############################################################
 
-profplot = (ggplot(proficiency, aes(x=reorder('technology', 'percentage'), y='percentage')) +
+profplot = (ggplot(proficiency, aes(x='reorder(technology, percentage)', y='percentage')) +
                     geom_bar(stat='identity', fill='#0E87BE') +
                     geom_point(aes(y='average_proficiency2'), color='#3B3838') +
                     geom_line(aes(y='average_proficiency2', group=1), color='#3B3838') +
