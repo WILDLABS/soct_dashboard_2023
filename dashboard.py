@@ -8,7 +8,6 @@ import geopandas as gpd
 import plotly.express as px
 import matplotlib.patches as mpatches
 from streamlit_extras.dataframe_explorer import dataframe_explorer
-import tempfile
 
 #import the data
 demographics = pd.read_excel('Input files/demographics.xlsx')
