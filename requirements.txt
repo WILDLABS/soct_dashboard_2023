@@ -1,12 +1,10 @@
 
 geopandas==0.12.1
-matplotlib
-matplotlib-inline
-
+matplotlib==3.5.1
 pandas==1.4.2
-plotly
+plotly==5.6.0
 plotly-geo==1.0.0
-plotnine>=0.8.0
+plotnine
 streamlit==1.25.0
 
 
