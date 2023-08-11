@@ -1,0 +1,7 @@
+streamlit
+plotnine
+matplotlib
+geopandas
+plotly
+streamlit_extras
+tempfile
