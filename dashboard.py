@@ -2,7 +2,7 @@
 import pandas as pd
 import streamlit as st
 import numpy as np
-import plotnine as pn
+from plotnine import ggplot, aes, geom_bar, geom_text, coord_flip, ggtitle, theme, element_text, labs, scale_fill_manual, theme_minimal, geom_point, geom_line, position_stack, reorder
 import matplotlib.pyplot as plt
 import geopandas as gpd
 import plotly.express as px
@@ -51,15 +51,15 @@ df_summary = filtered_df.groupby(['year', 'sc_gender']).size().reset_index(name=
 df_summary['percentage'] = df_summary.groupby('year')['count'].transform(lambda x: x / x.sum() * 100).round(1)
 df_summary['percentage2'] = df_summary['percentage'].astype(str) + '%'
 
-genderplot = (pn.ggplot(df_summary, pn.aes(y='percentage', x='factor(year)', fill='factor(sc_gender)')) +
-        pn.geom_bar(stat='identity', width=0.5) +
-        pn.geom_text(aes(label='percentage2'), position=pn.position_stack(vjust=0.5), color='white') +
-        pn.coord_flip() +
-        pn.ggtitle('Gender Identity') +
-        pn.theme(plot_title=pn.element_text(size=18, face="bold")) +
-        pn.labs(x='', y='Percentage of respondents', fill='Gender') +
-        pn.scale_fill_manual(values=['#DD7E3B', '#0E87BE']) +
-        pn.theme_minimal())
+genderplot = (ggplot(df_summary, aes(y='percentage', x='factor(year)', fill='factor(sc_gender)')) +
+              geom_bar(stat='identity', width=0.5) +
+              geom_text(aes(label='percentage2'), position=position_stack(vjust=0.5), color='white') +
+              coord_flip() +
+              ggtitle('Gender Identity') +
+              theme(plot_title=element_text(size=18, face="bold")) +
+              labs(x='', y='Percentage of respondents', fill='Gender') +
+              scale_fill_manual(values=['#DD7E3B', '#0E87BE']) +
+              theme_minimal())
 
 st.pyplot(ggplot.draw(genderplot))
 
@@ -243,17 +243,17 @@ st.markdown('Most survey respondents indicated they frquently engage with one or
 ### Proficiency plot
 ############################################################
 
-profplot = (pn.ggplot(proficiency, pn.aes(x='reorder(technology, percentage)', y='percentage')) +
-        pn.geom_bar(stat='identity', fill='#0E87BE') +
-        pn.geom_point(aes(y='average_proficiency2'), color='#3B3838') +
-        pn.geom_line(aes(y='average_proficiency2', group=1), color='#3B3838') +
-        pn.labs(x='', y='Percentage of usage') +
-        pn.geom_text(aes(label='percentage2'), position=pn.position_stack(vjust=0.5), color='white', size=10) +
-        pn.theme_minimal() +
-        pn.coord_flip() +
-        pn.ggtitle(f'Technology usage and proficiency') +
-        pn.theme(axis_text=pn.element_text(size=12), plot_title=pn.element_text(size=18)) +
-        pn.scale_fill_manual(values=['#0E87BE', '#DD7E3B'], guide=False))
+profplot = (ggplot(proficiency, aes(x=reorder('technology', 'percentage'), y='percentage')) +
+                    geom_bar(stat='identity', fill='#0E87BE') +
+                    geom_point(aes(y='average_proficiency2'), color='#3B3838') +
+                    geom_line(aes(y='average_proficiency2', group=1), color='#3B3838') +
+                    labs(x='', y='Percentage of usage') +
+                    geom_text(aes(label='percentage2'), position=position_stack(vjust=0.5), color='white', size=10) +
+                    theme_minimal() +
+                    coord_flip() +
+                    ggtitle(f'Technology usage and proficiency') +
+                    theme(axis_text=element_text(size=12), plot_title=element_text(size=18)) +
+                    scale_fill_manual(values=['#0E87BE', '#DD7E3B'], guide=False))
 
 st.pyplot(ggplot.draw(profplot))
 
