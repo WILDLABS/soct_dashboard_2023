@@ -69,9 +69,9 @@ st.markdown('Regarding country of origin, most responders were from either the U
 ### Map plot
 ############################################################
 
-df20 = demographics[demographics['year'] == '2020']
-df21 = demographics[demographics['year'] == '2021']
-df22 = demographics[demographics['year'] == '2022']
+# df20 = demographics[demographics['year'] == '2020']
+# df21 = demographics[demographics['year'] == '2021']
+# df22 = demographics[demographics['year'] == '2022']
 
 # Read the Natural Earth dataset for countries
 world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
