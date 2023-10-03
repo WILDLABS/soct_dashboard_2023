@@ -319,8 +319,7 @@ st.markdown('*Small shifts were noted from year to year, but overall, conservati
 
 st.subheader(':blue[Sector-wide challenges]')
 
-st.markdown('Regarding challenges facing the conservation technology sector as a whole, competition for limited funding and duplication of efforts remain the primary challenges respondetns reported for all years of the survey.\n\nExplore how challenge ranks shifted over time by clicking through the three years:
-')
+st.markdown('Regarding challenges facing the conservation technology sector as a whole, competition for limited funding and duplication of efforts remain the primary challenges respondetns reported for all years of the survey.\n\nExplore how challenge ranks shifted over time by clicking through the three years:')
 
 ############################################################
 ### challenges
