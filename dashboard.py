@@ -164,14 +164,12 @@ ax.spines['bottom'].set_visible(False)
 ax.spines['left'].set_visible(False)
 ax.tick_params(axis='both', which='both', length=0)
 
-ax.set_xticks([])
-ax.set_yticks([])
 
 # Set y-axis tick labels
 plt.yticks( fontsize=12)
 
 # Set plot title
-plt.title('Organisations by Year', fontsize=18)
+plt.title('Organisations by Year\n', fontsize=22)
 
 # Adjust the figure layout to prevent label cutoff
 plt.tight_layout()
@@ -229,9 +227,6 @@ ax.spines['bottom'].set_visible(False)
 ax.spines['left'].set_visible(False)
 ax.tick_params(axis='both', which='both', length=0)
 
-ax.set_xticks([])
-ax.set_yticks([])
-
 # Set y-axis label
 plt.yticks( fontsize=12)
 
@@ -239,7 +234,7 @@ plt.yticks( fontsize=12)
 plt.tight_layout()
 
 # Set plot title
-plt.title('Roles by Year', fontsize=18)
+plt.title('Roles by Year\n', fontsize=22)
 
 
 # Display the plot
@@ -254,6 +249,8 @@ st.markdown('The main conservation issues respondents report focusing on in thei
 st.image('Input files/workchallenge.jpg')
 
 st.caption('*Note: order based on number of times challenge indicated by respondents; for 2021 and 2022 only*')
+
+st.divider()
 
 ######################################################
 
