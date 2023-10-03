@@ -153,10 +153,10 @@ for i, year in enumerate(years):
 
         # Add text inside each circle
         for orgs, size in zip(orgs, sizes):
-            plt.text(i, orgs, str(int(size)), ha='center', va='center', color='white', weight='bold', fontsize = 12)
+            plt.text(i, orgs, str(int(size)), ha='center', va='center', color='white', weight='bold', fontsize = 14)
 
 # Set x-axis tick labels as year values
-plt.xticks(x_coords, years, fontsize=12)
+plt.xticks(x_coords, years, fontsize=14)
 ax.margins(x=0.1)
 ax.spines['top'].set_visible(False)
 ax.spines['right'].set_visible(False)
@@ -216,10 +216,10 @@ for i, year in enumerate(years):
 
         # Add text inside each circle
         for roles, size in zip(roles, sizes):
-            plt.text(i, roles, str(int(size)), ha='center', va='center', color='white', weight='bold', fontsize=12)
+            plt.text(i, roles, str(int(size)), ha='center', va='center', color='white', weight='bold', fontsize=14)
 
 # Set x-axis tick labels as year values
-plt.xticks(x_coords, years, fontsize=12)
+plt.xticks(x_coords, years, fontsize=14)
 ax.margins(x=0.1)
 ax.spines['top'].set_visible(False)
 ax.spines['right'].set_visible(False)
