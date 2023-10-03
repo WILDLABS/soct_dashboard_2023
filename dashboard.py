@@ -246,6 +246,15 @@ plt.title('Roles by Year', fontsize=18)
 st.pyplot(fig)
 st.divider()
 
+
+####################
+
+st.markdown('The main conservation issues respondents report focusing on in their work remain unchanged in both years we’ve collected opinions on them: ecological monitoring is the most widespread, followed by species protection and protected area management and planning.')
+
+st.image('Input files/workchallenge.jpg')
+
+st.caption('*Note: order based on number of times challenge indicated by respondents; for 2021 and 2022 only*')
+
 ######################################################
 
 st.header(':blue[Current Tools: How are they performing?]')
@@ -290,28 +299,22 @@ st.dataframe(filtered_df, use_container_width=True)
 
 st.subheader(':blue[Performance versus potential]')
 
-st.markdown('To understand how current tools are perceived more broadly, we asked people to rate the technologies they use in terms of both current performance and potential capacity to advance the field. In 2020, GIS/remote sensing, Drones, and Mobile Apps were rated as the best performing technologies, while AI tools, eDNA & genomics and Biologgers were the ones with the perceived highest potential capacity to advance the field.')
+st.markdown('To understand how current tools are perceived more broadly, we asked people to rate the conservation technologies they use in terms of both current performance and potential capacity to advance conservation. In 2020, GIS and remote sensing, Drones, and Mobile Apps were rated as the best performing technologies, while AI tools, eDNA and genomics, and Networked sensors were the ones seen as having the highest potential capacity to advance the field.')
 
 st.image('Input files/potential2020.jpg')
 
-st.markdown('The landscape is somewhat different in 2023: while GIS/remote sensing is still the highest performing technology group, protected area management tools and bioacoustics have replaced drones and mobile apps as the othertop-rated groups. Regarding future potential, eDNA moved from the top of the list to nearly the bottom, replaced by biologgers alongside networked sensors and AI tools.')
+st.markdown('The landscape is somewhat different in 2022: while GIS and remote sensing is still the highest performing technology group, protected area management tools and bioacoustics have replaced drones and mobile apps as the othertop-rated groups. Regarding potential to advance conservation, eDNA and genomics moved from the top of the list to nearly the bottom, replaced by Biologgers alongside Networked sensors and AI tools.')
 
-st.markdown('This change is likely due to a hype cycle around eDNA and genomics: when the technology first appeared, potential users got excited about the possibilities, but using it is probably yielding less results or ran into the \'plateau of prodictivity\' and thus it shifted down in perceived future potential. .')
+st.markdown('Keep in mind that, while interesting, changes like this in the perceived potential of emerging technologies are not particularly surprising. As reflected in the technology hype cycle, a framework for understanding evolving interest in technologies over time, it’s common for initial excitement to spike when a new tool emerges, which can then take a dramatic hit with early adoption challenges, and then usually grows to a productive place of iterative learning and effective application.')
 
 st.image('Input files/potential2022.jpg')
 
-st.caption('*Note: This graph shows the ranking of the mean score of survey responses for each technology. Respondents rated technologies on both fronts on scales from 1-5, with 1 being the least positive and 5 being the most.*')
+st.caption('*Note: The above two graphs show the ranking of the mean scores of survey responses for each technology. Respondents rated technologies on both fronts on scales from 1-5, with 1 being the least positive and 5 being the most.*')
 
 st.divider()
 st.header(':blue[Constraints: What’s preventing progress?]')
 
-st.markdown('*Small changes might occur from year to year, but overall, conservationists were challenged and constrained by very similar problems and issues in the last three years.*')
-
-st.markdown('The main conservation challenges respondents report focusing on in their work remain unchanged in both years we’ve collected opinions on them: biodiversity monitoring is the most widespread, followed by species protection and protected area management and planning.')
-
-st.image('Input files/workchallenge.jpg')
-
-st.caption('*Note: order based on number of times challenge indicated by respondents; for 2021 and 2022 only*')
+st.markdown('*Small shifts were noted from year to year, but overall, conservation technologists reported fairly consistent challenges and constraints over the last three years.*')
 
 st.subheader(':blue[Challenges for the ecosystem]')
 
