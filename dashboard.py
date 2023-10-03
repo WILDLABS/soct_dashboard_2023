@@ -169,7 +169,7 @@ ax.tick_params(axis='both', which='both', length=0)
 plt.yticks( fontsize=12)
 
 # Set plot title
-plt.title('Organisations by Year\n', fontsize=22)
+plt.title('Most respondents worked at Conservation NGOs\nOrganisations by year (count)', fontsize=22)
 
 # Adjust the figure layout to prevent label cutoff
 plt.tight_layout()
@@ -234,7 +234,7 @@ plt.yticks( fontsize=12)
 plt.tight_layout()
 
 # Set plot title
-plt.title('Roles by Year\n', fontsize=22)
+plt.title('Respondents were mostly conservationsist, researchers or technologists\nRoles by year (count)', fontsize=22)
 
 
 # Display the plot
