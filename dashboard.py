@@ -112,7 +112,7 @@ ax.set_title('Expansion of countries from 2020 to 2022', fontsize=18)
 # Display the plot using Streamlit
 st.pyplot(fig)
 
-st.markdown('For all years, most survey participants were working at conservation NGOs, followed by University or research institute. Most of them said their primary role was either conservation practitionist or researcher, but a significant share of them (18%) identified their primary role as technologist.')
+st.markdown('For all years, survey participants most frequently reported working at conservation NGOs, followed by Universities or research institutes. Most of these individuals identified their primary role as either a conservation practitioner or a researcher, but a significant share of them (18%) identified their primary role as technologist. Technology companies were the next most highly represented organization type across all years.')
 
 ############################################################
 ### Org plot
@@ -158,6 +158,14 @@ for i, year in enumerate(years):
 # Set x-axis tick labels as year values
 plt.xticks(x_coords, years, fontsize=12)
 ax.margins(x=0.1)
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+ax.spines['bottom'].set_visible(False)
+ax.spines['left'].set_visible(False)
+ax.tick_params(axis='both', which='both', length=0)
+
+ax.set_xticks([])
+ax.set_yticks([])
 
 # Set y-axis tick labels
 plt.yticks( fontsize=12)
@@ -175,9 +183,6 @@ st.pyplot(fig)
 ############################################################
 ### Role plot
 ############################################################
-
-# Filter the DataFrame by the specified years
-years = demographics['year'].unique()
 
 # Create an empty DataFrame to store the org counts
 role_counts = pd.DataFrame(index=demographics['sc_primary_role'].unique(), columns=years)
@@ -218,6 +223,14 @@ for i, year in enumerate(years):
 # Set x-axis tick labels as year values
 plt.xticks(x_coords, years, fontsize=12)
 ax.margins(x=0.1)
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+ax.spines['bottom'].set_visible(False)
+ax.spines['left'].set_visible(False)
+ax.tick_params(axis='both', which='both', length=0)
+
+ax.set_xticks([])
+ax.set_yticks([])
 
 # Set y-axis label
 plt.yticks( fontsize=12)
@@ -237,11 +250,11 @@ st.divider()
 
 st.header(':blue[Current Tools: How are they performing?]')
 
-st.markdown('*The tools conservationists mainly use haven\'t changed substanitally in the last few years, but people\'s view on future potential has shifted since 2020.*')
+st.markdown('*The tools respondents work with most haven\'t changed substantially since 2020, but people\'s views on the relative potential of these tools to advance conservation have shifted over time.*')
 
 st.subheader(':blue[Usage and proficiency]')
 
-st.markdown('Most survey respondents indicated they frquently engage with one or more of 11 core conservation technology groups. Notably, more than 92% indicated they engage with more than 1, and more than 79% said they engage with more than 2 types of technologies. Out of these groups, Camera Traps, GIS/remote sensing, and AI tools are the most widely used. The average level of expertise is similar across these tools with the notable exception of eDNA and genomics, which had the smallest sample size and lower average level of expertise than the other tools.')
+st.markdown('For all years investigated, most survey respondents indicated that they frequently engage with one or more of 11 core conservation technology groups. Notably, almost all respondents reported engaging with more than one technology type (92%), and the vast majority said they engage with more than two (79%). Out of these groups, Camera Traps, GIS and remote sensing, and AI tools were the most widely used. The average self-reported level of expertise was similar across these tools with the exception of eDNA and genomics, which had the smallest sample size and lower average level of expertise than other tools.')
 
 ############################################################
 ### Proficiency plot
@@ -251,7 +264,7 @@ profplot = (ggplot(proficiency, aes(x='reorder(technology, percentage)', y='perc
                     geom_bar(stat='identity', fill='#0E87BE') +
                     geom_point(aes(y='average_proficiency2'), color='#3B3838') +
                     geom_line(aes(y='average_proficiency2', group=1), color='#3B3838') +
-                    labs(x='', y='Percentage of usage') +
+                    labs(x='', y='Percentage of respondents') +
                     geom_text(aes(label='percentage2'), position=position_stack(vjust=0.5), color='white', size=10) +
                     theme_minimal() +
                     coord_flip() +
@@ -261,19 +274,19 @@ profplot = (ggplot(proficiency, aes(x='reorder(technology, percentage)', y='perc
 
 st.pyplot(ggplot.draw(profplot))
 
-st.markdown('Explore what percentage of conservationists use these technologies yearly, and what is the average corresponding technology level by utilizing the filters on the below table.')
+st.markdown('Explore what percentage of respondents used these technologies yearly, and what the average corresponding proficiency levels were, by utilizing the filters on the below table.')
+
+############################################################
+### Proficiency yearly pivot
+############################################################
 
 dataframe = proficiency_pivot
 
 filtered_df = dataframe_explorer(dataframe, case=False)
 st.dataframe(filtered_df, use_container_width=True)
 
-############################################################
-### Proficiency yearly pivot
-############################################################
-
-year = proficiency_pivot['Year'].drop_duplicates()
-year_choice = st.sidebar.selectbox('Select Year:', year)
+# year = proficiency_pivot['Year'].drop_duplicates()
+# year_choice = st.sidebar.selectbox('Select Year:', year)
 
 st.subheader(':blue[Performance versus potential]')
 
