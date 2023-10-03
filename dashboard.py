@@ -317,9 +317,10 @@ st.header(':blue[Constraints: What’s preventing progress?]')
 
 st.markdown('*Small shifts were noted from year to year, but overall, conservation technologists reported fairly consistent challenges and constraints over the last three years.*')
 
-st.subheader(':blue[Challenges for the ecosystem]')
+st.subheader(':blue[Sector-wide challenges]')
 
-st.markdown('Regarding challenges facing the conservation technology ecosystem as a whole, competition for limited funding and duplication of efforts are the main challenges respondetns reported for all years of the survey.')
+st.markdown('Regarding challenges facing the conservation technology sector as a whole, competition for limited funding and duplication of efforts remain the primary challenges respondetns reported for all years of the survey.\n\nExplore how challenge ranks shifted over time by clicking through the three years:
+')
 
 ############################################################
 ### challenges
@@ -334,7 +335,7 @@ color_map = {ranking: color for ranking, color in zip(ranking_order, color_value
 
 plots = {}  # Dictionary to store the plots
 
-for year in [2020, 2021, 2022]:
+for year in years:
     # Filter data for the current year
     filtered_data = chal[chal['year'] == year]
     chal_order = filtered_data['chal'].tolist()
@@ -363,7 +364,7 @@ for year in [2020, 2021, 2022]:
             tickfont=dict(size=10)
         ),
         yaxis=dict(tickfont=dict(size=12)),
-        title=f'Ecosystem challenges for {year}',
+        title=f'Sector-wide challenges for {year}',
         title_x=0.39  # This centers the title
     )
 
@@ -377,27 +378,27 @@ selected_year = st.radio('Year:', [' 2020', ' 2021', ' 2022'], index=0)
 
 
 if selected_year == ' 2020':
-    st.write('In 2020, funding competition, duplication of efforts and adoption capacity were the most significant challenges.')
+    st.write('In 2020,competition for limited funding, duplication of efforts, and adoption capacity were the most significant challenges.')
     
     st.plotly_chart(plots['challenges2020'])
         
 elif selected_year == ' 2021':
-    st.write('In the 2021 survey we introcued the category \'matching technology to conservation\', which became the second most reported challenge. Funding competition and duplication of efforts are still the other two significant challenges.')
+    st.write('In the 2021 survey we introcued the category \'matching tech expertise with conservation needs\' based on previous open-ended responses, which became the second highest ranked challenge. Competition for limited funding and duplication of efforts were still the two other top challenges.')
     
     st.plotly_chart(plots['challenges2021'])
     
     
 else:
-    st.write('The 2022 landscape of challenges is very similar to the 2021 one with no notable changes.')
+    st.write('The 2022 landscape of challenges is very similar to 2021, with the only notable change being that scaling sustainably shifted up above technology hype.')
     st.plotly_chart(plots['challenges2022'])
 
 st.subheader(':blue[User constrainsts]')
 
-st.markdown('Regarding specific constraints affecting engagement by conservation tech end-users and developers, a key finding is that location matters: both users and developers in countries with developing economies were more likely to report multiple significant constraints. Additionally, gender and professional role are also potentially influential factors.')
+st.markdown('Regarding specific constraints affecting engagement by conservation tech end-users and developers, a key finding reiterated from the 2021 report is that location matters: both users and developers in countries with developing economies were more likely to report multiple significant constraints. We also found that gender and professional role were  influential factors in reported constraints.')
 
-st.markdown('End-users in developing countries were 1.5x more likely to report being significantly constrained by  maintenance costs, 2.5x more likely to be constrained by upfront costs, as well as access to training, advice, and mentoring, and 5x more likely to be constrained by local access to technology suppliers.')
+st.markdown('End-users in developing countries were 5x as likely to report being significantly constrained by local access to technology suppliers. They were also 2.5x as likely to do so for upfront costs, as well as access to training, advice, and mentoring, and 1.5x as likely to do so for maintenance costs.')
 
-st.markdown('When looking at end user constraints year by year, upfront costs are the main constrainst in every year, but the other constrainst have been shifting over the years: maintenance cost and time required seem to be more significant constraints, while technical skills slightly less so.')
+st.markdown('Looking at shifts in end-user constraints over the  years, upfront costs were the top constraint in every year, but the other constraints shifted to a degree: maintenance costs and time required appear to have become more significant constraints, while building technical skills has become a less significant constraint over time.')
 
 st.caption('*Note: Likelihood figures are rounded.*')
 
@@ -415,7 +416,7 @@ color_map = {ranking: color for ranking, color in zip(ranking_order, color_value
 
 plots = {}  # Dictionary to store the plots
 
-for year in [2020, 2021, 2022]:
+for year in years:
     # Filter data for the current year
     filtered_data = uconst[uconst['year'] == year]
     uconst_order = filtered_data['uconst'].tolist()
@@ -458,18 +459,18 @@ selected_year = st.radio('Year:', ['2020', '2021', '2022'], index=0)
 
 
 if selected_year == '2020':
-    st.write('In 2020, upfront costs, technical skills and time required were the most significant constraints.')
+    st.write('In 2020, upfront costs, technical skills, and time required to engage were the most significant constraints affecting engagement by conservation technology end-users.')
     
     st.plotly_chart(plots['constraints2020'])
         
 elif selected_year == '2021':
-    st.write('Compared to 2020, upfront costs is still the most significant constraint, but maintenance cost shifted from fourth place to become the second most pressing issue, while the newly introduced local access to suppliers is the thirs most pressing constraint.')
+    st.write('In 2021, upfront costs were still the most significant constraint, but maintenance cost shifted from fourth place to become the second most pressing issue. The newly introduced category of local access to technology suppliers became the third most pressing constraint affecting engagement by conservation technology end-users.')
     
     st.plotly_chart(plots['constraints2021'])
     
     
 else:
-    st.write('Compared to 2021, upfront costs is still the most significant constraint, but local access to suppliers shifted from third place to become the second most pressing issue, while time required shifted from fifth to third place.')
+    st.write('In 2022, upfront costs were still the most significant constraint, but local access to suppliers shifted from third to become the second highest ranked. Time required to engage shifted from the fifth to third most pressing constraint affecting engagement by conservation technology end-users.')
     st.plotly_chart(plots['constraints2022'])
     
          
@@ -480,11 +481,11 @@ st.subheader(':blue[Developer constrainsts]')
 ### Dev constrainst
 ############################################################
 
-st.markdown('Tech developers in developing countries were also more likely to report significant constraints compared to their deveopled country counterparts. They were 3.5x as likely to rate  sourcing supplies and testing sites, and 2.5x as likely to rate securing seed funding as primary constraints.')
+st.markdown('Tech developers in countries with developing economies were also more likely to report significant constraints compared to their deveopled country counterparts. They were 3.5x as likely to report sourcing supplies and accessing testing sites as primary constraints, and 2.5x as likely to do so for securing seed funding.')
 
-st.markdown('Female tech developers were also 2x more likely than male developers to report significant constraints regarding user data concerns,  2.5x as likely regarding both securing  continued funding and data access, and 3.5x as likely regarding accessing testing sites.')
+st.markdown('Female-identifying tech developers also reported disproportionate constraints, being 3.5x as likely as male developers to report significant constraints accessing testing sites, 2.5x as likely to do so for both securing funding throughout the development cycle and accessing relevant data, and 2x as likely to do so regarding overcoming user concerns about data security and privacy.')
 
-st.markdown('When looking at developer constraints year by year, continued funding and seed funding are the two typically most significant constraints, but their order changes across the years. ')
+st.markdown('When looking at developer constraints year by year, continued funding and seed funding were consistently the two most significant constraints, but their order shifted over time.')
 
 st.caption('*Note: Likelihood figures are rounded.*')
 
@@ -498,7 +499,7 @@ color_map2 = {ranking: color for ranking, color in zip(ranking_order2, color_val
 
 plots2 = {}  # Dictionary to store the plots
 
-for year in [2020, 2021, 2022]:
+for year in years:
     # Filter data for the current year
     filtered_data2 = dconst[dconst['year'] == year]
     dconst_order2 = filtered_data2['dconst'].tolist()
@@ -541,29 +542,31 @@ selected_year = st.radio('Year:', ['2020 ', '2021 ', '2022 ' ], index=0)
 
 
 if selected_year == '2020 ':
-    st.write('In 2020, continued funding and seed funding were similarily significant constraints for most developers, followed by understanding landscape.')
+    st.write('In 2020, securing continued funding throughout the development cycle and securing seed funding were similarily significant constraints affecting engagement by conservation technology developers, followed by understanding the conservation tool landscape (who is doing what and where the gaps exist).')
     
     st.plotly_chart(plots2['constraints2020'])
         
 elif selected_year == '2021 ':
-    st.write('There were no changes in the top 3 constraints in 2022 compared to 2021.')
+    st.write('In 2021, the top two constraints affecting developer engagement remained the same, but overcoming engineering challenges became the third most signifcant, moving above understanding the conservation tool landscape.  We also added a new ‘Supply chain’ category this year, reflecting constraints relating to sourcing materials given the significance of this issue at the time.')
     st.plotly_chart(plots2['constraints2021'])
     
     
 else:
-    st.write('In 2022')
+    st.write('In 2022, the top three constraints affecting developer engagement with conservation technology remained stable: securing seed funding, continued funding throughout the development cycle, and overcoming engineering challenges. The noteworthy shift this year was that understanding the conservation tool landscape, a top three constraint in 2020 and top four in 2021, moved down significantly.')
     st.plotly_chart(plots2['constraints2022'])
 
 st.divider()
 st.header(':blue[Opportunities: What’s needed?]')
 
-st.markdown('*Despite these challenges the community has remarkable hope for the future that only improved over time, and largely agrees on what needs to be done.*')
+st.markdown('*Despite these challenges, the global community maintains remarkable hope for the future that only grew over time, and largely agrees on what needs to be done.*')
 
-st.markdown('Almost two-thirds of survey respondents (63%) reported feeling more optimistic about the future of conservation technology relative to 12 months prior. This improves on results from both 2021 and 2020: in both years, about 52% indicated being optimistic. When asked to rank potential reasons for optimism, people indicated that the rate at which the field is evolving, the increasing accessibility of conservation technologies, and growing support most important, with 73%, 73%, and 43% respectively ranking them in their top three. In earlier years, collaborative culture was typically rated as the third reason for optimism.')
+st.markdown('In 2022, almost two-thirds of survey respondents (63%) reported feeling more optimistic about the future of conservation technology relative to 12 months prior. This improves on results from both 2021 and 2020: in both years, about 52% indicated being more optimistic than the previous year. When asked to rank potential reasons for optimism, people indicated that the rate at which the field is evolving, the increasing accessibility of conservation technologies, and growing support from the conservation community and decision-makers were the most important factors, with 73%, 73%, and 43% respectively ranking them in their top three. In earlier years, collaborative culture was typically rated as the third top reason for optimism.')
 
 st.image('Input files/optimism.jpg')
 
-st.markdown('When thinking about the opportunities the future brings, ...')
+st.markdown('When asked about the greatest opportunities for advancing the conservation technology sector, respondents ranked the top 3 as improving collaboration and information sharing (69%), making tools more open, accessible, and user friendly (63%), and improving the interoperability of tools and data streams (51%).\n\nExpanding capacity for data analyses at scale, investing in local technology capacity building, and increasing capacity to share, store, and collate data globally were also seen as priorities.')
+
+st.markdown('*Note: Percentages indicate the proportion of respondents who ranked these opportunities as 1st, 2nd, or 3rd out of all opportunities.*')
 
 st.image('Input files/opportunities.jpg')
 
