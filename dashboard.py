@@ -234,7 +234,9 @@ plt.yticks( fontsize=12)
 plt.tight_layout()
 
 # Set plot title
-plt.title('Respondents were mostly conservationsist, researchers or technologists\nRoles by year (count)', fontsize=22)
+plt.title('Respondents were mostly conservationsist, researchers or technologists\n', fontsize=22, loc='left')
+ax.set_xlabel('Roles by year (count)', fontsize=18, loc='left')
+ax.xaxis.set_label_position('top')
 
 
 # Display the plot
