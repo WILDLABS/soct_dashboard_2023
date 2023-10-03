@@ -22,22 +22,22 @@ st.image('Input files/cover.jpg')
 
 st.header(':blue[About the research]')
 
-st.markdown('As global environmental challenges continue to escalate, understanding how to most effectively leverage tech for conservation is critical. Each year, the WILDLABS team surveys the global community to find out what you all are working on, what challenges you\'re facing, and what support you need. Our aims in this research are 1) to build an evidence base to share back with and support the community, 2) to use the insights produced to create informed and effective WILDLABS programmes, and to communicate shared priorities to influence policy and funding decisions that will benefit our sector as a whole.\
+st.markdown('As global environmental challenges continue to escalate, understanding how to most effectively leverage modern technology innovations for conservation impact becomes increasingly critical. Each year, **WILD**LABS surveys the global conservation tech community to find out what you all are working on, what challenges you\'re facing, what support you need, and what you foresee on the horizon. Our aims in this research are to build an evidence base to share back with and support the community, to use the insights produced to create more informed and effective **WILD**LABS programmes, and to communicate shared priorities to influence policy and funding decisions that will benefit our sector as a whole.\
             \
-            This year, we’ve looked at the last three years of surveys to bring you insights for the first time about how trends and opinions have been changing across the community, and what challenges, constraints and opportunities remain prevalent. We aimed to identify the most critical issues as well as the most powerful opportunities both for the community as a whole and for WILDLABS to ensure the advancement of this discipline and that we’re heading in the right direction.')
+            For the State of Conservation Technology 2023 report, we\'ve built on our 2021 results to coduct a three-year trends analysis,  bringing you insights for the first time into how dynamics have been evolving across the community over time. By highlighting shifting opinions as well as stabilizing trends in technology usage, user and developer challenges, opportunities for growth, and more, we aimed to illuminate the most useful information for advancing the sector together in a more effective and inclusive way. As always, our hope with this research is to amplify a united voice to drive progress toward impactful solutions for the planet.')
 
 st.divider()
 
 st.subheader(':blue[What is WILDLABS?]')
 
-st.markdown('**WILD**LABS is the central hub for conservation technology online, connecting 6,000+ conservationists, researchers, field biologists, engineers, developers, and conservation technology experts from around the world. Our rapidly developing research program harnesses rich insights from this global community to inform effective technology development and capacity building, break down barriers and empower technologists and conservationists alike to transform the conservation landscape. With collaboration and innovation at the heart of our work, WILDLABS is the launching pad for meeting conservation’s biggest challenges with conservation technology’s boldest solutions. Visit our platform and [YouTube channel](https://www.youtube.com/channel/UCrxw8iiyFalKHFNAhZYCAYA/videos) to learn more about the community, and follow us on X [@WILDLABSNET](https://twitter.com/WILDLABSNET), Threads or Instagram.')
+st.markdown('**WILD**LABS is the central hub for conservation technology online, connecting 6,000+ conservationists, researchers, field biologists, engineers, developers, and conservation technology experts from around the world. Our rapidly developing research program harnesses rich insights from this global community to inform effective technology development and capacity building, break down barriers and empower technologists and conservationists alike to transform the conservation landscape. With collaboration and innovation at the heart of our work, **WILD**LABS is the launching pad for meeting conservation’s biggest challenges with conservation technology’s boldest solutions. Visit our platform and [YouTube channel](https://www.youtube.com/channel/UCrxw8iiyFalKHFNAhZYCAYA/videos) to learn more about the community, and follow us on X [@WILDLABSNET](https://twitter.com/WILDLABSNET) and Instagram [@wildlabsnet](https://www.instagram.com/wildlabsnet/).')
 
 st.divider()
 
 st.subheader(':blue[Who did we hear from?]')
 
-st.markdown('We heard from 630 people across three years. In 2020, 222 people filled in the survey, 233 people filled it out in 2021, and 175 in 2022\*. About half of them said they were active members of **WILD**LABS. About ~30-35% identified as female, ~70-75% identified as male, and a small (>1%) identified as 3rd gender or non-binary.')
-st.caption('*\*Note: incomplete answers below a certain threshold were filtered out*.')
+st.markdown('We heard from 630 people across three years of surveys - for this report, we included responses from 222 people in 2020, 233 people in 2021, and 175 people in 2022*. About half of respondents said they were active **WILD**LABS members. Across the years, roughly one-third of respondents identified as female (34%), two-thirds identified as male (66%), and a few identified as 3rd gender or non-binary (<1%).')
+st.caption('*\*Note: incomplete answers below a certain threshold were filtered out in each year*.')
 
 
 ############################################################
@@ -63,15 +63,11 @@ genderplot = (ggplot(df_summary, aes(y='percentage', x='factor(year)', fill='fac
 
 st.pyplot(ggplot.draw(genderplot))
 
-st.markdown('Regarding country of origin, most responders were from either the United States and the United Kingdom, or other Europen countries. By 2022, the regional reach of the survey were slightly expanded: while in 2020, 63% of respondents were from either North-America or Europe, in 2022, 57% were from these two continents. The below graph illustrates the geographical expansion of the survey over the last three years by highlighting the first year a country appeared in the responses.')
+st.markdown('Regarding geographic reach, most respondents indicated residing in the United States, the United Kingdom, or other European countries across years. Alongside **WILD**LABS’ efforts to more effectively engagage regional communities, the reach of the survey improved incrementally over time, with the percentage of respondents in North America and Europe dropping from 63% in 2020 to 57% in 2022. The below graph illustrates the geographical expansion of the survey over the last three years by highlighting the first year a country appeared in the responses.')
 
 ############################################################
 ### Map plot
 ############################################################
-
-# df20 = demographics[demographics['year'] == '2020']
-# df21 = demographics[demographics['year'] == '2021']
-# df22 = demographics[demographics['year'] == '2022']
 
 # Read the Natural Earth dataset for countries
 world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
@@ -99,6 +95,14 @@ merged_data.plot(column='sc_count_novel', linewidth=0.4, ax=ax, edgecolor='0.8',
 # Add the first legend for the color mapping
 legend_colors = [mpatches.Patch(color=color_mapping[region], label=region) for region in color_mapping]
 ax.legend(handles=legend_colors, title='First app.')
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+ax.spines['bottom'].set_visible(False)
+ax.spines['left'].set_visible(False)
+ax.tick_params(axis='both', which='both', length=0)
+
+ax.set_xticks([])
+ax.set_yticks([])
 
 
 
