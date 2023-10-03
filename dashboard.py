@@ -236,7 +236,7 @@ plt.yticks( fontsize=12)
 plt.tight_layout()
 
 # Set plot title
-plt.title('Respondents were mostly conservationsist, researchers or technologists\n', fontsize=22, loc='left')
+plt.title('Respondents were mostly conservationsist or researchers\n', fontsize=22, loc='left')
 ax.set_xlabel('Roles by year (count)', fontsize=18, loc='left')
 ax.xaxis.set_label_position('top')
 
@@ -279,7 +279,7 @@ profplot = (ggplot(proficiency, aes(x='reorder(technology, percentage)', y='perc
                     theme_minimal() +
                     coord_flip() +
                     ggtitle(f'Conservation technology usage \nand proficiency') +
-                    theme(axis_text=element_text(size=12), plot_title=element_text(size=18)) +
+                    theme(axis_text=element_text(size=12), plot_title=element_text(size=16)) +
                     scale_fill_manual(values=['#0E87BE', '#DD7E3B'], guide=False))
 
 st.pyplot(ggplot.draw(profplot))
