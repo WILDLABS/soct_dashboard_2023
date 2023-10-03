@@ -169,7 +169,9 @@ ax.tick_params(axis='both', which='both', length=0)
 plt.yticks( fontsize=12)
 
 # Set plot title
-plt.title('Most respondents worked at Conservation NGOs\nOrganisations by year (count)', fontsize=22)
+plt.title('Most respondents worked at Conservation NGOs\n', fontsize=22, loc='left')
+ax.set_xlabel('Organizations by year (count)', fontsize=18, loc='left')
+ax.xaxis.set_label_position('top')
 
 # Adjust the figure layout to prevent label cutoff
 plt.tight_layout()
