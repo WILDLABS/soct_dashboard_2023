@@ -278,7 +278,7 @@ profplot = (ggplot(proficiency, aes(x='reorder(technology, percentage)', y='perc
                     geom_text(aes(label='percentage2'), position=position_stack(vjust=0.5), color='white', size=10) +
                     theme_minimal() +
                     coord_flip() +
-                    ggtitle(f'Technology usage and proficiency') +
+                    ggtitle(f'Conservation technology usage \nand proficiency') +
                     theme(axis_text=element_text(size=12), plot_title=element_text(size=18)) +
                     scale_fill_manual(values=['#0E87BE', '#DD7E3B'], guide=False))
 
