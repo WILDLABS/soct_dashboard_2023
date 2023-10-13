@@ -67,7 +67,7 @@ genderplot = (ggplot(df_summary, aes(y='percentage', x='factor(year)', fill='fac
               scale_fill_manual(values=['#DD7E3B', '#0E87BE']) +
               theme_light() +
               theme(
-                  plot_title=element_text(size=18, face="bold", color="#2E2C2C"),
+                  plot_title=element_text(size=16, color="#2E2C2C"),
                   axis_title_y=element_text(colour="#423f3f")
                   )
               )
@@ -317,7 +317,7 @@ st.markdown('Explore what percentage of respondents used these technologies year
 ### Proficiency yearly pivot
 ############################################################
 # Formatting another way
-proficiency_pivot['Year'] = proficiency_pivot['Year'].astype(str)
+proficiency_pivot['Year'] = proficiency_pivot['Year'].astype(str) + ' '
 proficiency_pivot["Share of users (%)"] = proficiency_pivot["Share of users (%)"].apply(lambda x: f"{x:.1%}")
 proficiency_pivot["Highly proficient users (%)"] = proficiency_pivot["Highly proficient users (%)"].apply(lambda x: f"{x:.1%}")
 
@@ -528,7 +528,8 @@ st.markdown('When looking at developer constraints year by year, continued fundi
 st.caption('*Note: Likelihood figures are rounded.*')
 
 #update formatting
-dconst = dconst.style.format({"percentage": "{:.1f}%"})
+dconst["percentage"] = dconst["percentage"].apply(lambda x: f"{x:.1f}%")
+
 
 
 # Define custom order and color mapping
