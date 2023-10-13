@@ -316,11 +316,15 @@ st.markdown('Explore what percentage of respondents used these technologies year
 ############################################################
 ### Proficiency yearly pivot
 ############################################################
-st.table(proficiency_pivot.assign(hack='').set_index('hack'))
+# Formatting another way
+proficiency_pivot["Share of users (%)"] = proficiency_pivot["Share of users (%)"].apply(lambda x: f"{x:.1%}")
+proficiency_pivot["Highly proficient users (%)"] = proficiency_pivot["Highly proficient users (%)"].apply(lambda x: f"{x:.1%}")
 
-dataframe = proficiency_pivot
-dataframe = dataframe.style.format({"Share of users (%)": "{:.1%}",
-                                        "Highly proficient users (%)": "{:.1%}"})
+# st.table(proficiency_pivot.assign(hack='').set_index('hack'))
+
+# dataframe = proficiency_pivot
+# dataframe = dataframe.style.format({"Share of users (%)": "{:.1%}",
+#                                     "Highly proficient users (%)": "{:.1%}"})
 
 filtered_df = dataframe_explorer(dataframe, case=False)
 
