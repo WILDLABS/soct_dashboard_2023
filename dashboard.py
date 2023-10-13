@@ -326,7 +326,7 @@ proficiency_pivot["Highly proficient users (%)"] = proficiency_pivot["Highly pro
 # dataframe = dataframe.style.format({"Share of users (%)": "{:.1%}",
 #                                     "Highly proficient users (%)": "{:.1%}"})
 
-filtered_df = dataframe_explorer(dataframe, case=False)
+filtered_df = dataframe_explorer(proficiency_pivot, case=False)
 
 st.dataframe(filtered_df, use_container_width=True)
 
