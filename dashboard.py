@@ -317,7 +317,9 @@ st.markdown('Explore what percentage of respondents used these technologies year
 ### Proficiency yearly pivot
 ############################################################
 # Formatting another way
-proficiency_pivot['Year'] = proficiency_pivot['Year'].apply(lambda x: str(x))
+proficiency_pivot['Year'] = proficiency_pivot['Year'].dt.year
+proficiency_pivot['Year'] = pd.to_datetime(proficiency_pivot['Year'], format='%Y').dt.year
+
 proficiency_pivot["Share of users (%)"] = proficiency_pivot["Share of users (%)"].apply(lambda x: f"{x:.1%}")
 proficiency_pivot["Highly proficient users (%)"] = proficiency_pivot["Highly proficient users (%)"].apply(lambda x: f"{x:.1%}")
 
