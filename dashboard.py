@@ -54,10 +54,9 @@ df_summary['percentage2'] = df_summary['percentage'].astype(str) + '%'
 genderplot = (ggplot(df_summary, aes(y='percentage', x='factor(year)', fill='factor(sc_gender)')) +
               geom_bar(stat='identity', width=0.5) +
               geom_text(
-                  aes(label='percentage'), 
+                  aes(label='percentage2'), 
                   position=position_stack(vjust=0.5), 
-                  color='white',
-                  format_string='{:.1f}%') +
+                  color='white') +
               coord_flip() +
               labs(
                   title = 'Around two-thirds of respondents\nidentified as male each year',
@@ -519,6 +518,9 @@ st.markdown('When looking at developer constraints year by year, continued fundi
 
 st.caption('*Note: Likelihood figures are rounded.*')
 
+#update formatting
+dconst = dconst.style.format({"percentage": "{:.1f}%"})
+
 
 # Define custom order and color mapping
 
@@ -541,7 +543,8 @@ for year in years:
                  color='ranking',
                  orientation='h',
                  category_orders={"dconst": dconst_order2},
-                 color_discrete_map=color_map2)
+                 color_discrete_map=color_map2,
+                 hover_data=['percentage', 'ranking'])
 
     # Update layout
     fig.update_layout(
