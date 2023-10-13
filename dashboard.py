@@ -306,7 +306,8 @@ profplot = (ggplot(proficiency, aes(x='reorder(technology, -order)', y='percenta
                         plot_title=element_text(size=16,color="#2e2c2c"),
                         axis_title_y=element_text(color="#2e2c2c")
                         ) +
-                    scale_fill_manual(values=['#0E87BE', '#DD7E3B'], guide=False))
+                    scale_fill_manual(values=['#0E87BE', '#DD7E3B'], guide=False)
+            )
 
 st.pyplot(ggplot.draw(profplot))
 
@@ -319,7 +320,7 @@ st.markdown('Explore what percentage of respondents used these technologies year
 dataframe = proficiency_pivot
 
 filtered_df = dataframe_explorer(dataframe, case=False)
-filtered_df = filtered_df.style.format({"Share of users (%)": "{:.1%}"})
+#filtered_df = filtered_df.style.format({"Share of users (%)": "{:.1%}"})
 st.dataframe(filtered_df, use_container_width=True)
 
 # year = proficiency_pivot['Year'].drop_duplicates()
