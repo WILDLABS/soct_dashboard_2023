@@ -57,7 +57,7 @@ genderplot = (ggplot(df_summary, aes(y='percentage', x='factor(year)', fill='fac
                   aes(label='percentage'), 
                   position=position_stack(vjust=0.5), 
                   color='white',
-                  format_string='{:.1}%') +
+                  format_string='{:.1f}%') +
               coord_flip() +
               labs(
                   title = 'Around two-thirds of respondents\nidentified as male each year',
@@ -317,11 +317,13 @@ st.markdown('Explore what percentage of respondents used these technologies year
 ############################################################
 ### Proficiency yearly pivot
 ############################################################
+st.table(proficiency_pivot.assign(hack='').set_index('hack'))
 
 dataframe = proficiency_pivot
 
 filtered_df = dataframe_explorer(dataframe, case=False)
-filtered_df = filtered_df.style.format({"Share of users (%)": "{:.1%}"})
+filtered_df = filtered_df.style.format({"Share of users (%)": "{:.1f}%"})
+filtered_df = filtered_df.style.format({"Highly proficient users (%)": "{:.1f}%"})
 st.dataframe(filtered_df, use_container_width=True)
 
 # year = proficiency_pivot['Year'].drop_duplicates()
