@@ -57,7 +57,7 @@ genderplot = (ggplot(df_summary, aes(y='percentage', x='factor(year)', fill='fac
                   aes(label='percentage'), 
                   position=position_stack(vjust=0.5), 
                   color='white',
-                  format_string='{:.1%}') +
+                  format_string='{:.1}%') +
               coord_flip() +
               labs(
                   title = 'Around two-thirds of respondents\nidentified as male each year',
