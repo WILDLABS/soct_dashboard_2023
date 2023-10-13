@@ -321,8 +321,8 @@ st.table(proficiency_pivot.assign(hack='').set_index('hack'))
 dataframe = proficiency_pivot
 
 filtered_df = dataframe_explorer(dataframe, case=False)
-filtered_df = filtered_df.style.format({"Share of users (%)": "{:.1f}%"})
-filtered_df = filtered_df.style.format({"Highly proficient users (%)": "{:.1f}%"})
+filtered_df = filtered_df.style.format({"Share of users (%)": "{:.1f}%",
+                                        "Highly proficient users (%)": "{:.1f}%"})
 st.dataframe(filtered_df, use_container_width=True)
 
 # year = proficiency_pivot['Year'].drop_duplicates()
