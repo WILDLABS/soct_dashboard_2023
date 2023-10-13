@@ -317,12 +317,9 @@ st.markdown('Explore what percentage of respondents used these technologies year
 ### Proficiency yearly pivot
 ############################################################
 # Formatting another way
-proficiency_pivot['Year'] = proficiency_pivot['Year'].astype(str) + ' '
+proficiency_pivot['Year'] = ' ' + proficiency_pivot['Year'].astype(str)
 proficiency_pivot["Share of users (%)"] = proficiency_pivot["Share of users (%)"].apply(lambda x: f"{x:.1%}")
 proficiency_pivot["Highly proficient users (%)"] = proficiency_pivot["Highly proficient users (%)"].apply(lambda x: f"{x:.1%}")
-
-#hide index
-proficiency_pivot = proficiency_pivot.assign(hack='').set_index('hack')
 
 # st.table(proficiency_pivot.assign(hack='').set_index('hack'))
 
