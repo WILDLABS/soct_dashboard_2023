@@ -18,7 +18,7 @@ dconst = pd.read_excel('Input files/dconst.xlsx')
 chal = pd.read_excel('Input files/chal.xlsx')
 
 ########################
-st.image('Input files/cover.jpg')
+st.image('Input images/cover.jpg')
 
 st.header(':blue[About the research]')
 
@@ -53,13 +53,25 @@ df_summary['percentage2'] = df_summary['percentage'].astype(str) + '%'
 
 genderplot = (ggplot(df_summary, aes(y='percentage', x='factor(year)', fill='factor(sc_gender)')) +
               geom_bar(stat='identity', width=0.5) +
-              geom_text(aes(label='percentage2'), position=position_stack(vjust=0.5), color='white') +
+              geom_text(
+                  aes(label='percentage'), 
+                  position=position_stack(vjust=0.5), 
+                  color='white',
+                  format_string='{:.1%}') +
               coord_flip() +
-              ggtitle('Gender Identity') +
-              theme(plot_title=element_text(size=18, face="bold")) +
-              labs(x='', y='Percentage of respondents', fill='Gender') +
+              labs(
+                  title = 'Around two-thirds of respondents identified as male each year',
+                  x='', 
+                  y='Percentage of respondents', 
+                  fill='Gender'
+                  ) +
               scale_fill_manual(values=['#DD7E3B', '#0E87BE']) +
-              theme_minimal())
+              theme_light() +
+              theme(
+                  plot_title=element_text(size=18, face="bold", color="#2E2C2C"),
+                  axis_title_y=element_text(colour="#423f3f")
+                  )
+              )
 
 st.pyplot(ggplot.draw(genderplot))
 
@@ -250,7 +262,7 @@ st.divider()
 
 st.markdown('The main conservation issues respondents report focusing on in their work remain unchanged in both years we’ve collected opinions on them: ecological monitoring is the most widespread, followed by species protection and protected area management and planning.')
 
-st.image('Input files/workchallenge.jpg')
+st.image('Input images/workchallenge.jpg')
 
 st.caption('*Note: order based on number of times challenge indicated by respondents; for 2021 and 2022 only*')
 
@@ -270,16 +282,30 @@ st.markdown('For all years investigated, most survey respondents indicated that 
 ### Proficiency plot
 ############################################################
 
-profplot = (ggplot(proficiency, aes(x='reorder(technology, percentage)', y='percentage')) +
+profplot = (ggplot(proficiency, aes(x='reorder(technology, -order)', y='percentage')) +
                     geom_bar(stat='identity', fill='#0E87BE') +
-                    geom_point(aes(y='average_proficiency2'), color='#3B3838') +
-                    geom_line(aes(y='average_proficiency2', group=1), color='#3B3838') +
-                    labs(x='', y='Percentage of respondents') +
-                    geom_text(aes(label='percentage2'), position=position_stack(vjust=0.5), color='white', size=10) +
-                    theme_minimal() +
+                    geom_point(aes(y='average_proficiency/10'), color='#3B3838') +
+                    geom_line(aes(y='average_proficiency/10', group=1), color='#3B3838') +
+                    labs(
+                        title='Conservation technology usage \nand proficiency'
+                        x='', 
+                        y='Percentage of respondents',
+                        caption = "Note: Multiple technologies could be indicated \nProficiency is reascaled to 10% of original value"
+                        ) +
+                    geom_text(
+                        aes(label='percentage'), 
+                        position=position_stack(vjust=0.5), 
+                        color='white', 
+                        size=10,
+                        format_string='{:.0%}'
+                        ) +
+                    theme_linedraw() +
                     coord_flip() +
-                    ggtitle(f'Conservation technology usage \nand proficiency') +
-                    theme(axis_text=element_text(size=12), plot_title=element_text(size=16)) +
+                    theme(
+                        axis_text=element_text(size=12), 
+                        plot_title=element_text(size=16,color="#2e2c2c"),
+                        axis_title_y=element_text(color="#2e2c2c")
+                        ) +
                     scale_fill_manual(values=['#0E87BE', '#DD7E3B'], guide=False))
 
 st.pyplot(ggplot.draw(profplot))
@@ -293,6 +319,7 @@ st.markdown('Explore what percentage of respondents used these technologies year
 dataframe = proficiency_pivot
 
 filtered_df = dataframe_explorer(dataframe, case=False)
+filtered_df = filtered_df.style.format({"Share of users (%)": "{:.1%}"})
 st.dataframe(filtered_df, use_container_width=True)
 
 # year = proficiency_pivot['Year'].drop_duplicates()
@@ -302,13 +329,13 @@ st.subheader(':blue[Performance versus potential]')
 
 st.markdown('To understand how current tools are perceived more broadly, we asked people to rate the conservation technologies they use in terms of both current performance and potential capacity to advance conservation. In 2020, GIS and remote sensing, Drones, and Mobile Apps were rated as the best performing technologies, while AI tools, eDNA and genomics, and Networked sensors were the ones seen as having the highest potential capacity to advance the field.')
 
-st.image('Input files/potential2020.jpg')
+st.image('Input images/potential2020.jpg')
 
 st.markdown('The landscape is somewhat different in 2022: while GIS and remote sensing is still the highest performing technology group, protected area management tools and bioacoustics have replaced drones and mobile apps as the othertop-rated groups. Regarding potential to advance conservation, eDNA and genomics moved from the top of the list to nearly the bottom, replaced by Biologgers alongside Networked sensors and AI tools.')
 
 st.markdown('Keep in mind that, while interesting, changes like this in the perceived potential of emerging technologies are not particularly surprising. As reflected in the technology hype cycle, a framework for understanding evolving interest in technologies over time, it’s common for initial excitement to spike when a new tool emerges, which can then take a dramatic hit with early adoption challenges, and then usually grows to a productive place of iterative learning and effective application.')
 
-st.image('Input files/potential2022.jpg')
+st.image('Input images/potential2022.jpg')
 
 st.caption('*Note: The above two graphs show the ranking of the mean scores of survey responses for each technology. Respondents rated technologies on both fronts on scales from 1-5, with 1 being the least positive and 5 being the most.*')
 
@@ -561,13 +588,13 @@ st.markdown('*Despite these challenges, the global community maintains remarkabl
 
 st.markdown('In 2022, almost two-thirds of survey respondents (63%) reported feeling more optimistic about the future of conservation technology relative to 12 months prior. This improves on results from both 2021 and 2020: in both years, about 52% indicated being more optimistic than the previous year. When asked to rank potential reasons for optimism, people indicated that the rate at which the field is evolving, the increasing accessibility of conservation technologies, and growing support from the conservation community and decision-makers were the most important factors, with 73%, 73%, and 43% respectively ranking them in their top three. In earlier years, collaborative culture was typically rated as the third top reason for optimism.')
 
-st.image('Input files/optimism.jpg')
+st.image('Input images/optimism.jpg')
 
 st.markdown('When asked about the greatest opportunities for advancing the conservation technology sector, respondents ranked the top 3 as improving collaboration and information sharing (69%), making tools more open, accessible, and user friendly (63%), and improving the interoperability of tools and data streams (51%).\n\nExpanding capacity for data analyses at scale, investing in local technology capacity building, and increasing capacity to share, store, and collate data globally were also seen as priorities.')
 
 st.markdown('*Note: Percentages indicate the proportion of respondents who ranked these opportunities as 1st, 2nd, or 3rd out of all opportunities.*')
 
-st.image('Input files/opportunities.jpg')
+st.image('Input images/opportunities.jpg')
 
 st.divider()
 st.header(':blue[Moving forward]')
@@ -576,6 +603,6 @@ st.markdown('Future.. + quotes')
 
 st.markdown('People look for advice -> online sources and other individuals -> WILDLABS -> we have a measurable impact')
 
-st.image('Input files/wildlabs.jpg')
+st.image('Input images/wildlabs.jpg')
 
 st.markdown('Some input from survey quotes, WILDLABS future plans')
