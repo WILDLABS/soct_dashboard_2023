@@ -290,7 +290,7 @@ profplot = (ggplot(proficiency, aes(x='reorder(technology, -order)', y='percenta
                     geom_point(aes(y='average_proficiency/10'), color='#3B3838') +
                     geom_line(aes(y='average_proficiency/10', group=1), color='#3B3838') +
                     labs(
-                        title='Conservation technology usage \nand proficiency',
+                        title='Conservation technology usage \n        and proficiency',
                         x='', 
                         y='Percentage of respondents',
                         caption = "Note: Multiple technologies could be indicated \nProficiency is reascaled to 10% of original value"
@@ -305,10 +305,10 @@ profplot = (ggplot(proficiency, aes(x='reorder(technology, -order)', y='percenta
                     theme_minimal() +
                     coord_flip() +
                     theme(
-                        axis_text=element_text(size=8, color="#423f3f", font='serif'), 
-                        plot_title=element_text(size=12, color="#423f3f",  face="bold", hjust=0.5, font='serif'),
-                        axis_title_y=element_text(size=10, color="#423f3f", font='serif'),
-                        plot_caption = element_text(hjust=0, size=6, font='serif'),
+                        axis_text=element_text(size=8, color="#423f3f"), 
+                        plot_title=element_text(size=12, color="#423f3f",  face="bold", hjust=0.5),
+                        axis_title_x=element_text(size=10, color="#423f3f"),
+                        plot_caption = element_text(hjust=0, size=6),
                         plot_background = element_rect(fill = "white",color='white'),
                         panel_background = element_rect(fill = "white",color='white')
                         ) +
