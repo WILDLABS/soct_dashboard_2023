@@ -410,7 +410,7 @@ for year in years:
             xanchor="right",
             x=1)
     )
-    fig.update_traces(marker=dict(coloraxis=None))
+    #fig.update_traces(marker=dict(coloraxis=None))
 
     # Store the plot to the dictionary with the key 'year'
     plots[f'challenges{year}'] = fig
