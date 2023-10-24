@@ -2,7 +2,7 @@
 import pandas as pd
 import streamlit as st
 import numpy as np
-from plotnine import ggplot, aes, geom_bar, geom_text, coord_flip, theme, element_text, labs, scale_fill_manual, theme_minimal, geom_point, geom_line, position_stack, theme_light, theme_linedraw, element_rect
+from plotnine import ggplot, aes, geom_bar, scale_y_continuous, geom_text, coord_flip, theme, element_text, labs, scale_fill_manual, theme_minimal, geom_point, geom_line, position_stack, theme_light, theme_linedraw, element_rect
 import matplotlib.pyplot as plt
 import geopandas as gpd
 import plotly.express as px
