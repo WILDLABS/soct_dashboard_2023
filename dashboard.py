@@ -67,10 +67,10 @@ genderplot = (ggplot(df_summary, aes(y='percentage', x='factor(year)', fill='fac
               scale_fill_manual(values=['#DD7E3B', '#0E87BE']) +
               theme_minimal() +
               theme(
-                  plot_title=element_text(size=16, color="#2E2C2C"),
+                  plot_title=element_text(size=12, color="#2E2C2C",  face="bold"),
                   axis_title_y=element_text(colour="#423f3f"),
-                  plot_background = element_rect(fill = "darkblue"),
-                  panel_background = element_rect(fill = "lightblue")
+                  plot_background = element_rect(fill = "white"),
+                  panel_background = element_rect(fill = "white")
                   )
               )
 
@@ -297,16 +297,18 @@ profplot = (ggplot(proficiency, aes(x='reorder(technology, -order)', y='percenta
                         aes(label='percentage'), 
                         position=position_stack(vjust=0.5), 
                         color='white', 
-                        size=10,
+                        size=8,
                         format_string='{:.0%}'
                         ) +
                     theme_minimal() +
                     coord_flip() +
                     theme(
-                        axis_text=element_text(size=12), 
-                        plot_title=element_text(size=16,color="#2e2c2c",  face="bold"),
+                        axis_text=element_text(size=10), 
+                        plot_title=element_text(size=12,color="#2e2c2c",  face="bold"),
                         axis_title_y=element_text(color="#2e2c2c"),
-                        plot_caption = element_text(hjust=0, size=8)
+                        plot_caption = element_text(hjust=0, size=6),
+                        plot_background = element_rect(fill = "white"),
+                        panel_background = element_rect(fill = "white")
                         ) +
                     scale_fill_manual(values=['#0E87BE', '#DD7E3B'], guide=False)
             )
