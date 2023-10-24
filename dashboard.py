@@ -400,7 +400,9 @@ for year in years:
         ),
         yaxis=dict(tickfont=dict(size=12)),
         title=f'Sector-wide challenges for {year}',
-        title_x=0.39
+        title_x=0.39,
+        coloraxis_colorbar=dict(
+            orientation='h')
     )
     #fig.update_traces(marker=dict(coloraxis=None))
 
