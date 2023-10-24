@@ -403,8 +403,8 @@ for year in years:
         title_x=0.39,
         coloraxis_colorbar=dict(
             orientation='h',
-            lenmode="pixels", len=200, 
-            yanchor="bottom", y=1.5,
+            #lenmode="pixels", len=200, 
+            yanchor="bottom", y=0,
             xanchor="right", x=1)
     )
 
