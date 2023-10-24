@@ -402,6 +402,7 @@ for year in years:
         title=f'Sector-wide challenges for {year}',
         title_x=0.39
     )
+    fig.update_traces(marker=dict(coloraxis=None))
 
     # Store the plot to the dictionary with the key 'year'
     plots[f'challenges{year}'] = fig
