@@ -123,7 +123,7 @@ ax.set_yticks([])
 
 
 # Set plot title
-ax.set_title('Expansion of countries from 2020 to 2022', fontsize=14, weight='bold')
+ax.set_title('Expansion of countries from 2020 to 2022', fontsize=12, weight='bold')
 
 # Display the plot using Streamlit
 st.pyplot(fig)
@@ -182,7 +182,7 @@ ax.tick_params(axis='both', which='both', length=0)
 
 
 # Set y-axis tick labels
-plt.yticks( fontsize=12)
+plt.yticks( fontsize=14)
 
 # Set plot title
 plt.title('Organization of respondents by year (count)\n', fontsize=18, weight='bold')
@@ -244,7 +244,7 @@ ax.spines['left'].set_visible(False)
 ax.tick_params(axis='both', which='both', length=0)
 
 # Set y-axis label
-plt.yticks( fontsize=12)
+plt.yticks( fontsize=14)
 
 # Adjust the figure layout to prevent label cutoff
 plt.tight_layout()
