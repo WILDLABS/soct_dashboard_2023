@@ -401,12 +401,10 @@ for year in years:
         yaxis=dict(tickfont=dict(size=12)),
         title=f'Sector-wide challenges for {year}',
         title_x=0.39,
-        legend=dict(
-            orientation="h",
-            yanchor="bottom",
-            y=1.02,
-            xanchor="right",
-            x=1)
+        coloraxis_colorbar=dict(
+            lenmode="pixels", len=200, 
+            yanchor="bottom", y=0,
+            xanchor="right", x=1)
     )
 
     # Store the plot to the dictionary with the key 'year'
@@ -487,7 +485,13 @@ for year in years:
         ),
         yaxis=dict(tickfont=dict(size=12)),
         title=f'User Constraints for {year}',
-        title_x=0.39  # This centers the title
+        title_x=0.39,
+        legend=dict(
+            orientation="h",
+            yanchor="bottom",
+            y=1.02,
+            xanchor="right",
+            x=1)e
     )
 
     # Store the plot to the dictionary with the key 'year'
@@ -502,17 +506,17 @@ selected_year = st.radio('Year:', ['2020', '2021', '2022'], index=0)
 if selected_year == '2020':
     st.write('In 2020, upfront costs, technical skills, and time required to engage were the most significant constraints affecting engagement by conservation technology end-users.')
     
-    st.plotly_chart(plots['constraints2020'])
+    st.plotly_chart(plots['constraints2020'], use_container_width=True)
         
 elif selected_year == '2021':
     st.write('In 2021, upfront costs were still the most significant constraint, but maintenance cost shifted from fourth place to become the second most pressing issue. The newly introduced category of local access to technology suppliers became the third most pressing constraint affecting engagement by conservation technology end-users.')
     
-    st.plotly_chart(plots['constraints2021'])
+    st.plotly_chart(plots['constraints2021'], use_container_width=True)
     
     
 else:
     st.write('In 2022, upfront costs were still the most significant constraint, but local access to suppliers shifted from third to become the second highest ranked. Time required to engage shifted from the fifth to third most pressing constraint affecting engagement by conservation technology end-users.')
-    st.plotly_chart(plots['constraints2022'])
+    st.plotly_chart(plots['constraints2022'], use_container_width=True)
     
          
 st.subheader(':blue[Developer constrainsts]')
@@ -575,7 +579,7 @@ for year in years:
         ),
         yaxis=dict(tickfont=dict(size=12)),
         title=f'Developer Constraints for {year}',
-        title_x=0.39  # This centers the title
+        title_x=0.39
     )
 
     # Store the plot to the dictionary with the key 'year'
@@ -590,16 +594,16 @@ selected_year = st.radio('Year:', ['2020 ', '2021 ', '2022 ' ], index=0)
 if selected_year == '2020 ':
     st.write('In 2020, securing continued funding throughout the development cycle and securing seed funding were similarily significant constraints affecting engagement by conservation technology developers, followed by understanding the conservation tool landscape (who is doing what and where the gaps exist).')
     
-    st.plotly_chart(plots2['constraints2020'])
+    st.plotly_chart(plots2['constraints2020'], use_container_width=True)
         
 elif selected_year == '2021 ':
     st.write('In 2021, the top two constraints affecting developer engagement remained the same, but overcoming engineering challenges became the third most signifcant, moving above understanding the conservation tool landscape.  We also added a new ‘Supply chain’ category this year, reflecting constraints relating to sourcing materials given the significance of this issue at the time.')
-    st.plotly_chart(plots2['constraints2021'])
+    st.plotly_chart(plots2['constraints2021'], use_container_width=True)
     
     
 else:
     st.write('In 2022, the top three constraints affecting developer engagement with conservation technology remained stable: securing seed funding, continued funding throughout the development cycle, and overcoming engineering challenges. The noteworthy shift this year was that understanding the conservation tool landscape, a top three constraint in 2020 and top four in 2021, moved down significantly.')
-    st.plotly_chart(plots2['constraints2022'])
+    st.plotly_chart(plots2['constraints2022'], use_container_width=True)
 
 st.divider()
 st.header(':blue[Opportunities: What’s needed?]')
