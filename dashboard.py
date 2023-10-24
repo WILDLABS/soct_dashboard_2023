@@ -404,7 +404,7 @@ for year in years:
         coloraxis_colorbar=dict(
             orientation='h',
             lenmode="pixels", len=200, 
-            yanchor="bottom", y=-2.5,
+            yanchor="bottom", y=1.5,
             xanchor="right", x=1)
     )
 
