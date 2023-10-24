@@ -56,7 +56,8 @@ genderplot = (ggplot(df_summary, aes(y='percentage', x='factor(year)', fill='fac
               geom_text(
                   aes(label='percentage2'), 
                   position=position_stack(vjust=0.5), 
-                  color='white') +
+                  color='white',
+                  size=8) +
               coord_flip() +
               labs(
                   title = 'Around two-thirds of respondents\nidentified as male each year',
@@ -70,7 +71,7 @@ genderplot = (ggplot(df_summary, aes(y='percentage', x='factor(year)', fill='fac
                   plot_title=element_text(size=12, color="#2E2C2C",  face="bold"),
                   axis_title_y=element_text(colour="#423f3f"),
                   plot_background = element_rect(fill = "white"),
-                  panel_background = element_rect(fill = "white")
+                  panel_background = element_rect(fill = "white",color='white')
                   )
               )
 
