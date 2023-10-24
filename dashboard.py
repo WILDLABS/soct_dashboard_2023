@@ -363,7 +363,7 @@ st.markdown('Regarding challenges facing the conservation technology sector as a
 
 # Define custom order and color mapping
 
-color_values = ['#9F2A00', '#D32A00', '#F42A00', '#969696', '#A0A0A0', '#B0B0B0', '#B9B9B9', '#C7C7C7', '#E1E1E1']
+color_values = ['#E1E1E1', '#C7C7C7', '#B9B9B9', '#B0B0B0', '#A0A0A0', '#969696',  '#F42A00', '#D32A00', '#9F2A00']
 ranking_order = chal['ranking'].unique().tolist()
 
 color_map = {ranking: color for ranking, color in zip(ranking_order, color_values)}
@@ -403,12 +403,8 @@ for year in years:
         yaxis=dict(tickfont=dict(size=12)),
         title=f'Sector-wide challenges for {year}',
         title_x=0.39,
-        legend=dict(
-            orientation="h",
-            yanchor="bottom",
-            y=-0.5,
-            xanchor="right",
-            x=1)
+        coloraxis_colorbar=dict(
+            orientation='h')
     )
     #fig.update_traces(marker=dict(coloraxis=None))
 
