@@ -363,10 +363,10 @@ st.markdown('Regarding challenges facing the conservation technology sector as a
 
 # Define custom order and color mapping
 
-color_values = ['#E1E1E1', '#C7C7C7', '#B9B9B9', '#B0B0B0', '#A0A0A0', '#969696',  '#F42A00', '#D32A00', '#9F2A00']
-ranking_order = chal['ranking'].unique().tolist()
+# color_values = ['#E1E1E1', '#C7C7C7', '#B9B9B9', '#B0B0B0', '#A0A0A0', '#969696',  '#F42A00', '#D32A00', '#9F2A00']
+# ranking_order = chal['ranking'].unique().tolist()
 
-color_map = {ranking: color for ranking, color in zip(ranking_order, color_values)}
+# color_map = {ranking: color for ranking, color in zip(ranking_order, color_values)}
 
 plots = {}  # Dictionary to store the plots
 
@@ -382,8 +382,7 @@ for year in years:
                  color='ranking',
                  orientation='h',
                  category_orders={"chal": chal_order},
-                 color_discrete_map=color_map
-                 #color_continuous_scale="GnBu_r"
+                 color_continuous_scale="GnBu_r"
                  )
 
     # Update layout
@@ -402,11 +401,9 @@ for year in years:
         ),
         yaxis=dict(tickfont=dict(size=12)),
         title=f'Sector-wide challenges for {year}',
-        title_x=0.39,
-        coloraxis_colorbar=dict(
-            orientation='h')
+        title_x=0.39
     )
-    #fig.update_traces(marker=dict(coloraxis=None))
+    fig.update_traces(marker=dict(coloraxis=None))
 
     # Store the plot to the dictionary with the key 'year'
     plots[f'challenges{year}'] = fig
