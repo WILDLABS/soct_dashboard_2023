@@ -491,7 +491,7 @@ for year in years:
             yanchor="bottom",
             y=1.02,
             xanchor="right",
-            x=1)e
+            x=1)
     )
 
     # Store the plot to the dictionary with the key 'year'
