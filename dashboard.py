@@ -315,6 +315,8 @@ profplot = (ggplot(proficiency, aes(x='reorder(technology, -order)', y='percenta
 
 st.pyplot(ggplot.draw(profplot))
 
+st.caption('*Note: Multiple technologies could be indicated \nProficiency is reascaled to 10% of original value\nPA mgmt tools = Protected Area Management tools; eDNA = environmental DNA; ML = machine learning; Average proficiency = mean score on a scale from 1-5, with 1 being ‘novice’ and 5 being ‘expert, rescaled to 10% of original value')
+
 st.markdown('Explore what percentage of respondents used these technologies yearly, and what the average corresponding proficiency levels were, by utilizing the filters on the below table.')
 
 ############################################################
