@@ -70,7 +70,7 @@ genderplot = (ggplot(df_summary, aes(y='percentage', x='factor(year)', fill='fac
               theme(
                   plot_title=element_text(size=12, color="#2E2C2C",  face="bold"),
                   axis_title_y=element_text(colour="#423f3f"),
-                  plot_background = element_rect(fill = "white"),
+                  plot_background = element_rect(fill = "white",color='white'),
                   panel_background = element_rect(fill = "white",color='white')
                   )
               )
