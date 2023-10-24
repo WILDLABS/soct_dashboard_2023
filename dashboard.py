@@ -630,6 +630,8 @@ st.header(':blue[The impact and future of **WILD**LABS]')
 
 st.markdown('**WILD**LABS has become the go-to place for conservation technology online - a central hub for the community to connect with and learn from each other, share their insights and innovations, and find collaborators across geographic and sectoral borders. Most respondents highlighted one or all three of these benefits when asked about the value of WILDLABS for the community.')
 
+st.image('Input images/quotes_wildlabs.jpg')
+
 st.markdown('We’ve also found that WILDLABS had a measurable impact on members in some key areas:')
 
 st.image('Input images/wildlabs.jpg')
@@ -639,6 +641,6 @@ st.markdown('Although we have seen these trends develop and captured them anecdo
 st.divider()
 st.header(':blue[Acknowledgments]')\
 
-st.markdown('First and foremost, we thank our survey respondents for their time and thoughtful contributions. This research program is led by Talia Speaker of WILDLABS with support from Stephanie O’Donnell of WILDLABS and Jennifer Solomon of Colorado State University. All analyses and graphics in this report and were conducted by Fanni Varhelyi as part of a **WILD**LABS internship at WWF.')
+st.markdown('First and foremost, we thank our survey respondents for their time and thoughtful contributions. This research program is led by Talia Speaker of **WILD**LABS with support from Stephanie O’Donnell of WILDLABS and Jennifer Solomon of Colorado State University. All analyses and graphics in this report and were conducted by Fanni Varhelyi as part of a **WILD**LABS internship at WWF.')
 
 st.caption('*For any questions regarding this research, please contact the WILDLABS team at community@wildlabs.net or Talia Speaker at talia.speaker@wildlabs.net.*')
