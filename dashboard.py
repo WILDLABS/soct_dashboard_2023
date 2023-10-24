@@ -382,7 +382,7 @@ for year in years:
                  color='ranking',
                  orientation='h',
                  category_orders={"chal": chal_order},
-                 color_continuous_scale="GnBu_r")
+                 color_discrete_map=color_map)
 
     # Update layout
     fig.update_layout(
