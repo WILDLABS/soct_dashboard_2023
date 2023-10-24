@@ -402,10 +402,9 @@ for year in years:
         title=f'Sector-wide challenges for {year}',
         title_x=0.39,
         coloraxis_colorbar=dict(
-            orientation='h'
-            #lenmode="pixels", len=200, 
-            #yanchor="bottom", y=-1,
-            #xanchor="right", x=1
+            orientation='h',
+            yanchor="bottom", y=-1,
+            xanchor="right", x=1
             )
     )
 
