@@ -415,17 +415,17 @@ selected_year = st.radio('Year:', [' 2020', ' 2021', ' 2022'], index=0)
 if selected_year == ' 2020':
     st.write('In 2020,competition for limited funding, duplication of efforts, and adoption capacity were the most significant challenges.')
     
-    st.plotly_chart(plots['challenges2020'])
+    st.plotly_chart(plots['challenges2020'], use_container_width=True)
         
 elif selected_year == ' 2021':
     st.write('In the 2021 survey we introcued the category \'matching tech expertise with conservation needs\' based on previous open-ended responses, which became the second highest ranked challenge. Competition for limited funding and duplication of efforts were still the two other top challenges.')
     
-    st.plotly_chart(plots['challenges2021'])
+    st.plotly_chart(plots['challenges2021'], use_container_width=True)
     
     
 else:
     st.write('The 2022 landscape of challenges is very similar to 2021, with the only notable change being that scaling sustainably shifted up above technology hype.')
-    st.plotly_chart(plots['challenges2022'])
+    st.plotly_chart(plots['challenges2022'], use_container_width=True)
 
 st.subheader(':blue[User constrainsts]')
 
