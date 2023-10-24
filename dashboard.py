@@ -357,7 +357,7 @@ st.markdown('*Small shifts were noted from year to year, but overall, conservati
 
 st.subheader(':blue[Sector-wide challenges]')
 
-st.markdown('Regarding challenges facing the conservation technology sector as a whole, competition for limited funding and duplication of efforts remain the primary challenges respondetns reported for all years of the survey.\n\nExplore how challenge ranks shifted over time by clicking through the three years:')
+st.markdown('Regarding challenges facing the conservation technology sector as a whole, competition for limited funding and duplication of efforts remain the primary challenges respondents reported for all years of the survey.  \n  \nExplore how challenge ranks shifted over time by clicking through the three years:')
 
 ############################################################
 ### challenges
@@ -416,12 +416,12 @@ selected_year = st.radio('Year:', [' 2020', ' 2021', ' 2022'], index=0)
 
 
 if selected_year == ' 2020':
-    st.write('In 2020,competition for limited funding, duplication of efforts, and adoption capacity were the most significant challenges.')
+    st.write('In 2020, competition for limited funding, duplication of efforts, and adoption capacity were the most significant challenges.')
     
     st.plotly_chart(plots['challenges2020'], use_container_width=True)
         
 elif selected_year == ' 2021':
-    st.write('In the 2021 survey we introcued the category \'matching tech expertise with conservation needs\' based on previous open-ended responses, which became the second highest ranked challenge. Competition for limited funding and duplication of efforts were still the two other top challenges.')
+    st.write('In the 2021 survey we introduced the category \'matching tech expertise with conservation needs\' based on previous open-ended responses, which became the second highest ranked challenge. Competition for limited funding and duplication of efforts were still the two other top challenges.')
     
     st.plotly_chart(plots['challenges2021'], use_container_width=True)
     
@@ -430,7 +430,7 @@ else:
     st.write('The 2022 landscape of challenges is very similar to 2021, with the only notable change being that scaling sustainably shifted up above technology hype.')
     st.plotly_chart(plots['challenges2022'], use_container_width=True)
 
-st.subheader(':blue[User constrainsts]')
+st.subheader(':blue[User constraints]')
 
 st.markdown('Regarding specific constraints affecting engagement by conservation tech end-users and developers, a key finding reiterated from the 2021 report is that location matters: both users and developers in countries with developing economies were more likely to report multiple significant constraints. We also found that gender and professional role were  influential factors in reported constraints.')
 
@@ -518,7 +518,7 @@ else:
     st.plotly_chart(plots['constraints2022'], use_container_width=True)
     
          
-st.subheader(':blue[Developer constrainsts]')
+st.subheader(':blue[Developer constraints]')
 
 
 ############################################################
@@ -626,12 +626,19 @@ st.markdown('*Note: Percentages indicate the proportion of respondents who ranke
 st.image('Input images/opportunities.jpg')
 
 st.divider()
-st.header(':blue[Moving forward]')
+st.header(':blue[The impact and future of **WILD**LABS]')
 
-st.markdown('Future.. + quotes')
+st.markdown('**WILD**LABS has become the go-to place for conservation technology online - a central hub for the community to connect with and learn from each other, share their insights and innovations, and find collaborators across geographic and sectoral borders. Most respondents highlighted one or all three of these benefits when asked about the value of WILDLABS for the community.')
 
-st.markdown('People look for advice -> online sources and other individuals -> WILDLABS -> we have a measurable impact')
+st.markdown('We’ve also found that WILDLABS had a measurable impact on members in some key areas:')
 
 st.image('Input images/wildlabs.jpg')
 
-st.markdown('Some input from survey quotes, WILDLABS future plans')
+st.markdown('Although we have seen these trends develop and captured them anecdotally over the years, it is exciting to see data support them for the first time. Results like these are critical for helping us understand our impact and continue to develop programs, events, and tools that respond most effectively too the community and sector’s evolving needs.')
+
+st.divider()
+st.header(':blue[Acknowledgments]')\
+
+st.markdown('First and foremost, we thank our survey respondents for their time and thoughtful contributions. This research program is led by Talia Speaker of WILDLABS with support from Stephanie O’Donnell of WILDLABS and Jennifer Solomon of Colorado State University. All analyses and graphics in this report and were conducted by Fanni Varhelyi as part of a **WILD**LABS internship at WWF.')
+
+st.caption('*For any questions regarding this research, please contact the WILDLABS team at <a href="community@wildlabs.net">community@wildlabs.net</a> or Talia Speaker at talia.speaker@wildlabs.net.*', unsafe_allow_html=True)
