@@ -306,8 +306,8 @@ profplot = (ggplot(proficiency, aes(x='reorder(technology, -order)', y='percenta
                     coord_flip() +
                     theme(
                         axis_text=element_text(size=8, color="#423f3f", font='serif'), 
-                        plot_title=element_text(size=10, size=12, color="#423f3f",  face="bold", hjust=0.5, font='serif'),
-                        axis_title_y=element_text(color="#423f3f", font='serif'),
+                        plot_title=element_text(size=12, color="#423f3f",  face="bold", hjust=0.5, font='serif'),
+                        axis_title_y=element_text(size=10, color="#423f3f", font='serif'),
                         plot_caption = element_text(hjust=0, size=6, font='serif'),
                         plot_background = element_rect(fill = "white",color='white'),
                         panel_background = element_rect(fill = "white",color='white')
