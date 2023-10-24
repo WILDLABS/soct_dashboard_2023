@@ -65,6 +65,7 @@ genderplot = (ggplot(df_summary, aes(y='percentage', x='factor(year)', fill='fac
                   y='Percentage of respondents', 
                   fill='Gender'
                   ) +
+              scale_y_continuous(labels=lambda l: ['{:.0f}%'.format(val) for val in l]) +
               scale_fill_manual(values=['#DD7E3B', '#0E87BE']) +
               theme_minimal() +
               theme(
