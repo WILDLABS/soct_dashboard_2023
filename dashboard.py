@@ -123,7 +123,7 @@ ax.set_yticks([])
 
 
 # Set plot title
-ax.set_title('Expansion of countries from 2020 to 2022', fontsize=18)
+ax.set_title('Expansion of countries from 2020 to 2022', fontsize=14, weight='bold')
 
 # Display the plot using Streamlit
 st.pyplot(fig)
@@ -185,9 +185,7 @@ ax.tick_params(axis='both', which='both', length=0)
 plt.yticks( fontsize=12)
 
 # Set plot title
-plt.title('Most respondents worked at Conservation NGOs\n', fontsize=22, loc='left')
-ax.set_xlabel('Organizations by year (count)', fontsize=18, loc='left')
-ax.xaxis.set_label_position('top')
+plt.title('Organization of respondents by year (count)\n', fontsize=18, weight='bold')
 
 # Adjust the figure layout to prevent label cutoff
 plt.tight_layout()
@@ -252,9 +250,7 @@ plt.yticks( fontsize=12)
 plt.tight_layout()
 
 # Set plot title
-plt.title('Respondents were mostly conservationsist or researchers\n', fontsize=22, loc='left')
-ax.set_xlabel('Roles by year (count)', fontsize=18, loc='left')
-ax.xaxis.set_label_position('top')
+plt.title('Primary role of respondents by year (count)\n', fontsize=18, weight='bold')
 
 
 # Display the plot
