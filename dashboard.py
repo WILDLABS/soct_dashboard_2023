@@ -60,7 +60,7 @@ genderplot = (ggplot(df_summary, aes(y='percentage', x='factor(year)', fill='fac
                   size=8) +
               coord_flip() +
               labs(
-                  title = 'Around two-thirds of respondents\nidentified as male each year',
+                  title = 'Gender distribution for respondents across the years',
                   x='', 
                   y='Percentage of respondents', 
                   fill='Gender'
@@ -68,8 +68,9 @@ genderplot = (ggplot(df_summary, aes(y='percentage', x='factor(year)', fill='fac
               scale_fill_manual(values=['#DD7E3B', '#0E87BE']) +
               theme_minimal() +
               theme(
-                  plot_title=element_text(size=12, color="#2E2C2C",  face="bold", hjust=0.5),
-                  axis_title_y=element_text(colour="#423f3f"),
+                  axis_text=element_text(size=8, color="#423f3f", font='serif'),
+                  plot_title=element_text(size=12, color="#423f3f",  face="bold", hjust=0.5, font='serif'),
+                  axis_title_y=element_text(size=10, colour="#423f3f", font='serif'),
                   plot_background = element_rect(fill = "white",color='white'),
                   panel_background = element_rect(fill = "white",color='white')
                   )
@@ -304,12 +305,12 @@ profplot = (ggplot(proficiency, aes(x='reorder(technology, -order)', y='percenta
                     theme_minimal() +
                     coord_flip() +
                     theme(
-                        axis_text=element_text(size=10), 
-                        plot_title=element_text(size=12,color="#2e2c2c",  face="bold"),
-                        axis_title_y=element_text(color="#2e2c2c"),
-                        plot_caption = element_text(hjust=0, size=6),
-                        plot_background = element_rect(fill = "white"),
-                        panel_background = element_rect(fill = "white")
+                        axis_text=element_text(size=8, color="#423f3f", font='serif'), 
+                        plot_title=element_text(size=10, size=12, color="#423f3f",  face="bold", hjust=0.5, font='serif'),
+                        axis_title_y=element_text(color="#423f3f", font='serif'),
+                        plot_caption = element_text(hjust=0, size=6, font='serif'),
+                        plot_background = element_rect(fill = "white",color='white'),
+                        panel_background = element_rect(fill = "white",color='white')
                         ) +
                     scale_fill_manual(values=['#0E87BE', '#DD7E3B'], guide=False)
             )
