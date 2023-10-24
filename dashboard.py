@@ -22,9 +22,7 @@ st.image('Input images/cover.jpg')
 
 st.header(':blue[About the research]')
 
-st.markdown('As global environmental challenges continue to escalate, understanding how to most effectively leverage modern technology innovations for conservation impact becomes increasingly critical. Each year, **WILD**LABS surveys the global conservation tech community to find out what you all are working on, what challenges you\'re facing, what support you need, and what you foresee on the horizon. Our aims in this research are to build an evidence base to share back with and support the community, to use the insights produced to create more informed and effective **WILD**LABS programmes, and to communicate shared priorities to influence policy and funding decisions that will benefit our sector as a whole.  \n  \n\
-            \
-            For the State of Conservation Technology 2023 report, we\'ve built on our 2021 results to coduct a three-year trends analysis,  bringing you insights for the first time into how dynamics have been evolving across the community over time. By highlighting shifting opinions as well as stabilizing trends in technology usage, user and developer challenges, opportunities for growth, and more, we aimed to illuminate the most useful information for advancing the sector together in a more effective and inclusive way. As always, our hope with this research is to amplify a united voice to drive progress toward impactful solutions for the planet.')
+st.markdown('As global environmental challenges continue to escalate, understanding how to most effectively leverage modern technology innovations for conservation impact becomes increasingly critical. Each year, **WILD**LABS surveys the global conservation tech community to find out what you all are working on, what challenges you\'re facing, what support you need, and what you foresee on the horizon. Our aims in this research are to build an evidence base to share back with and support the community, to use the insights produced to create more informed and effective **WILD**LABS programmes, and to communicate shared priorities to influence policy and funding decisions that will benefit our sector as a whole.  \n  \nFor the State of Conservation Technology 2023 report, we\'ve built on our 2021 results to coduct a three-year trends analysis,  bringing you insights for the first time into how dynamics have been evolving across the community over time. By highlighting shifting opinions as well as stabilizing trends in technology usage, user and developer challenges, opportunities for growth, and more, we aimed to illuminate the most useful information for advancing the sector together in a more effective and inclusive way. As always, our hope with this research is to amplify a united voice to drive progress toward impactful solutions for the planet.')
 
 st.divider()
 
@@ -313,7 +311,7 @@ profplot = (ggplot(proficiency, aes(x='reorder(technology, -order)', y='percenta
 
 st.pyplot(ggplot.draw(profplot))
 
-st.caption('*Note: Multiple technologies could be indicated  \n PA mgmt tools = Protected Area Management tools; eDNA = environmental DNA; ML = machine learning;  \n Average proficiency = mean score on a scale from 1-5, with 1 being ‘novice’ and 5 being ‘expert, rescaled to 10% of original value')
+st.caption('*Note: Multiple technologies could be indicated  \n PA mgmt tools = Protected Area Management tools; eDNA = environmental DNA; ML = machine learning;  \n Average proficiency = mean score on a scale from 1-5, with 1 being ‘novice’ and 5 being ‘expert, rescaled to 10% of original value*')
 
 st.markdown('Explore what percentage of respondents used these technologies yearly, and what the average corresponding proficiency levels were, by utilizing the filters on the below table.')
 
