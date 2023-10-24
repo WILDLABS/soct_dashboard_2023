@@ -290,7 +290,7 @@ profplot = (ggplot(proficiency, aes(x='reorder(technology, -order)', y='percenta
                     geom_point(aes(y='average_proficiency/10'), color='#3B3838') +
                     geom_line(aes(y='average_proficiency/10', group=1), color='#3B3838') +
                     labs(
-                        title='Conservation technology usage \n        and proficiency',
+                        title='Conservation technology usage \n            and proficiency',
                         x='', 
                         y='Percentage of respondents',
                         caption = "Note: Multiple technologies could be indicated \nProficiency is reascaled to 10% of original value"
