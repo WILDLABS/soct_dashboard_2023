@@ -400,12 +400,7 @@ for year in years:
         ),
         yaxis=dict(tickfont=dict(size=12)),
         title=f'Sector-wide challenges for {year}',
-        title_x=0.39,
-        coloraxis_colorbar=dict(
-            orientation='h',
-            yanchor="top", y=-1,
-            xanchor="right", x=1
-            )
+        title_x=0.39
     )
 
     # Store the plot to the dictionary with the key 'year'
