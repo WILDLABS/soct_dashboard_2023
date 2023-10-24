@@ -302,6 +302,7 @@ profplot = (ggplot(proficiency, aes(x='reorder(technology, -order)', y='percenta
                         size=8,
                         format_string='{:.0%}'
                         ) +
+                    scale_y_continuous(labels=lambda l: ['{:.0f}%'.format(val*100) for val in l]) +
                     theme_minimal() +
                     coord_flip() +
                     theme(
