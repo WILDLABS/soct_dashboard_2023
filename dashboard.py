@@ -2,7 +2,7 @@
 import pandas as pd
 import streamlit as st
 import numpy as np
-from plotnine import ggplot, aes, geom_bar, geom_text, coord_flip, ggtitle, theme, element_text, labs, scale_fill_manual, theme_minimal, geom_point, geom_line, position_stack, theme_light, theme_linedraw
+from plotnine import ggplot, aes, geom_bar, geom_text, coord_flip, theme, element_text, labs, scale_fill_manual, theme_minimal, geom_point, geom_line, position_stack, theme_light, theme_linedraw, element_rect
 import matplotlib.pyplot as plt
 import geopandas as gpd
 import plotly.express as px
@@ -65,10 +65,12 @@ genderplot = (ggplot(df_summary, aes(y='percentage', x='factor(year)', fill='fac
                   fill='Gender'
                   ) +
               scale_fill_manual(values=['#DD7E3B', '#0E87BE']) +
-              theme_light() +
+              theme_minimal() +
               theme(
                   plot_title=element_text(size=16, color="#2E2C2C"),
-                  axis_title_y=element_text(colour="#423f3f")
+                  axis_title_y=element_text(colour="#423f3f"),
+                  plot_background = element_rect(fill = "darkblue"),
+                  panel_background = element_rect(fill = "lightblue")
                   )
               )
 
@@ -403,7 +405,6 @@ for year in years:
         title=f'Sector-wide challenges for {year}',
         title_x=0.39
     )
-    #fig.update_traces(marker=dict(coloraxis=None))
 
     # Store the plot to the dictionary with the key 'year'
     plots[f'challenges{year}'] = fig
