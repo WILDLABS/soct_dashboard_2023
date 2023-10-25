@@ -18,20 +18,13 @@ percentage_pie = load_data('Input files/percentage_pie.csv')
 proficiency_pie = load_data('Input files/proficiency_pie.csv')
 uconst = load_data('Input files/uconst.csv')
 dconst = load_data('Input files/dconst.csv')
+chal = load_data('Input files/chal.csv')
 
 @st.cache_data
 def load_geodata(filename):
     return gpd.read_file(filename)
 
 map = load_geodata('Input files/map.gpkg')
-
-#demographics = pd.read_excel('Input files/demographics.xlsx')
-#proficiency = pd.read_excel('Input files/proficiency.xlsx')
-#percentage_pie = pd.read_excel('Input files/percentage_pie.xlsx')
-#proficiency_pie = pd.read_excel('Input files/proficiency_pie.xlsx')
-# uconst = pd.read_excel('Input files/uconst.xlsx')
-# dconst = pd.read_excel('Input files/dconst.xlsx')
-chal = pd.read_excel('Input files/chal.xlsx')
 
 ########################
 st.image('Input images/cover.jpg')
