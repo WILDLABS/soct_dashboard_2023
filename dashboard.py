@@ -355,7 +355,9 @@ fig_max_year = px.pie(
         'Respondents using technology' : '#0C4E6F',
         'Respondents not using technology' : '#13C2FF'
     },
-    hole=0.6
+    hole=0.6,
+    texttemplate="%{percent:.1%}",
+    textposition="inside"
 )
 
 # Create a subplot layout and add individual pie charts
