@@ -473,7 +473,14 @@ for year in years:
                  color='ranking',
                  orientation='h',
                  category_orders={"uconst": uconst_order},
-                 color_discrete_map=color_map)
+                 color_discrete_map=color_map,
+                 custom_data=[filtered_data['ranking']]
+                 )
+    fig.update_traces(hovertemplate="<b>%{y}</b> <br>" +
+                                    "Ranking: %{customdata} <br>" +
+                                    "Percentage: %{x:,0.00f}% <br>" +
+                                    "<extra></extra>"
+                                    )
     
 
     # Update layout
@@ -500,7 +507,6 @@ for year in years:
             xanchor="right",
             x=1)
     )
-    config = {'scrollZoom': False}
 
     # Store the plot to the dictionary with the key 'year'
     plots[f'constraints{year}'] = fig
@@ -569,7 +575,13 @@ for year in years:
                  orientation='h',
                  category_orders={"dconst": dconst_order2},
                  color_discrete_map=color_map2,
-                 hover_data=['percentage', 'ranking'])
+                 custom_data=[filtered_data['ranking']]
+                 )
+    fig.update_traces(hovertemplate="<b>%{y}</b> <br>" +
+                                    "Ranking: %{customdata} <br>" +
+                                    "Percentage: %{x:,0.00f}% <br>" +
+                                    "<extra></extra>"
+                                    )
 
     # Update layout
     fig.update_layout(
