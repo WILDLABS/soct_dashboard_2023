@@ -54,6 +54,7 @@ st.caption('*\*Note: incomplete answers below a certain threshold were filtered 
 ############################################################
 ### Gender plot
 ############################################################
+@st.cache_data
 def gender_plot(demographics):
 # Filter the DataFrame by gender values of 1 and 0
     filtered_df = demographics[demographics['sc_gender'].isin(['Male', 'Female'])]
@@ -99,47 +100,40 @@ st.markdown('Regarding geographic reach, most respondents indicated residing in 
 ############################################################
 ### Map plot
 ############################################################
+@st.cache_data
+def map_plot(map):
 
-# Read the Natural Earth dataset for countries
-#world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
+    # Define the custom colors for each region
+    color_mapping = {
+        '2020': '#68BDE4',
+        '2021': '#0E87BE',
+        '2022': '#04425F',
+        'Other': 'lightgray'
+    }
 
-# Define the custom colors for each region
-color_mapping = {
-    '2020': '#68BDE4',
-    '2021': '#0E87BE',
-    '2022': '#04425F',
-    'Other': 'lightgray'
-}
-
-# Merge the world map with DataFrame based on the country column
-#merged_data = world.merge(demographics, left_on='name', right_on='sc_country', how='left')
-
-# Fill NaN values in the sc_region column with a default region (e.g., 'Other')
-#merged_data['sc_count_novel'].fillna('Other', inplace=True)
-
-# Plot the world map with colored countries based on the region
-fig, ax = plt.subplots(figsize=(10, 6))
-plt.rcParams['font.family'] = 'sans serif'
-map.plot(column='sc_count_novel', linewidth=0.4, ax=ax, edgecolor='0.8', legend=True, color=[color_mapping.get(region, 'lightgrey') for region in map['sc_count_novel']])
+    # Plot the world map with colored countries based on the region
+    fig, ax = plt.subplots(figsize=(10, 6))
+    plt.rcParams['font.family'] = 'sans serif'
+    map.plot(column='sc_count_novel', linewidth=0.4, ax=ax, edgecolor='0.8', legend=True, color=[color_mapping.get(region, 'lightgrey') for region in map['sc_count_novel']])
 
 
-# Add the first legend for the color mapping
-legend_colors = [mpatches.Patch(color=color_mapping[region], label=region) for region in color_mapping]
-ax.legend(handles=legend_colors, title='First app.')
-ax.spines['top'].set_visible(False)
-ax.spines['right'].set_visible(False)
-ax.spines['bottom'].set_visible(False)
-ax.spines['left'].set_visible(False)
-ax.tick_params(axis='both', which='both', length=0)
+    # Add the first legend for the color mapping
+    legend_colors = [mpatches.Patch(color=color_mapping[region], label=region) for region in color_mapping]
+    ax.legend(handles=legend_colors, title='First app.')
+    ax.spines['top'].set_visible(False)
+    ax.spines['right'].set_visible(False)
+    ax.spines['bottom'].set_visible(False)
+    ax.spines['left'].set_visible(False)
+    ax.tick_params(axis='both', which='both', length=0)
 
-ax.set_xticks([])
-ax.set_yticks([])
+    ax.set_xticks([])
+    ax.set_yticks([])
 
+    # Set plot title
+    ax.set_title('Expansion of countries from 2020 to 2022', fontsize=12, weight='bold')
+    return fig
 
-
-# Set plot title
-ax.set_title('Expansion of countries from 2020 to 2022', fontsize=12, weight='bold')
-
+fig = map_plot(map)
 # Display the plot using Streamlit
 st.pyplot(fig)
 
