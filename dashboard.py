@@ -148,7 +148,6 @@ st.markdown('For all years, survey participants most frequently reported working
 ############################################################
 ### Org plot
 ############################################################
-st.write(demographics.dtypes)
 #Per year
 # Filter the DataFrame by the specified years
 years = demographics['year'].unique()
