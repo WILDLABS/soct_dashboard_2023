@@ -9,7 +9,7 @@ import matplotlib.patches as mpatches
 from plotly.subplots import make_subplots
 
 #import the data
-@st.cache
+@st.cache_data
 def load_data(filename):
     return pd.read_csv(filename)
 demographics = load_data('Input files/demographics.csv')
@@ -105,10 +105,10 @@ color_mapping = {
 # Fill NaN values in the sc_region column with a default region (e.g., 'Other')
 #merged_data['sc_count_novel'].fillna('Other', inplace=True)
 
-# Plot the world map with colored countries based on the region using the custom colors
+# Plot the world map with colored countries based on the region
 fig, ax = plt.subplots(figsize=(10, 6))
 plt.rcParams['font.family'] = 'sans serif'
-demographics.plot(column='sc_count_novel', linewidth=0.4, ax=ax, edgecolor='0.8', legend=True, color=[color_mapping.get(region, 'lightgrey') for region in merged_data['sc_count_novel']])
+demographics.plot(column='sc_count_novel', linewidth=0.4, ax=ax, edgecolor='0.8', legend=True, color=[color_mapping.get(region, 'lightgrey') for region in demographics['sc_count_novel']])
 
 
 # Add the first legend for the color mapping
