@@ -9,7 +9,12 @@ import matplotlib.patches as mpatches
 from plotly.subplots import make_subplots
 
 #import the data
-demographics = pd.read_excel('Input files/demographics.xlsx')
+@st.cache
+def load_data(filename):
+    return pd.read_csv(filename)
+demographics = load_data('Input files/demographics.csv')
+
+#demographics = pd.read_csv('Input files/demographics.csv')
 proficiency = pd.read_excel('Input files/proficiency.xlsx')
 percentage_pie = pd.read_excel('Input files/percentage_pie.xlsx')
 proficiency_pie = pd.read_excel('Input files/proficiency_pie.xlsx')
@@ -42,10 +47,10 @@ st.caption('*\*Note: incomplete answers below a certain threshold were filtered 
 ### Gender plot
 ############################################################
 # Filter the DataFrame by gender values of 1 and 0
-filtered_df = demographics[demographics['sc_gender'].isin(['Male', 'Female'])]
+#filtered_df = demographics[demographics['sc_gender'].isin(['Male', 'Female'])]
 
 # Calculate the percentage of each gender value per year
-df_summary = filtered_df.groupby(['year', 'sc_gender']).size().reset_index(name='count')
+df_summary = demographics.groupby(['year', 'sc_gender']).size().reset_index(name='count')
 df_summary['percentage'] = df_summary.groupby('year')['count'].transform(lambda x: x / x.sum() * 100).round(1)
 df_summary['percentage2'] = df_summary['percentage'].astype(str) + '%'
 
@@ -84,7 +89,7 @@ st.markdown('Regarding geographic reach, most respondents indicated residing in 
 ############################################################
 
 # Read the Natural Earth dataset for countries
-world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
+#world = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
 
 # Define the custom colors for each region
 color_mapping = {
@@ -95,15 +100,15 @@ color_mapping = {
 }
 
 # Merge the world map with DataFrame based on the country column
-merged_data = world.merge(demographics, left_on='name', right_on='sc_country', how='left')
+#merged_data = world.merge(demographics, left_on='name', right_on='sc_country', how='left')
 
 # Fill NaN values in the sc_region column with a default region (e.g., 'Other')
-merged_data['sc_count_novel'].fillna('Other', inplace=True)
+#merged_data['sc_count_novel'].fillna('Other', inplace=True)
 
 # Plot the world map with colored countries based on the region using the custom colors
 fig, ax = plt.subplots(figsize=(10, 6))
 plt.rcParams['font.family'] = 'sans serif'
-merged_data.plot(column='sc_count_novel', linewidth=0.4, ax=ax, edgecolor='0.8', legend=True, color=[color_mapping.get(region, 'lightgrey') for region in merged_data['sc_count_novel']])
+demographics.plot(column='sc_count_novel', linewidth=0.4, ax=ax, edgecolor='0.8', legend=True, color=[color_mapping.get(region, 'lightgrey') for region in merged_data['sc_count_novel']])
 
 
 # Add the first legend for the color mapping

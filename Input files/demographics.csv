@@ -1,0 +1,531 @@
+,sc_gender,year,sc_region,sc_country,sc_primary_role,sc_organization,sc_count_novel
+0,Female,2020,Europe,United Kingdom,Academic or researcher,University/Research Inst.,2020
+1,Male,2020,North America,Canada,Investor or funder,Conservation NGO,2020
+2,Female,2020,North America,United States of America,Academic or researcher,University/Research Inst.,2020
+3,Female,2020,North America,United States of America,Technologist,University/Research Inst.,2020
+4,Male,2020,North America,Canada,Academic or researcher,University/Research Inst.,2020
+5,Female,2020,North America,United States of America,Academic or researcher,University/Research Inst.,2020
+6,Male,2020,Europe,United Kingdom,Academic or researcher,University/Research Inst.,2020
+7,Male,2020,North America,United States of America,Technologist,Conservation NGO,2020
+8,Female,2020,North America,United States of America,Academic or researcher,University/Research Inst.,2020
+9,Male,2020,Africa,Tanzania,Technologist,Conservation NGO,2020
+10,Female,2020,North America,United States of America,Conservation practitioner,Conservation NGO,2020
+11,Female,2020,North America,United States of America,Technologist,Private (non-tech),2020
+12,Male,2020,Europe,Switzerland,Conservation practitioner,Conservation NGO,2020
+13,Female,2020,North America,United States of America,Academic or researcher,University/Research Inst.,2020
+14,Male,2020,North America,Canada,Conservation practitioner,Conservation NGO,2020
+15,Male,2020,North America,United States of America,Technologist,Other,2020
+16,Male,2020,North America,United States of America,Conservation practitioner,Government agency,2020
+17,Male,2020,North America,United States of America,Academic or researcher,Conservation NGO,2020
+18,Male,2020,Oceania,Australia,Academic or researcher,University/Research Inst.,2020
+19,Male,2020,North America,Canada,Technologist,Tech company,2020
+20,Male,2020,North America,United States of America,Technologist,Conservation NGO,2020
+21,Male,2020,Asia,Japan,Technologist,Private (non-tech),2020
+23,Male,2020,Oceania,Australia,Conservation practitioner,Conservation NGO,2020
+24,Male,2020,Asia,Philippines,Conservation practitioner,Conservation NGO,2020
+25,Male,2020,Oceania,Australia,Technologist,Conservation NGO,2020
+26,Male,2020,North America,United States of America,Technologist,Tech company,2020
+27,Female,2020,Asia,India,Academic or researcher,Government agency,2020
+28,Female,2020,Africa,South Africa,Academic or researcher,Private (non-tech),2020
+29,Male,2020,Asia,Laos,Academic or researcher,Conservation NGO,2020
+30,Male,2020,Europe,United Kingdom,Technologist,Private (non-tech),2020
+31,Male,2020,Africa,South Africa,Technologist,Tech company,2020
+32,Male,2020,Europe,United Kingdom,Academic or researcher,University/Research Inst.,2020
+33,Male,2020,Oceania,Australia,Technologist,Tech company,2020
+34,Female,2020,Europe,United Kingdom,Academic or researcher,University/Research Inst.,2020
+35,Male,2020,Europe,Austria,Technologist,University/Research Inst.,2020
+36,Female,2020,Europe,France,Technologist,Tech company,2020
+37,Male,2020,Europe,Sweden,Academic or researcher,University/Research Inst.,2020
+38,Male,2020,North America,United States of America,Technologist,Tech company,2020
+39,Female,2020,North America,Canada,Academic or researcher,Private (non-tech),2020
+40,Male,2020,Europe,Netherlands,Academic or researcher,Conservation NGO,2020
+41,Male,2020,North America,United States of America,Conservation practitioner,Government agency,2020
+42,Male,2020,Latin America,Argentina,Technologist,Tech company,2020
+43,Female,2020,North America,United States of America,Conservation practitioner,Conservation NGO,2020
+44,Male,2020,North America,United States of America,Academic or researcher,University/Research Inst.,2020
+45,Female,2020,North America,United States of America,Academic or researcher,University/Research Inst.,2020
+46,Male,2020,Asia,Singapore,Technologist,Tech company,2020
+47,Male,2020,Asia,India,Academic or researcher,Conservation NGO,2020
+48,Female,2020,North America,United States of America,Academic or researcher,Tech company,2020
+49,Male,2020,North America,United States of America,Conservation practitioner,Conservation NGO,2020
+50,Female,2020,Asia,Nepal,Academic or researcher,University/Research Inst.,2020
+51,Male,2020,Latin America,Brazil,Conservation practitioner,Conservation NGO,2020
+52,Female,2020,North America,United States of America,Conservation practitioner,Conservation NGO,2020
+53,Male,2020,Europe,United Kingdom,Conservation practitioner,Private (non-tech),2020
+54,Female,2020,Europe,United Kingdom,Conservation practitioner,Conservation NGO,2020
+55,Male,2020,Africa,Zimbabwe,Conservation practitioner,Conservation NGO,2020
+57,Male,2020,Asia,India,Technologist,Conservation NGO,2020
+60,Male,2020,North America,United States of America,Academic or researcher,University/Research Inst.,2020
+77,Female,2020,North America,United States of America,Academic or researcher,University/Research Inst.,2020
+94,Female,2020,North America,United States of America,Technologist,Conservation NGO,2020
+101,Male,2020,Europe,United Kingdom,Technologist,Tech company,2020
+102,Male,2020,Asia,Malaysia,Conservation practitioner,Conservation NGO,2020
+104,Male,2020,Asia,Malaysia,Conservation practitioner,Conservation NGO,2020
+109,Male,2020,Africa,Madagascar,Conservation practitioner,Conservation NGO,2020
+110,Male,2020,Asia,India,Conservation practitioner,Conservation NGO,2020
+113,Female,2020,Europe,United Kingdom,Conservation practitioner,Conservation NGO,2020
+115,Male,2020,Asia,Indonesia,Conservation practitioner,Conservation NGO,2020
+116,Male,2020,Asia,Thailand,Conservation practitioner,Other,2020
+117,Male,2020,Europe,Netherlands,Technologist,Conservation NGO,2020
+118,Female,2020,Europe,United Kingdom,Conservation practitioner,Conservation NGO,2020
+127,Male,2020,Asia,Vietnam,Conservation practitioner,Conservation NGO,2020
+129,Female,2020,Europe,United Kingdom,Conservation practitioner,Conservation NGO,2020
+132,Female,2020,North America,United States of America,Academic or researcher,University/Research Inst.,2020
+134,Male,2020,Latin America,Guyana,Conservation practitioner,Conservation NGO,2020
+141,Male,2020,Africa,Nigeria,Conservation practitioner,Conservation NGO,2020
+143,Female,2020,Europe,United Kingdom,Academic or researcher,Conservation NGO,2020
+155,Male,2020,Asia,Cambodia,Technologist,Tech company,2020
+157,Male,2020,Asia,India,Technologist,University/Research Inst.,2020
+158,Male,2020,Oceania,New Zealand,Technologist,Private (non-tech),2020
+168,Male,2020,Europe,Ukraine,Conservation practitioner,Conservation NGO,2020
+170,Male,2020,North America,United States of America,Technologist,University/Research Inst.,2020
+171,Male,2020,North America,United States of America,Academic or researcher,Conservation NGO,2020
+173,Male,2020,North America,United States of America,Technologist,Tech company,2020
+174,Male,2020,North America,United States of America,Technologist,Tech company,2020
+178,Male,2020,North America,United States of America,Academic or researcher,University/Research Inst.,2020
+180,Male,2020,North America,United States of America,Technologist,Tech company,2020
+183,Female,2020,Latin America,Brazil,Conservation practitioner,Conservation NGO,2020
+186,Male,2020,North America,Canada,Investor or funder,Tech company,2020
+187,Female,2020,North America,United States of America,Conservation practitioner,Conservation NGO,2020
+188,Male,2020,North America,United States of America,Technologist,Tech company,2020
+189,Male,2020,North America,United States of America,Academic or researcher,University/Research Inst.,2020
+190,Male,2020,Oceania,Australia,Academic or researcher,University/Research Inst.,2020
+191,Female,2020,Europe,United Kingdom,Technologist,Tech company,2020
+193,Female,2020,Europe,Germany,Technologist,Conservation NGO,2020
+195,Male,2020,Asia,India,Conservation practitioner,Tech company,2020
+201,Female,2020,North America,Canada,Technologist,Tech company,2020
+204,Female,2020,Africa,Kenya,Conservation practitioner,Conservation NGO,2020
+206,Male,2020,Europe,United Kingdom,Technologist,Conservation NGO,2020
+208,Male,2020,Europe,United Kingdom,Academic or researcher,University/Research Inst.,2020
+211,Female,2020,Europe,United Kingdom,Academic or researcher,University/Research Inst.,2020
+212,Male,2020,North America,United States of America,Technologist,Tech company,2020
+216,Male,2020,North America,United States of America,Academic or researcher,University/Research Inst.,2020
+218,Female,2020,Asia,India,Conservation practitioner,Tech company,2020
+219,Female,2020,Africa,Congo,Conservation practitioner,Conservation NGO,2020
+220,Male,2020,Oceania,Australia,Conservation practitioner,Government agency,2020
+223,Female,2020,Europe,Austria,Academic or researcher,University/Research Inst.,2020
+225,Male,2020,North America,United States of America,Academic or researcher,University/Research Inst.,2020
+229,Male,2020,Europe,United Kingdom,Academic or researcher,University/Research Inst.,2020
+231,Female,2020,Europe,Germany,Conservation practitioner,Conservation NGO,2020
+235,Male,2020,Latin America,Brazil,Academic or researcher,University/Research Inst.,2020
+236,Male,2020,North America,United States of America,Technologist,Conservation NGO,2020
+237,Female,2020,Asia,Malaysia,Conservation practitioner,Conservation NGO,2020
+240,Female,2020,Oceania,Australia,Technologist,Tech company,2020
+242,Female,2020,Europe,United Kingdom,Academic or researcher,University/Research Inst.,2020
+243,Male,2020,Europe,United Kingdom,Conservation practitioner,Conservation NGO,2020
+244,Female,2020,Europe,Sweden,Academic or researcher,University/Research Inst.,2020
+245,Male,2020,Europe,Netherlands,Conservation practitioner,Tech company,2020
+246,Female,2020,Europe,Greece,Academic or researcher,University/Research Inst.,2020
+247,Male,2020,Africa,Madagascar,Conservation practitioner,Conservation NGO,2020
+248,Male,2020,Asia,Malaysia,Academic or researcher,University/Research Inst.,2020
+249,Male,2020,Europe,United Kingdom,Conservation practitioner,Conservation NGO,2020
+250,Female,2020,Europe,United Kingdom,Technologist,Government agency,2020
+251,Female,2020,Africa,Zambia,Conservation practitioner,Conservation NGO,2020
+252,Male,2020,Europe,United Kingdom,Technologist,Tech company,2020
+254,Male,2020,Asia,Nepal,Conservation practitioner,Conservation NGO,2020
+255,Female,2020,North America,Canada,Academic or researcher,Conservation NGO,2020
+256,Male,2020,Europe,France,Academic or researcher,Private (non-tech),2020
+257,Male,2020,North America,United States of America,Academic or researcher,University/Research Inst.,2020
+258,Male,2020,Africa,Kenya,Academic or researcher,Conservation NGO,2020
+260,Female,2020,Europe,United Kingdom,Technologist,Conservation NGO,2020
+262,Female,2020,Asia,India,Conservation practitioner,Conservation NGO,2020
+263,Male,2020,Europe,United Kingdom,Technologist,Tech company,2020
+264,Male,2020,Latin America,Paraguay,Conservation practitioner,Conservation NGO,2020
+265,Male,2020,North America,United States of America,Technologist,University/Research Inst.,2020
+266,Female,2020,Asia,India,Academic or researcher,University/Research Inst.,2020
+267,Male,2020,Asia,India,Policymaker,,2020
+269,Male,2020,Europe,Germany,Academic or researcher,University/Research Inst.,2020
+270,Male,2020,North America,United States of America,Technologist,Tech company,2020
+272,Male,2020,Oceania,New Zealand,Conservation practitioner,Tech company,2020
+273,Male,2020,Asia,Philippines,Technologist,Tech company,2020
+275,Male,2020,Oceania,Australia,Technologist,University/Research Inst.,2020
+276,Female,2020,Oceania,New Zealand,Conservation practitioner,Private (non-tech),2020
+277,Male,2020,Europe,France,Academic or researcher,University/Research Inst.,2020
+278,Male,2020,North America,Canada,Academic or researcher,Private (non-tech),2020
+279,Male,2020,Oceania,Australia,Academic or researcher,University/Research Inst.,2020
+280,Female,2020,Europe,Italy,Investor or funder,Tech company,2020
+282,Female,2020,Africa,Kenya,Technologist,University/Research Inst.,2020
+283,Female,2020,Europe,Germany,Academic or researcher,University/Research Inst.,2020
+284,Male,2020,Latin America,Panama,Technologist,Private (non-tech),2020
+285,Male,2020,North America,United States of America,Technologist,Conservation NGO,2020
+334,Female,2021,Oceania,Australia,Conservation practitioner,Conservation NGO,2020
+335,Female,2021,North America,United States of America,Academic or researcher,Conservation NGO,2020
+336,Female,2021,North America,United States of America,Conservation practitioner,Conservation NGO,2020
+337,Female,2021,North America,United States of America,,Other,2020
+338,Female,2021,North America,Canada,Policymaker,Government agency,2020
+339,Male,2021,North America,United States of America,Technologist,Conservation NGO,2020
+340,Male,2021,Europe,Greece,Academic or researcher,University/Research Inst.,2020
+341,Female,2021,Africa,Kenya,Policymaker,Conservation NGO,2020
+342,Male,2021,Europe,Germany,Academic or researcher,University/Research Inst.,2020
+343,Female,2021,North America,United States of America,Conservation practitioner,Private (non-tech),2020
+344,Male,2021,Latin America,Colombia,Conservation practitioner,Conservation NGO,2020
+345,Male,2021,North America,United States of America,Technologist,Tech company,2020
+347,Female,2021,North America,Canada,Conservation practitioner,Government agency,2020
+348,Male,2021,Oceania,Australia,Academic or researcher,Private (non-tech),2020
+349,Male,2021,Oceania,Australia,Academic or researcher,University/Research Inst.,2020
+350,Male,2021,Asia,Mongolia,Academic or researcher,Conservation NGO,2021
+351,Male,2021,North America,United States of America,Academic or researcher,University/Research Inst.,2020
+352,Male,2021,Latin America,Ecuador,Academic or researcher,Conservation NGO,2021
+353,Male,2021,North America,United States of America,Technologist,Tech company,2020
+354,Male,2021,North America,Canada,Technologist,Tech company,2020
+355,Male,2021,Oceania,Australia,Technologist,Tech company,2020
+356,Male,2021,North America,United States of America,Policymaker,Government agency,2020
+357,Male,2021,North America,United States of America,Conservation practitioner,Other,2020
+358,Female,2021,Africa,Gabon,Conservation practitioner,Conservation NGO,2021
+359,Male,2021,Africa,Kenya,Academic or researcher,Other,2020
+360,Male,2021,Africa,Kenya,Conservation practitioner,Conservation NGO,2020
+361,Male,2021,Africa,South Africa,Conservation practitioner,Conservation NGO,2020
+362,Male,2021,Africa,Zimbabwe,Conservation practitioner,Private (non-tech),2020
+363,Female,2021,North America,United States of America,Conservation practitioner,Conservation NGO,2020
+364,Female,2021,Europe,United Kingdom,Conservation practitioner,Conservation NGO,2020
+365,Female,2021,North America,United States of America,Conservation practitioner,Conservation NGO,2020
+366,Male,2021,Oceania,Australia,Technologist,Tech company,2020
+367,Female,2021,Oceania,Australia,Technologist,Tech company,2020
+368,Male,2021,North America,United States of America,Academic or researcher,University/Research Inst.,2020
+369,Male,2021,North America,United States of America,Technologist,Tech company,2020
+370,Female,2021,Africa,Kenya,Technologist,Tech company,2020
+371,Male,2021,North America,United States of America,Technologist,Conservation NGO,2020
+372,Female,2021,Europe,Germany,Academic or researcher,University/Research Inst.,2020
+374,Male,2021,North America,Canada,Academic or researcher,University/Research Inst.,2020
+377,Female,2021,North America,United States of America,Academic or researcher,University/Research Inst.,2020
+378,Male,2021,Europe,Netherlands,Technologist,Tech company,2020
+379,Male,2021,Africa,Gabon,Conservation practitioner,Conservation NGO,2021
+380,Male,2021,North America,United States of America,Investor or funder,Tech company,2020
+382,Female,2021,North America,United States of America,Academic or researcher,University/Research Inst.,2020
+383,Male,2021,Europe,Belgium,Academic or researcher,University/Research Inst.,2020
+385,Male,2021,Europe,Spain,Technologist,Private (non-tech),2020
+386,Male,2021,Latin America,Brazil,Conservation practitioner,Conservation NGO,2020
+388,Male,2021,Oceania,Australia,Academic or researcher,University/Research Inst.,2020
+389,Female,2021,Asia,Indonesia,Academic or researcher,University/Research Inst.,2020
+390,Male,2021,North America,Canada,Academic or researcher,University/Research Inst.,2020
+391,Female,2021,North America,United States of America,Academic or researcher,Government agency,2020
+392,Male,2021,North America,United States of America,Conservation practitioner,Conservation NGO,2020
+394,Male,2021,North America,United States of America,Technologist,Tech company,2020
+395,Male,2021,North America,United States of America,Academic or researcher,Conservation NGO,2020
+397,Male,2021,Africa,South Africa,Conservation practitioner,Conservation NGO,2020
+401,Male,2021,Africa,Namibia,Conservation practitioner,Conservation NGO,2020
+402,Male,2021,Africa,Zimbabwe,Conservation practitioner,Private (non-tech),2020
+407,Female,2021,North America,United States of America,Academic or researcher,University/Research Inst.,2020
+412,Female,2021,North America,United States of America,Technologist,Private (non-tech),2020
+413,Male,2021,Oceania,Australia,Academic or researcher,University/Research Inst.,2020
+414,Male,2021,North America,Canada,Conservation practitioner,Conservation NGO,2020
+415,Female,2021,Asia,Turkey,Conservation practitioner,Conservation NGO,2021
+416,Male,2021,Africa,South Africa,Conservation practitioner,Conservation NGO,2020
+417,Female,2021,Europe,Serbia,Conservation practitioner,Conservation NGO,2021
+418,Male,2021,Europe,Switzerland,Technologist,Conservation NGO,2020
+420,Male,2021,Europe,Spain,Academic or researcher,University/Research Inst.,2020
+422,Female,2021,North America,Canada,Conservation practitioner,Conservation NGO,2020
+423,Male,2021,North America,Canada,Conservation practitioner,Conservation NGO,2020
+424,Female,2021,Latin America,Mexico,Conservation practitioner,Private (non-tech),2020
+425,Female,2021,North America,Canada,Academic or researcher,Conservation NGO,2020
+426,Female,2021,Latin America,Peru,Conservation practitioner,Conservation NGO,2021
+427,Female,2021,Latin America,Costa Rica,Academic or researcher,Conservation NGO,2021
+428,Male,2021,North America,Canada,Conservation practitioner,Conservation NGO,2020
+429,Female,2021,Oceania,Australia,Conservation practitioner,Conservation NGO,2020
+431,Female,2021,Asia,China,Conservation practitioner,Conservation NGO,2021
+432,Male,2021,Asia,Bhutan,Conservation practitioner,Government agency,2021
+433,Male,2021,Africa,Rwanda,Conservation practitioner,Conservation NGO,2021
+440,Male,2021,Africa,Rwanda,Conservation practitioner,Conservation NGO,2021
+445,Female,2021,Asia,India,Academic or researcher,Conservation NGO,2020
+448,Female,2021,North America,United States of America,Conservation practitioner,Conservation NGO,2020
+449,Male,2021,Latin America,Chile,Academic or researcher,University/Research Inst.,2021
+452,Female,2021,Europe,Greece,Conservation practitioner,Conservation NGO,2020
+453,Male,2021,Africa,Cameroon,Conservation practitioner,Conservation NGO,2021
+455,Male,2021,Europe,United Kingdom,Technologist,Tech company,2020
+458,Male,2021,Asia,China,Conservation practitioner,Conservation NGO,2021
+461,Female,2021,Europe,Russia,Policymaker,Conservation NGO,2021
+462,Female,2021,Europe,Greece,Conservation practitioner,Conservation NGO,2020
+465,Male,2021,Latin America,Peru,Conservation practitioner,Government agency,2021
+467,Male,2021,Europe,Italy,Conservation practitioner,Conservation NGO,2020
+468,Female,2021,Europe,Greece,Conservation practitioner,Conservation NGO,2020
+470,Male,2021,North America,United States of America,Academic or researcher,Conservation NGO,2020
+474,Male,2021,Europe,Greece,Conservation practitioner,Conservation NGO,2020
+476,Female,2021,North America,United States of America,Conservation practitioner,Conservation NGO,2020
+477,Female,2021,Asia,Singapore,Conservation practitioner,Conservation NGO,2020
+478,Male,2021,Oceania,New Zealand,Technologist,Tech company,2020
+480,Female,2021,Europe,United Kingdom,Academic or researcher,University/Research Inst.,2020
+481,Male,2021,Africa,South Africa,Technologist,Tech company,2020
+482,Male,2021,North America,United States of America,Conservation practitioner,Conservation NGO,2020
+483,Male,2021,Europe,United Kingdom,Academic or researcher,Private (non-tech),2020
+484,Male,2021,North America,United States of America,Academic or researcher,University/Research Inst.,2020
+485,Male,2021,North America,United States of America,Academic or researcher,University/Research Inst.,2020
+486,Male,2021,Asia,India,Academic or researcher,University/Research Inst.,2020
+487,Female,2021,Africa,Congo,Academic or researcher,Conservation NGO,2020
+488,Female,2021,North America,United States of America,Academic or researcher,University/Research Inst.,2020
+489,Male,2021,Europe,United Kingdom,Technologist,Tech company,2020
+490,Female,2021,North America,United States of America,Conservation practitioner,Conservation NGO,2020
+491,Male,2021,North America,United States of America,Academic or researcher,University/Research Inst.,2020
+492,Male,2021,North America,United States of America,Investor or funder,Private (non-tech),2020
+493,Male,2021,North America,United States of America,Technologist,Conservation NGO,2020
+494,Male,2021,North America,United States of America,Academic or researcher,University/Research Inst.,2020
+496,Male,2021,Europe,Austria,Academic or researcher,University/Research Inst.,2020
+497,Male,2021,Latin America,Brazil,Academic or researcher,University/Research Inst.,2020
+498,Male,2021,North America,Canada,Conservation practitioner,Conservation NGO,2020
+499,Male,2021,Europe,Germany,Conservation practitioner,Conservation NGO,2020
+500,Male,2021,Asia,India,Academic or researcher,Conservation NGO,2020
+501,Male,2021,North America,United States of America,Technologist,Conservation NGO,2020
+502,Male,2021,Europe,United Kingdom,Technologist,Tech company,2020
+503,Male,2021,Latin America,Brazil,Conservation practitioner,Conservation NGO,2020
+504,Male,2021,Europe,Portugal,Academic or researcher,University/Research Inst.,2021
+505,Male,2021,Europe,Germany,Conservation practitioner,Government agency,2020
+506,Female,2021,Oceania,Australia,Conservation practitioner,Government agency,2020
+507,Female,2021,North America,United States of America,Technologist,University/Research Inst.,2020
+508,Male,2021,Oceania,Australia,Conservation practitioner,Government agency,2020
+509,Female,2021,Asia,Indonesia,Academic or researcher,University/Research Inst.,2020
+510,Male,2021,Asia,Turkey,Academic or researcher,University/Research Inst.,2021
+511,Male,2021,Europe,Serbia,Conservation practitioner,Conservation NGO,2021
+512,Male,2021,Europe,United Kingdom,Academic or researcher,University/Research Inst.,2020
+513,Male,2021,Oceania,New Zealand,Academic or researcher,Private (non-tech),2020
+514,Male,2021,North America,United States of America,Conservation practitioner,Conservation NGO,2020
+515,Male,2021,Europe,United Kingdom,Academic or researcher,University/Research Inst.,2020
+516,Male,2021,Asia,India,Technologist,Tech company,2020
+517,Male,2021,Europe,United Kingdom,Conservation practitioner,Conservation NGO,2020
+518,Female,2021,Latin America,Brazil,Academic or researcher,University/Research Inst.,2020
+519,Female,2021,Asia,Lebanon,Academic or researcher,University/Research Inst.,2021
+520,Female,2021,Europe,Germany,Technologist,Conservation NGO,2020
+521,Male,2021,North America,United States of America,Academic or researcher,University/Research Inst.,2020
+523,Male,2021,Europe,Spain,Technologist,Government agency,2020
+524,Male,2021,Asia,Philippines,Conservation practitioner,Conservation NGO,2020
+525,Male,2021,North America,United States of America,Technologist,Tech company,2020
+526,Female,2021,Asia,Singapore,Technologist,Conservation NGO,2020
+527,Female,2021,Europe,United Kingdom,Conservation practitioner,Conservation NGO,2020
+529,Female,2021,Oceania,Australia,Conservation practitioner,Conservation NGO,2020
+531,Female,2021,Latin America,Colombia,Academic or researcher,Private (non-tech),2020
+532,Male,2021,Latin America,Costa Rica,Academic or researcher,University/Research Inst.,2021
+536,Female,2021,Asia,India,Academic or researcher,Conservation NGO,2020
+537,Male,2021,Europe,Romania,Academic or researcher,University/Research Inst.,2020
+540,Male,2021,North America,United States of America,Technologist,Tech company,2020
+543,Male,2021,North America,United States of America,Conservation practitioner,Conservation NGO,2020
+545,Male,2021,Europe,United Kingdom,Technologist,Tech company,2020
+546,Male,2021,North America,United States of America,Technologist,Tech company,2020
+550,Male,2021,North America,United States of America,Academic or researcher,University/Research Inst.,2020
+551,Male,2021,North America,United States of America,Academic or researcher,University/Research Inst.,2020
+552,Female,2021,Asia,Indonesia,Policymaker,Conservation NGO,2020
+553,Male,2021,Latin America,Peru,Conservation practitioner,Private (non-tech),2021
+555,Female,2021,Europe,United Kingdom,Academic or researcher,University/Research Inst.,2020
+560,Male,2021,Europe,United Kingdom,Conservation practitioner,Conservation NGO,2020
+562,Female,2021,North America,United States of America,Academic or researcher,University/Research Inst.,2020
+563,Female,2021,Oceania,New Zealand,Conservation practitioner,Government agency,2020
+564,Male,2021,North America,United States of America,Academic or researcher,Government agency,2020
+566,Female,2021,Africa,Somalia,Policymaker,Government agency,2021
+567,Male,2021,Oceania,Australia,Technologist,Tech company,2020
+568,Male,2021,Oceania,Australia,Technologist,Tech company,2020
+569,Male,2021,Europe,United Kingdom,Technologist,Private (non-tech),2020
+570,Male,2021,Europe,United Kingdom,Conservation practitioner,University/Research Inst.,2020
+571,Female,2021,Oceania,Australia,Technologist,Tech company,2020
+572,Female,2021,Oceania,Australia,Academic or researcher,University/Research Inst.,2020
+573,Male,2021,Asia,Singapore,Technologist,Tech company,2020
+574,Male,2021,Asia,Sri Lanka,Academic or researcher,University/Research Inst.,2021
+575,Male,2021,Asia,India,Policymaker,Government agency,2020
+576,Male,2021,Europe,United Kingdom,Academic or researcher,University/Research Inst.,2020
+577,Female,2021,Europe,United Kingdom,Academic or researcher,University/Research Inst.,2020
+578,Male,2021,North America,United States of America,Academic or researcher,University/Research Inst.,2020
+581,Male,2021,Asia,India,Conservation practitioner,Conservation NGO,2020
+583,Male,2021,North America,United States of America,Conservation practitioner,Conservation NGO,2020
+585,Male,2021,Europe,United Kingdom,Technologist,Tech company,2020
+586,Male,2021,Africa,South Africa,Technologist,Tech company,2020
+587,Male,2021,North America,Canada,Conservation practitioner,Tech company,2020
+589,Male,2021,Europe,France,Technologist,Tech company,2020
+595,Male,2021,Asia,Japan,Academic or researcher,University/Research Inst.,2020
+596,Male,2021,North America,Canada,Technologist,Tech company,2020
+597,Male,2021,North America,Canada,Conservation practitioner,Other,2020
+599,Male,2021,Latin America,Chile,Technologist,Private (non-tech),2021
+600,Male,2021,North America,United States of America,Technologist,Tech company,2020
+601,Male,2021,Latin America,Argentina,Academic or researcher,University/Research Inst.,2020
+604,Male,2021,North America,United States of America,Academic or researcher,Conservation NGO,2020
+605,Male,2021,Europe,United Kingdom,Conservation practitioner,Conservation NGO,2020
+606,Male,2021,Asia,Indonesia,Conservation practitioner,Conservation NGO,2020
+607,Male,2021,Asia,Kyrgyzstan,Conservation practitioner,Conservation NGO,2021
+608,Female,2021,Europe,United Kingdom,Conservation practitioner,Conservation NGO,2020
+609,Male,2021,Europe,United Kingdom,Conservation practitioner,Conservation NGO,2020
+610,Female,2021,Europe,United Kingdom,Conservation practitioner,Conservation NGO,2020
+611,Male,2021,Africa,Sudan,Conservation practitioner,Conservation NGO,2021
+612,Female,2021,North America,Canada,Academic or researcher,Conservation NGO,2020
+613,Male,2021,Latin America,Belize,Conservation practitioner,Conservation NGO,2021
+614,Female,2021,North America,United States of America,Academic or researcher,Conservation NGO,2020
+615,Male,2021,Africa,Congo,Conservation practitioner,Conservation NGO,2020
+616,Male,2021,Latin America,Peru,Conservation practitioner,Conservation NGO,2021
+617,Male,2021,Latin America,Belize,Conservation practitioner,Conservation NGO,2021
+619,Female,2021,North America,United States of America,Conservation practitioner,University/Research Inst.,2020
+620,Female,2021,Europe,United Kingdom,Conservation practitioner,Conservation NGO,2020
+623,Male,2021,Europe,United Kingdom,Technologist,Conservation NGO,2020
+624,Male,2021,Asia,Georgia,Conservation practitioner,Conservation NGO,2021
+626,Female,2021,Europe,United Kingdom,Conservation practitioner,Conservation NGO,2020
+628,Female,2021,Europe,United Kingdom,Conservation practitioner,Conservation NGO,2020
+631,Female,2021,Latin America,Belize,Conservation practitioner,Conservation NGO,2021
+632,Male,2021,Latin America,Chile,Academic or researcher,Conservation NGO,2021
+634,Male,2021,Asia,Myanmar,Conservation practitioner,Conservation NGO,2020
+635,Female,2021,Latin America,Chile,Conservation practitioner,Conservation NGO,2021
+636,Female,2021,North America,United States of America,,Conservation NGO,2020
+643,Female,2021,Africa,Kenya,Conservation practitioner,Conservation NGO,2020
+644,Male,2021,Europe,United Kingdom,Technologist,Conservation NGO,2020
+645,Female,2021,Europe,United Kingdom,Conservation practitioner,Conservation NGO,2020
+647,Female,2021,Europe,United Kingdom,Conservation practitioner,Conservation NGO,2020
+648,Female,2021,Europe,United Kingdom,Conservation practitioner,Conservation NGO,2020
+649,Male,2021,Asia,Cambodia,Technologist,Conservation NGO,2020
+651,Male,2021,North America,United States of America,Technologist,Conservation NGO,2020
+653,Male,2021,Africa,Madagascar,,Conservation NGO,2020
+654,Female,2021,North America,United States of America,Conservation practitioner,Conservation NGO,2020
+655,Female,2021,North America,United States of America,Academic or researcher,Conservation NGO,2020
+656,Male,2021,North America,United States of America,Technologist,Conservation NGO,2020
+663,Female,2022,North America,United States of America,Academic or researcher,Conservation NGO,2020
+664,Male,2022,North America,United States of America,Technologist,Tech company,2020
+665,Female,2022,Oceania,Australia,Conservation practitioner,Other,2020
+667,Male,2022,Asia,Japan,Technologist,Tech company,2020
+668,Male,2022,Europe,France,Technologist,Tech company,2020
+669,Female,2022,North America,United States of America,Academic or researcher,University/Research Inst.,2020
+670,Female,2022,Africa,Kenya,Conservation practitioner,Conservation NGO,2020
+672,Female,2022,North America,United States of America,Conservation practitioner,Conservation NGO,2020
+673,Female,2022,Africa,Zambia,Technologist,Conservation NGO,2020
+674,Male,2022,Europe,United Kingdom,Conservation practitioner,Conservation NGO,2020
+675,Female,2022,Europe,United Kingdom,Technologist,Tech company,2020
+676,Male,2022,Europe,United Kingdom,Technologist,University/Research Inst.,2020
+677,Female,2022,Oceania,Australia,Academic or researcher,University/Research Inst.,2020
+678,Male,2022,Asia,Thailand,Conservation practitioner,Conservation NGO,2020
+680,Male,2022,North America,United States of America,Academic or researcher,University/Research Inst.,2020
+681,Male,2022,Africa,Algeria,Policymaker,Government agency,2022
+682,Male,2022,Europe,Switzerland,Conservation practitioner,Conservation NGO,2020
+683,Male,2022,Europe,United Kingdom,Academic or researcher,University/Research Inst.,2020
+684,Male,2022,North America,Canada,Conservation practitioner,Conservation NGO,2020
+685,Male,2022,Africa,South Africa,Technologist,Tech company,2020
+686,Male,2022,North America,United States of America,Academic or researcher,University/Research Inst.,2020
+687,Male,2022,North America,United States of America,Academic or researcher,University/Research Inst.,2020
+688,Male,2022,North America,United States of America,Academic or researcher,Conservation NGO,2020
+689,Male,2022,Europe,United Kingdom,Conservation practitioner,Tech company,2020
+690,Male,2022,North America,United States of America,Conservation practitioner,Government agency,2020
+691,Male,2022,Oceania,Australia,Academic or researcher,University/Research Inst.,2020
+692,Male,2022,North America,Canada,Investor or funder,Tech company,2020
+693,Male,2022,North America,United States of America,Academic or researcher,University/Research Inst.,2020
+694,Male,2022,Oceania,Australia,Conservation practitioner,Conservation NGO,2020
+695,Male,2022,Oceania,Australia,Conservation practitioner,Tech company,2020
+696,Male,2022,Latin America,Trinidad and Tobago,Conservation practitioner,Conservation NGO,2022
+697,Male,2022,Oceania,Australia,Conservation practitioner,Conservation NGO,2020
+698,Female,2022,Oceania,Australia,Policymaker,Tech company,2020
+699,Male,2022,North America,United States of America,Academic or researcher,University/Research Inst.,2020
+700,Female,2022,North America,United States of America,Academic or researcher,Conservation NGO,2020
+701,Male,2022,North America,United States of America,Technologist,Conservation NGO,2020
+702,Male,2022,Europe,Switzerland,Academic or researcher,University/Research Inst.,2020
+703,Male,2022,Europe,Austria,Technologist,University/Research Inst.,2020
+704,Female,2022,Europe,Germany,Academic or researcher,Government agency,2020
+705,Male,2022,Asia,Sri Lanka,Academic or researcher,University/Research Inst.,2021
+707,Male,2022,Europe,United Kingdom,Academic or researcher,University/Research Inst.,2020
+708,Male,2022,North America,United States of America,Academic or researcher,University/Research Inst.,2020
+709,Female,2022,North America,Canada,Academic or researcher,Government agency,2020
+710,Male,2022,Europe,Luxembourg,Technologist,University/Research Inst.,2022
+711,Female,2022,North America,United States of America,Technologist,Tech company,2020
+713,Male,2022,North America,United States of America,Technologist,Tech company,2020
+714,Female,2022,North America,United States of America,Academic or researcher,University/Research Inst.,2020
+715,Male,2022,Europe,Italy,Conservation practitioner,Tech company,2020
+716,Female,2022,Europe,United Kingdom,Technologist,Conservation NGO,2020
+718,Female,2022,Latin America,Brazil,Conservation practitioner,Private (non-tech),2020
+719,Male,2022,Asia,India,Academic or researcher,University/Research Inst.,2020
+720,Female,2022,Europe,United Kingdom,Academic or researcher,Conservation NGO,2020
+721,Male,2022,North America,United States of America,Academic or researcher,University/Research Inst.,2020
+723,Female,2022,Latin America,Argentina,Technologist,Tech company,2020
+724,Male,2022,Europe,United Kingdom,Academic or researcher,Conservation NGO,2020
+725,Female,2022,North America,United States of America,Academic or researcher,University/Research Inst.,2020
+727,Male,2022,Europe,United Kingdom,Conservation practitioner,Conservation NGO,2020
+730,Female,2022,North America,United States of America,Technologist,Tech company,2020
+731,Male,2022,Europe,Netherlands,Technologist,Conservation NGO,2020
+732,Male,2022,Europe,Spain,Conservation practitioner,Conservation NGO,2020
+733,Male,2022,Latin America,Paraguay,Conservation practitioner,Conservation NGO,2020
+735,Male,2022,Europe,Germany,Academic or researcher,University/Research Inst.,2020
+739,Male,2022,Asia,Cambodia,Conservation practitioner,Conservation NGO,2020
+743,Male,2022,North America,Canada,Academic or researcher,Government agency,2020
+750,Male,2022,North America,United States of America,Conservation practitioner,Conservation NGO,2020
+751,Male,2022,Oceania,New Zealand,Technologist,Conservation NGO,2020
+752,Female,2022,Latin America,Argentina,Academic or researcher,University/Research Inst.,2020
+753,Male,2022,Africa,Kenya,Conservation practitioner,Conservation NGO,2020
+755,Male,2022,Africa,Kenya,Conservation practitioner,Other,2020
+757,Male,2022,Africa,Kenya,Technologist,Tech company,2020
+758,Male,2022,Europe,Germany,Academic or researcher,University/Research Inst.,2020
+759,Male,2022,Africa,South Africa,Technologist,Tech company,2020
+761,Male,2022,North America,United States of America,Technologist,University/Research Inst.,2020
+766,Female,2022,North America,United States of America,Technologist,Conservation NGO,2020
+767,Male,2022,North America,United States of America,Academic or researcher,Conservation NGO,2020
+768,Male,2022,North America,United States of America,Academic or researcher,University/Research Inst.,2020
+769,Male,2022,Latin America,Brazil,Conservation practitioner,Conservation NGO,2020
+770,Male,2022,Europe,Italy,Technologist,Conservation NGO,2020
+771,Male,2022,North America,United States of America,Technologist,Conservation NGO,2020
+772,Female,2022,Europe,United Kingdom,Academic or researcher,University/Research Inst.,2020
+773,Male,2022,North America,United States of America,Academic or researcher,University/Research Inst.,2020
+774,Male,2022,Europe,United Kingdom,Academic or researcher,University/Research Inst.,2020
+775,Male,2022,Africa,Tunisia,Academic or researcher,University/Research Inst.,2022
+776,Male,2022,Europe,United Kingdom,Technologist,Tech company,2020
+777,Male,2022,Oceania,Australia,Academic or researcher,University/Research Inst.,2020
+778,Male,2022,Europe,United Kingdom,Technologist,Conservation NGO,2020
+779,Female,2022,Oceania,Australia,Academic or researcher,Conservation NGO,2020
+781,Male,2022,Asia,Cambodia,Conservation practitioner,Conservation NGO,2020
+782,Female,2022,Africa,Namibia,Conservation practitioner,Conservation NGO,2020
+783,Female,2022,Africa,South Africa,Technologist,Conservation NGO,2020
+784,Male,2022,Africa,Uganda,Conservation practitioner,Private (non-tech),2022
+785,Female,2022,Africa,Chad,Academic or researcher,Conservation NGO,2022
+786,Female,2022,Europe,Netherlands,Technologist,Conservation NGO,2020
+787,Female,2022,Africa,Tanzania,Conservation practitioner,Conservation NGO,2020
+788,Male,2022,Africa,Tanzania,Conservation practitioner,Conservation NGO,2020
+789,Female,2022,Asia,Thailand,Conservation practitioner,Conservation NGO,2020
+791,Male,2022,Africa,Somalia,Conservation practitioner,Conservation NGO,2021
+792,Male,2022,North America,United States of America,Conservation practitioner,Other,2020
+793,Male,2022,North America,United States of America,Academic or researcher,Government agency,2020
+794,Female,2022,Asia,Tajikistan,Conservation practitioner,Conservation NGO,2022
+795,Male,2022,Europe,United Kingdom,Technologist,Tech company,2020
+796,Male,2022,North America,United States of America,Technologist,University/Research Inst.,2020
+797,Female,2022,North America,United States of America,Academic or researcher,University/Research Inst.,2020
+798,Male,2022,Oceania,Australia,Academic or researcher,Government agency,2020
+799,Female,2022,Africa,Kenya,Academic or researcher,University/Research Inst.,2020
+801,Female,2022,Africa,Zambia,Conservation practitioner,Conservation NGO,2020
+804,Female,2022,North America,United States of America,Conservation practitioner,Conservation NGO,2020
+805,Female,2022,North America,United States of America,Academic or researcher,Tech company,2020
+806,Male,2022,North America,United States of America,Technologist,Tech company,2020
+808,Male,2022,North America,United States of America,Conservation practitioner,Other,2020
+812,Male,2022,Africa,Kenya,Conservation practitioner,Conservation NGO,2020
+814,Male,2022,Europe,Denmark,Academic or researcher,University/Research Inst.,2022
+815,Male,2022,Asia,India,Conservation practitioner,Private (non-tech),2020
+816,Male,2022,Asia,Saudi Arabia,Conservation practitioner,Private (non-tech),2022
+818,Male,2022,Africa,South Africa,Conservation practitioner,Conservation NGO,2020
+819,Female,2022,Europe,United Kingdom,Technologist,Tech company,2020
+820,Male,2022,Asia,Cambodia,Conservation practitioner,Conservation NGO,2020
+821,Male,2022,Asia,India,Technologist,Private (non-tech),2020
+822,Male,2022,Africa,Kenya,Conservation practitioner,Tech company,2020
+824,Male,2022,North America,United States of America,Academic or researcher,Other,2020
+825,Female,2022,North America,United States of America,Conservation practitioner,Conservation NGO,2020
+827,Female,2022,North America,United States of America,Conservation practitioner,Conservation NGO,2020
+828,Male,2022,Asia,Indonesia,Conservation practitioner,Conservation NGO,2020
+829,Male,2022,Asia,Indonesia,Conservation practitioner,Conservation NGO,2020
+831,Male,2022,Africa,Mozambique,Conservation practitioner,Conservation NGO,2022
+833,Male,2022,North America,United States of America,Policymaker,Government agency,2020
+835,Female,2022,North America,Canada,Academic or researcher,University/Research Inst.,2020
+836,Female,2022,North America,United States of America,Academic or researcher,University/Research Inst.,2020
+837,Male,2022,North America,Canada,Technologist,University/Research Inst.,2020
+840,Male,2022,Oceania,Australia,Academic or researcher,University/Research Inst.,2020
+841,Female,2022,Oceania,Australia,Technologist,Tech company,2020
+843,Male,2022,North America,United States of America,Investor or funder,Private (non-tech),2020
+844,Male,2022,Europe,United Kingdom,Technologist,Tech company,2020
+845,Male,2022,Europe,Bulgaria,Conservation practitioner,Conservation NGO,2022
+846,Male,2022,North America,United States of America,Academic or researcher,University/Research Inst.,2020
+847,Male,2022,Europe,France,Conservation practitioner,Government agency,2020
+848,Male,2022,North America,United States of America,Academic or researcher,Tech company,2020
+849,Male,2022,Oceania,New Zealand,Conservation practitioner,Conservation NGO,2020
+850,Male,2022,Oceania,Australia,Technologist,Tech company,2020
+851,Male,2022,Latin America,Belize,Academic or researcher,Conservation NGO,2021
+852,Female,2022,Oceania,Australia,Conservation practitioner,Government agency,2020
+853,Male,2022,Oceania,Australia,Conservation practitioner,Private (non-tech),2020
+854,Male,2022,Asia,Philippines,Conservation practitioner,Conservation NGO,2020
+855,Male,2022,Europe,Greece,Technologist,Tech company,2020
+856,Female,2022,Africa,Namibia,Academic or researcher,University/Research Inst.,2020
+857,Male,2022,Europe,Spain,Conservation practitioner,University/Research Inst.,2020
+860,Male,2022,Europe,United Kingdom,Conservation practitioner,Private (non-tech),2020
+861,Male,2022,Latin America,Costa Rica,Academic or researcher,University/Research Inst.,2021
+862,Male,2022,Oceania,Australia,Academic or researcher,Private (non-tech),2020
+863,Male,2022,Europe,United Kingdom,Technologist,Tech company,2020
+864,Male,2022,Oceania,New Zealand,Academic or researcher,Private (non-tech),2020
+865,Male,2022,Europe,Spain,Conservation practitioner,Conservation NGO,2020
+866,Male,2022,Europe,Spain,Policymaker,Government agency,2020
+868,Female,2022,Africa,Kenya,Academic or researcher,Government agency,2020
+872,Male,2022,Oceania,Australia,Academic or researcher,University/Research Inst.,2020
+873,Female,2022,North America,Canada,Technologist,Tech company,2020
+874,Female,2022,Europe,Ireland,Academic or researcher,University/Research Inst.,2022
+877,Female,2022,North America,Canada,Conservation practitioner,Private (non-tech),2020
+881,Male,2022,Europe,United Kingdom,Academic or researcher,University/Research Inst.,2020
+882,Female,2022,Oceania,Australia,Academic or researcher,University/Research Inst.,2020
+883,Male,2022,Africa,Zimbabwe,Technologist,Tech company,2020
