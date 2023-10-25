@@ -14,6 +14,8 @@ def load_data(filename):
     return pd.read_csv(filename)
 demographics = load_data('Input files/demographics.csv')
 proficiency = load_data('Input files/proficiency.csv')
+percentage_pie = load_data('Input files/percentage_pie.csv')
+proficiency_pie = load_data('Input files/proficiency_pie.csv')
 
 @st.cache_data
 def load_geodata(filename):
@@ -23,8 +25,8 @@ map = load_geodata('Input files/map.gpkg')
 
 #demographics = pd.read_excel('Input files/demographics.xlsx')
 #proficiency = pd.read_excel('Input files/proficiency.xlsx')
-percentage_pie = pd.read_excel('Input files/percentage_pie.xlsx')
-proficiency_pie = pd.read_excel('Input files/proficiency_pie.xlsx')
+#percentage_pie = pd.read_excel('Input files/percentage_pie.xlsx')
+#proficiency_pie = pd.read_excel('Input files/proficiency_pie.xlsx')
 uconst = pd.read_excel('Input files/uconst.xlsx')
 dconst = pd.read_excel('Input files/dconst.xlsx')
 chal = pd.read_excel('Input files/chal.xlsx')
