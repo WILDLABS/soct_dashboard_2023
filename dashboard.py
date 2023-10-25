@@ -355,9 +355,7 @@ fig_max_year = px.pie(
         'Respondents using technology' : '#0C4E6F',
         'Respondents not using technology' : '#13C2FF'
     },
-    hole=0.6,
-    texttemplate="%{percent:.1%}",
-    textposition="inside"
+    hole=0.6
 )
 
 # Create a subplot layout and add individual pie charts
@@ -379,8 +377,8 @@ fig.update_layout(
 )
 
 # Add year annotations
-fig.add_annotation(x=0.22, y=0.5, text="2020", font=dict(size=18, color='black'), showarrow=False)
-fig.add_annotation(x=0.82, y=0.5, text=f"{filtered_data['year'].max()}", font=dict(size=18, color='black'), showarrow=False)
+fig.add_annotation(x=0.1, y=0.1, text="2020", font=dict(size=18, color='black'), showarrow=False)
+fig.add_annotation(x=0.9, y=0.1, text=f"{filtered_data['year'].max()}", font=dict(size=18, color='black'), showarrow=False)
 
 st.plotly_chart(fig, use_container_width=True)
 
