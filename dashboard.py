@@ -100,7 +100,7 @@ st.markdown('Regarding geographic reach, most respondents indicated residing in 
 ############################################################
 ### Map plot
 ############################################################
-@st.cache_data
+@st.cache_data(hash_funcs={matplotlib.figure.Figure: lambda _: None})
 def map_plot(map):
 
     # Define the custom colors for each region
