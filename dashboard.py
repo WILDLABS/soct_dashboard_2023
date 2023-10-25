@@ -99,9 +99,9 @@ st.markdown('Regarding geographic reach, most respondents indicated residing in 
 
 # Define the custom colors for each region
 color_mapping = {
-    2020: '#68BDE4',
-    2021: '#0E87BE',
-    2022: '#04425F',
+    '2020': '#68BDE4',
+    '2021': '#0E87BE',
+    '2022': '#04425F',
     'Other': 'lightgray'
 }
 
