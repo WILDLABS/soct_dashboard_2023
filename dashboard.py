@@ -375,6 +375,8 @@ config_settings = {
 color_values = ['#E1E1E1', '#C7C7C7', '#B9B9B9', '#B0B0B0', '#A0A0A0', '#969696',  '#F42A00', '#D32A00', '#9F2A00']
 ranking_order = chal['ranking'].unique().tolist()
 
+chal['ranking'] = chal['ranking'].astype(str)
+
 color_map = {ranking: color for ranking, color in zip(ranking_order, color_values)}
 
 plots = {}  # Dictionary to store the plots
@@ -388,29 +390,30 @@ for year in years:
     fig = px.bar(filtered_data,
                  x='percentage',
                  y='chal',
-                 #color='ranking',
+                 color='ranking',
                  orientation='h',
-                 category_orders={"chal": chal_order}
+                 category_orders={"chal": chal_order},
+                 color_discrete_map=color_map
                  )
 
     # Update layout
-    # fig.update_layout(
-    #     showlegend=True,
-    #     legend_title_text='Ranking',
-    #     xaxis_title='',
-    #     yaxis_title='',
-    #     font=dict(size=16),
-    #     xaxis=dict(
-    #         tickvals=list(range(0, 101, 20)),
-    #         ticktext=[f"{i}%" for i in range(0, 101, 20)],
-    #         range=[0, 100],
-    #         title_standoff=12,
-    #         tickfont=dict(size=10)
-    #     ),
-    #     yaxis=dict(tickfont=dict(size=12)),
-    #     title=f'Sector-wide challenges for {year}',
-    #     title_x=0.39
-    # )
+    fig.update_layout(
+        showlegend=True,
+        legend_title_text='Ranking',
+        xaxis_title='',
+        yaxis_title='',
+        font=dict(size=16),
+        xaxis=dict(
+            tickvals=list(range(0, 101, 20)),
+            ticktext=[f"{i}%" for i in range(0, 101, 20)],
+            range=[0, 100],
+            title_standoff=12,
+            tickfont=dict(size=10)
+        ),
+        yaxis=dict(tickfont=dict(size=12)),
+        title=f'Sector-wide challenges for {year}',
+        title_x=0.39
+    )
 
     # Store the plot to the dictionary with the key 'year'
     plots[f'challenges{year}'] = fig
