@@ -378,8 +378,8 @@ fig.update_layout(
 )
 
 # Add year annotations
-fig.add_annotation(x=0.15, y=0.5, text="Year 2020", font=dict(size=16, color='black'), showarrow=False)
-fig.add_annotation(x=0.75, y=0.5, text=f"Year {filtered_data['year'].max()}", font=dict(size=16, color='black'), showarrow=False)
+fig.add_annotation(x=0.18, y=0.5, text="Year 2020", font=dict(size=16, color='black'), showarrow=False)
+fig.add_annotation(x=0.79, y=0.5, text=f"Year {filtered_data['year'].max()}", font=dict(size=16, color='black'), showarrow=False)
 
 st.plotly_chart(fig, use_container_width=True)
 
