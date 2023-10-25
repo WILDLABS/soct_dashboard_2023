@@ -1,18 +1,18 @@
 #import and load packages
 import pandas as pd
 import streamlit as st
-import numpy as np
-from plotnine import ggplot, aes, geom_bar, scale_y_continuous, geom_text, coord_flip, theme, element_text, labs, scale_fill_manual, theme_minimal, geom_point, geom_line, position_stack, theme_light, theme_linedraw, element_rect
+from plotnine import ggplot, aes, geom_bar, scale_y_continuous, geom_text, coord_flip, theme, element_text, labs, scale_fill_manual, theme_minimal, geom_point, geom_line, position_stack, element_rect
 import matplotlib.pyplot as plt
 import geopandas as gpd
 import plotly.express as px
 import matplotlib.patches as mpatches
-from streamlit_extras.dataframe_explorer import dataframe_explorer
+from plotly.subplots import make_subplots
 
 #import the data
 demographics = pd.read_excel('Input files/demographics.xlsx')
 proficiency = pd.read_excel('Input files/proficiency.xlsx')
-proficiency_pivot = pd.read_excel('Input files/proficiency_pivot.xlsx')
+percentage_pie = pd.read_excel('Input files/percentage_pie.xlsx')
+proficiency_pie = pd.read_excel('Input files/proficiency_pie.xlsx')
 uconst = pd.read_excel('Input files/uconst.xlsx')
 dconst = pd.read_excel('Input files/dconst.xlsx')
 chal = pd.read_excel('Input files/chal.xlsx')
@@ -313,32 +313,82 @@ st.pyplot(ggplot.draw(profplot))
 
 st.caption('*Note: Multiple technologies could be indicated  \n PA mgmt tools = Protected Area Management tools; eDNA = environmental DNA; ML = machine learning;  \n Average proficiency = mean score on a scale from 1-5, with 1 being ‘novice’ and 5 being ‘expert, rescaled to 10% of original value*')
 
-st.markdown('Explore what percentage of respondents used these technologies yearly, and what the average corresponding proficiency levels were, by utilizing the filters on the below table.')
+st.markdown('Explore what percentage of respondents used these technologies in 2020 and 2022, and what the average corresponding proficiency levels were, by utilizing the filters on the pie charts.')
 
-technologies = proficiency_pivot['Technology'].unique().tolist()
+############################################################
+### Proficiency yearly pie charts
+############################################################
+
+technologies = proficiency_pie['technology'].unique().tolist()
 
 choice = st.selectbox('Conservation technology', technologies)
 
 ############################################################
-### Proficiency yearly pivot
+### Users
 ############################################################
-# Formatting another way
-proficiency_pivot['Year'] = "Y " + proficiency_pivot['Year'].astype(str)
-proficiency_pivot["Share of users (%)"] = proficiency_pivot["Share of users (%)"].apply(lambda x: f"{x:.1%}")
-proficiency_pivot["Highly proficient users (%)"] = proficiency_pivot["Highly proficient users (%)"].apply(lambda x: f"{x:.1%}")
 
-# st.table(proficiency_pivot.assign(hack='').set_index('hack'))
+filtered_data = percentage_pie[percentage_pie['technology'] == choice]
 
-# dataframe = proficiency_pivot
-# dataframe = dataframe.style.format({"Share of users (%)": "{:.1%}",
-#                                     "Highly proficient users (%)": "{:.1%}"})
+# Filter data for the years of interest
+year_2020_data = filtered_data[filtered_data['year'] == 2020]
+max_year_data = filtered_data[filtered_data['year'] == filtered_data['year'].max()]
 
-filtered_df = dataframe_explorer(proficiency_pivot, case=False)
+# Create individual pie charts for each year
+fig_2020 = px.pie(
+    year_2020_data,
+    values='percentage_values',
+    names='percentage_type',
+    color='percentage_type',
+    color_discrete_map={
+        'Respondents using technology' : '#0C4E6F',
+        'Respondents not using technology' : '#13C2FF'
+    },
+    hole=0.6
+)
 
-st.dataframe(filtered_df, use_container_width=True)
+fig_max_year = px.pie(
+    max_year_data,
+    values='percentage_values',
+    names='percentage_type',
+    color='percentage_type',
+    color_discrete_map={
+        'Respondents using technology' : '#0C4E6F',
+        'Respondents not using technology' : '#13C2FF'
+    },
+    hole=0.6
+)
 
-# year = proficiency_pivot['Year'].drop_duplicates()
-# year_choice = st.sidebar.selectbox('Select Year:', year)
+# Create a subplot layout and add individual pie charts
+fig = make_subplots(rows=1, cols=2, specs=[[{'type': 'pie'}, {'type': 'pie'}]])
+fig.add_trace(fig_2020.data[0], row=1, col=1)
+fig.add_trace(fig_max_year.data[0], row=1, col=2)
+
+# Customize layout and annotations
+fig.update_traces(hovertemplate="<b>%{label}</b> <br>" +
+                                 "%{value:,.1%} <br>" +
+                                 "<extra></extra>",
+                showlegend = False,
+                sort = False)
+
+
+fig.update_layout(
+    title_text='<b>Share of users (%)</b>',
+    title_font=dict(size=16, color='black')
+)
+
+# Add year annotations
+fig.add_annotation(x=0.15, y=0.5, text="Year 2020", font=dict(size=16, color='black'), showarrow=False)
+fig.add_annotation(x=0.85, y=0.5, text=f"Year {filtered_data['year'].max()}", font=dict(size=16, color='black'), showarrow=False)
+
+st.plotly_chart(fig, use_container_width=True, config=config_settings)
+
+
+############################################################
+### Proficiency
+############################################################
+
+
+
 
 st.subheader(':blue[Performance versus potential]')
 
@@ -686,7 +736,7 @@ st.markdown('**WILD**LABS is committed to making our global community and progra
 
 st.markdown('<div style="text-align: center;"><a href="https://colostate.az1.qualtrics.com/jfe/form/SV_e5kiopCmrZXX1KS" target="_blank">Take the WILDLABS Conservation Tech Survey 2023</a></div>', unsafe_allow_html=True)
 
-st.markdown('   \n  \nBeyond our State of Conservation Technology research, **WILD**LABS is also delivering a growing suite of programs that advance progress toward our vision of conservation efforts everywhere benefiting fully from accessible, affordable, and effective modern technology innovations. These programs span our three pillars: 1) Community, focused on bringing people together and making information discoverable, 2) Research, aiming to identify evolving needs and opportunities in the space, and 3) Resourcing, working to build strategic partnerships that unlock cross-sector resources that answer collective needs. Find out more about the evolution of **WILD**LABS’ work in our latest <a href="https://wildlabs.net/article/read-2022-wildlabs-annual-report" target="_blank">Annual Report</a> or by joining us in the <a href="https://wildlabs.net/" target="_blank">community</a>.  \n  \nWe are a non-profit partnership led by a dedicated global team and a Steering Committee comprised of representatives from Conservation International, Fauna & Flora, the Wildlife Conservation Society, and World Wildlife Fund. There are a number of ways to <a href="https://wildlabs.net/support-wildlabs" target="_blank">support our growing community</a>, including by joining it!', unsafe_allow_html=True)
+st.markdown('Beyond our State of Conservation Technology research, **WILD**LABS is also delivering a growing suite of programs that advance progress toward our vision of conservation efforts everywhere benefiting fully from accessible, affordable, and effective modern technology innovations. These programs span our three pillars: 1) Community, focused on bringing people together and making information discoverable, 2) Research, aiming to identify evolving needs and opportunities in the space, and 3) Resourcing, working to build strategic partnerships that unlock cross-sector resources that answer collective needs. Find out more about the evolution of **WILD**LABS’ work in our latest <a href="https://wildlabs.net/article/read-2022-wildlabs-annual-report" target="_blank">Annual Report</a> or by joining us in the <a href="https://wildlabs.net/" target="_blank">community</a>.  \n  \nWe are a non-profit partnership led by a dedicated global team and a Steering Committee comprised of representatives from Conservation International, Fauna & Flora, the Wildlife Conservation Society, and World Wildlife Fund. There are a number of ways to <a href="https://wildlabs.net/support-wildlabs" target="_blank">support our growing community</a>, including by joining it!', unsafe_allow_html=True)
 
 st.divider()
 st.header(':blue[Acknowledgments]')\
