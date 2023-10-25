@@ -695,7 +695,7 @@ def open_page(url):
     """ % (url)
     html(open_script)
 
-st.button('Take the WILDLABS Conservation Tech Survey 2023', on_click=open_page, args=('https://colostate.az1.qualtrics.com/jfe/form/SV_e5kiopCmrZXX1KS',))
+st.button('Take the WILDLABS Conservation Tech Survey 2023', on_click=open_page('https://colostate.az1.qualtrics.com/jfe/form/SV_e5kiopCmrZXX1KS'))
 
 st.markdown('Beyond our State of Conservation Technology research, **WILD**LABS is also delivering a growing suite of programs that advance progress toward our vision of conservation efforts everywhere benefiting fully from accessible, affordable, and effective modern technology innovations. These programs span our three pillars: 1) Community, focused on bringing people together and making information discoverable, 2) Research, aiming to identify evolving needs and opportunities in the space, and 3) Resourcing, working to build strategic partnerships that unlock cross-sector resources that answer collective needs. Find out more about the evolution of **WILD**LABS’ work in our latest <a href="https://wildlabs.net/article/read-2022-wildlabs-annual-report" target="_blank">Annual Report</a> or by joining us in the <a href="https://wildlabs.net/" target="_blank">community</a>.  \n  \nWe are a non-profit partnership led by a dedicated global team and a Steering Committee comprised of representatives from Conservation International, Fauna & Flora, the Wildlife Conservation Society, and World Wildlife Fund. There are a number of ways to <a href="https://wildlabs.net/support-wildlabs" target="_blank">support our growing community</a>, including by joining it!', unsafe_allow_html=True)
 
