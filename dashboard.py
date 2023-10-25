@@ -355,7 +355,6 @@ fig_max_year = px.pie(
         'Respondents using technology' : '#0C4E6F',
         'Respondents not using technology' : '#13C2FF'
     },
-    title='Test',
     hole=0.6
 )
 
@@ -379,7 +378,7 @@ fig.update_layout(
 
 # Add year annotations
 fig.add_annotation(x=0.18, y=0.5, text="Year 2020", font=dict(size=16, color='black'), showarrow=False)
-fig.add_annotation(x=0.79, y=0.5, text=f"Year {filtered_data['year'].max()}", font=dict(size=16, color='black'), showarrow=False)
+fig.add_annotation(x=0.82, y=0.5, text=f"Year {filtered_data['year'].max()}", font=dict(size=16, color='black'), showarrow=False)
 
 st.plotly_chart(fig, use_container_width=True)
 
@@ -388,6 +387,58 @@ st.plotly_chart(fig, use_container_width=True)
 ### Proficiency
 ############################################################
 
+filtered_data = proficiency_pie[proficiency_pie['technology'] == choice]
+# Filter data for the years of interest
+year_2020_data = filtered_data[filtered_data['year'] == 2020]
+max_year_data = filtered_data[filtered_data['year'] == filtered_data['year'].max()]
+
+# Create individual pie charts for each year
+fig_2020 = px.pie(
+    year_2020_data,
+    values='prof_values',
+    names='proficiency',
+    color='proficiency',
+    color_discrete_map={
+        'Highly proficient respondents' : '#BD6A31',
+        'Respondents with average or low proficiency' : '#FF9845'
+    },
+    hole=0.6
+)
+
+fig_max_year = px.pie(
+    max_year_data,
+    values='prof_values',
+    names='proficiency',
+    color='proficiency',
+    color_discrete_map={
+        'Highly proficient respondents' : '#BD6A31',
+        'Respondents with average or low proficiency' : '#FF9845'
+    },
+    hole=0.6
+)
+
+# Create a subplot layout and add individual pie charts
+fig = make_subplots(rows=1, cols=2, specs=[[{'type': 'pie'}, {'type': 'pie'}]])
+fig.add_trace(fig_2020.data[0], row=1, col=1)
+fig.add_trace(fig_max_year.data[0], row=1, col=2)
+
+# Customize layout and annotations
+fig.update_traces(hovertemplate="<b>%{label}</b> <br>" +
+                                 "%{value:,.1%} <br>" +
+                                 "<extra></extra>",
+                showlegend=False,
+                sort=False)
+
+fig.update_layout(
+    title_text=f'<b>Share of highly proficient users, {choice} (%)</b>',
+    title_font=dict(size=16, color='black')
+)
+
+# Add year annotations
+fig.add_annotation(x=0.18, y=0.5, text="Year 2020", font=dict(size=16, color='black'), showarrow=False)
+fig.add_annotation(x=0.83, y=0.5, text=f"Year {filtered_data['year'].max()}", font=dict(size=16, color='black'), showarrow=False)
+
+st.plotly_chart(fig, use_container_width=True)
 
 
 
