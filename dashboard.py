@@ -55,43 +55,40 @@ st.caption('*\*Note: incomplete answers below a certain threshold were filtered 
 ### Gender plot
 ############################################################
 
-def gender_plot(demographics):
 # Filter the DataFrame by gender values of 1 and 0
-    filtered_df = demographics[demographics['sc_gender'].isin(['Male', 'Female'])]
+filtered_df = demographics[demographics['sc_gender'].isin(['Male', 'Female'])]
 
-    # Calculate the percentage of each gender value per year
-    df_summary = filtered_df.groupby(['year', 'sc_gender']).size().reset_index(name='count')
-    df_summary['percentage'] = df_summary.groupby('year')['count'].transform(lambda x: x / x.sum() * 100).round(1)
-    df_summary['percentage2'] = df_summary['percentage'].astype(str) + '%'
+# Calculate the percentage of each gender value per year
+df_summary = filtered_df.groupby(['year', 'sc_gender']).size().reset_index(name='count')
+df_summary['percentage'] = df_summary.groupby('year')['count'].transform(lambda x: x / x.sum() * 100).round(1)
+df_summary['percentage2'] = df_summary['percentage'].astype(str) + '%'
 
-    genderplot = (ggplot(df_summary, aes(y='percentage', x='factor(year)', fill='factor(sc_gender)')) +
-                geom_bar(stat='identity', width=0.5) +
-                geom_text(
+genderplot = (ggplot(df_summary, aes(y='percentage', x='factor(year)', fill='factor(sc_gender)')) +
+            geom_bar(stat='identity', width=0.5) +
+            geom_text(
                     aes(label='percentage2'), 
                     position=position_stack(vjust=0.5), 
                     color='white',
                     size=8) +
-                coord_flip() +
-                labs(
+            coord_flip() +
+            labs(
                     title = 'Gender distribution for respondents across the years',
                     x='', 
                     y='Percentage of respondents', 
                     fill='Gender'
                     ) +
-                scale_y_continuous(labels=lambda l: ['{:.0f}%'.format(val) for val in l]) +
-                scale_fill_manual(values=['#DD7E3B', '#0E87BE']) +
-                theme_minimal() +
-                theme(
+            scale_y_continuous(labels=lambda l: ['{:.0f}%'.format(val) for val in l]) +
+            scale_fill_manual(values=['#DD7E3B', '#0E87BE']) +
+            theme_minimal() +
+            theme(
                     axis_text=element_text(size=8, color="#423f3f"),
                     plot_title=element_text(size=11, color="#423f3f",  face="bold", hjust=0.5),
                     axis_title_y=element_text(size=10, colour="#423f3f"),
                     plot_background = element_rect(fill = "white",color='white'),
                     panel_background = element_rect(fill = "white",color='white')
                     )
-                )
-    return genderplot
+            )
 
-genderplot = gender_plot(demographics)
 
 st.pyplot(ggplot.draw(genderplot))
 
@@ -100,40 +97,36 @@ st.markdown('Regarding geographic reach, most respondents indicated residing in 
 ############################################################
 ### Map plot
 ############################################################
-@st.cache_data(hash_funcs={matplotlib.figure.Figure: lambda _: None})
-def map_plot(map):
 
-    # Define the custom colors for each region
-    color_mapping = {
-        '2020': '#68BDE4',
-        '2021': '#0E87BE',
-        '2022': '#04425F',
-        'Other': 'lightgray'
-    }
+# Define the custom colors for each region
+color_mapping = {
+    '2020': '#68BDE4',
+    '2021': '#0E87BE',
+    '2022': '#04425F',
+    'Other': 'lightgray'
+}
 
-    # Plot the world map with colored countries based on the region
-    fig, ax = plt.subplots(figsize=(10, 6))
-    plt.rcParams['font.family'] = 'sans serif'
-    map.plot(column='sc_count_novel', linewidth=0.4, ax=ax, edgecolor='0.8', legend=True, color=[color_mapping.get(region, 'lightgrey') for region in map['sc_count_novel']])
+# Plot the world map with colored countries based on the region
+fig, ax = plt.subplots(figsize=(10, 6))
+plt.rcParams['font.family'] = 'sans serif'
+map.plot(column='sc_count_novel', linewidth=0.4, ax=ax, edgecolor='0.8', legend=True, color=[color_mapping.get(region, 'lightgrey') for region in map['sc_count_novel']])
 
 
-    # Add the first legend for the color mapping
-    legend_colors = [mpatches.Patch(color=color_mapping[region], label=region) for region in color_mapping]
-    ax.legend(handles=legend_colors, title='First app.')
-    ax.spines['top'].set_visible(False)
-    ax.spines['right'].set_visible(False)
-    ax.spines['bottom'].set_visible(False)
-    ax.spines['left'].set_visible(False)
-    ax.tick_params(axis='both', which='both', length=0)
+# Add the first legend for the color mapping
+legend_colors = [mpatches.Patch(color=color_mapping[region], label=region) for region in color_mapping]
+ax.legend(handles=legend_colors, title='First app.')
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+ax.spines['bottom'].set_visible(False)
+ax.spines['left'].set_visible(False)
+ax.tick_params(axis='both', which='both', length=0)
 
-    ax.set_xticks([])
-    ax.set_yticks([])
+ax.set_xticks([])
+ax.set_yticks([])
 
-    # Set plot title
-    ax.set_title('Expansion of countries from 2020 to 2022', fontsize=12, weight='bold')
-    return fig
+# Set plot title
+ax.set_title('Expansion of countries from 2020 to 2022', fontsize=12, weight='bold')
 
-fig = map_plot(map)
 # Display the plot using Streamlit
 st.pyplot(fig)
 
