@@ -394,23 +394,23 @@ for year in years:
                  )
 
     # Update layout
-    fig.update_layout(
-        showlegend=True,
-        legend_title_text='Ranking',
-        xaxis_title='',
-        yaxis_title='',
-        font=dict(size=16),
-        xaxis=dict(
-            tickvals=list(range(0, 101, 20)),
-            ticktext=[f"{i}%" for i in range(0, 101, 20)],
-            range=[0, 100],
-            title_standoff=12,
-            tickfont=dict(size=10)
-        ),
-        yaxis=dict(tickfont=dict(size=12)),
-        title=f'Sector-wide challenges for {year}',
-        title_x=0.39
-    )
+    # fig.update_layout(
+    #     showlegend=True,
+    #     legend_title_text='Ranking',
+    #     xaxis_title='',
+    #     yaxis_title='',
+    #     font=dict(size=16),
+    #     xaxis=dict(
+    #         tickvals=list(range(0, 101, 20)),
+    #         ticktext=[f"{i}%" for i in range(0, 101, 20)],
+    #         range=[0, 100],
+    #         title_standoff=12,
+    #         tickfont=dict(size=10)
+    #     ),
+    #     yaxis=dict(tickfont=dict(size=12)),
+    #     title=f'Sector-wide challenges for {year}',
+    #     title_x=0.39
+    # )
 
     # Store the plot to the dictionary with the key 'year'
     plots[f'challenges{year}'] = fig
