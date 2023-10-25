@@ -9,12 +9,12 @@ import matplotlib.patches as mpatches
 from plotly.subplots import make_subplots
 
 #import the data
-@st.cache_data
+
 def load_data(filename):
     return pd.read_csv(filename)
 #demographics = load_data('Input files/demographics.csv')
 
-@st.cache_data
+
 def load_geodata(filename):
     return gpd.read_file(filename)
 
