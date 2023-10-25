@@ -372,13 +372,13 @@ fig.update_traces(hovertemplate="<b>%{label}</b> <br>" +
 
 
 fig.update_layout(
-    title_text='<b>Share of users (%)</b>',
+    title_text='<b>Share of users, {choice} (%)</b>',
     title_font=dict(size=16, color='black')
 )
 
 # Add year annotations
-fig.add_annotation(x=0.15, y=0.5, text="Year 2020", font=dict(size=16, color='black'), showarrow=False)
-fig.add_annotation(x=0.85, y=0.5, text=f"Year {filtered_data['year'].max()}", font=dict(size=16, color='black'), showarrow=False)
+fig.add_annotation(x=0.25, y=0.5, text="Year 2020", font=dict(size=16, color='black'), showarrow=False)
+fig.add_annotation(x=0.75, y=0.5, text=f"Year {filtered_data['year'].max()}", font=dict(size=16, color='black'), showarrow=False)
 
 st.plotly_chart(fig, use_container_width=True)
 
