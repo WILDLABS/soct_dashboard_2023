@@ -388,7 +388,7 @@ for year in years:
     fig = px.bar(filtered_data,
                  x='percentage',
                  y='chal',
-                 color='ranking',
+                 #color='ranking',
                  orientation='h',
                  category_orders={"chal": chal_order}
                  )
