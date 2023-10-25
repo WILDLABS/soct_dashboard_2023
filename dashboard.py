@@ -373,8 +373,8 @@ config_settings = {
 # Define custom order and color mapping
 chal['ranking'] = chal['ranking'].astype(str)
 
-color_values = ['#E1E1E1', '#C7C7C7', '#B9B9B9', '#B0B0B0', '#A0A0A0', '#969696',  '#F42A00', '#D32A00', '#9F2A00']
 ranking_order = chal['ranking'].unique().tolist()
+color_values = px.colors.sequential.GnBu[len(ranking_order)]
 
 color_map = {ranking: color for ranking, color in zip(ranking_order, color_values)}
 
@@ -385,19 +385,14 @@ for year in years:
     filtered_data = chal[chal['year'] == year]
     chal_order = filtered_data['chal'].tolist()
 
-    # Convert ranking to a continuous scale between 0 and 1
-    max_ranking = filtered_data['ranking'].max()
-    filtered_data['color_scale'] = filtered_data['ranking'] / max_ranking
-
-
     # Create the bar chart
     fig = px.bar(filtered_data,
                  x='percentage',
                  y='chal',
-                 color='color_scale',
+                 color='ranking',
                  orientation='h',
                  category_orders={"chal": chal_order},
-                 color_continuous_scale='GnBu',
+                 color_discrete_map=color_map,
                  custom_data=[filtered_data['ranking']]
                  )
     fig.update_traces(hovertemplate="<b>%{y}</b> <br>" +
