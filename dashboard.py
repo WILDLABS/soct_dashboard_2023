@@ -108,7 +108,7 @@ color_mapping = {
 # Plot the world map with colored countries based on the region
 fig, ax = plt.subplots(figsize=(10, 6))
 plt.rcParams['font.family'] = 'sans serif'
-demographics.plot(column='sc_count_novel', linewidth=0.4, ax=ax, edgecolor='0.8', legend=True, color=[color_mapping.get(region, 'lightgrey') for region in demographics['sc_count_novel']])
+demographics.plot(column='sc_count_novel', linewidth=0.4, ax=ax, legend=True, color=[color_mapping.get(region, 'lightgrey') for region in demographics['sc_count_novel']])
 
 
 # Add the first legend for the color mapping
