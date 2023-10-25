@@ -9,7 +9,7 @@ import matplotlib.patches as mpatches
 from plotly.subplots import make_subplots
 
 #import the data
-
+@st.cache_data
 def load_data(filename):
     return pd.read_csv(filename)
 demographics = load_data('Input files/demographics.csv')
@@ -25,6 +25,10 @@ def load_geodata(filename):
     return gpd.read_file(filename)
 
 map = load_geodata('Input files/map.gpkg')
+
+@st.cache_data
+def load_image(filename):
+    return gpd.read_file(filename)
 
 ########################
 st.image('Input images/cover.jpg')
@@ -50,39 +54,43 @@ st.caption('*\*Note: incomplete answers below a certain threshold were filtered 
 ############################################################
 ### Gender plot
 ############################################################
+def gender_plot(demographics):
 # Filter the DataFrame by gender values of 1 and 0
-filtered_df = demographics[demographics['sc_gender'].isin(['Male', 'Female'])]
+    filtered_df = demographics[demographics['sc_gender'].isin(['Male', 'Female'])]
 
-# Calculate the percentage of each gender value per year
-df_summary = filtered_df.groupby(['year', 'sc_gender']).size().reset_index(name='count')
-df_summary['percentage'] = df_summary.groupby('year')['count'].transform(lambda x: x / x.sum() * 100).round(1)
-df_summary['percentage2'] = df_summary['percentage'].astype(str) + '%'
+    # Calculate the percentage of each gender value per year
+    df_summary = filtered_df.groupby(['year', 'sc_gender']).size().reset_index(name='count')
+    df_summary['percentage'] = df_summary.groupby('year')['count'].transform(lambda x: x / x.sum() * 100).round(1)
+    df_summary['percentage2'] = df_summary['percentage'].astype(str) + '%'
 
-genderplot = (ggplot(df_summary, aes(y='percentage', x='factor(year)', fill='factor(sc_gender)')) +
-              geom_bar(stat='identity', width=0.5) +
-              geom_text(
-                  aes(label='percentage2'), 
-                  position=position_stack(vjust=0.5), 
-                  color='white',
-                  size=8) +
-              coord_flip() +
-              labs(
-                  title = 'Gender distribution for respondents across the years',
-                  x='', 
-                  y='Percentage of respondents', 
-                  fill='Gender'
-                  ) +
-              scale_y_continuous(labels=lambda l: ['{:.0f}%'.format(val) for val in l]) +
-              scale_fill_manual(values=['#DD7E3B', '#0E87BE']) +
-              theme_minimal() +
-              theme(
-                  axis_text=element_text(size=8, color="#423f3f"),
-                  plot_title=element_text(size=11, color="#423f3f",  face="bold", hjust=0.5),
-                  axis_title_y=element_text(size=10, colour="#423f3f"),
-                  plot_background = element_rect(fill = "white",color='white'),
-                  panel_background = element_rect(fill = "white",color='white')
-                  )
-              )
+    genderplot = (ggplot(df_summary, aes(y='percentage', x='factor(year)', fill='factor(sc_gender)')) +
+                geom_bar(stat='identity', width=0.5) +
+                geom_text(
+                    aes(label='percentage2'), 
+                    position=position_stack(vjust=0.5), 
+                    color='white',
+                    size=8) +
+                coord_flip() +
+                labs(
+                    title = 'Gender distribution for respondents across the years',
+                    x='', 
+                    y='Percentage of respondents', 
+                    fill='Gender'
+                    ) +
+                scale_y_continuous(labels=lambda l: ['{:.0f}%'.format(val) for val in l]) +
+                scale_fill_manual(values=['#DD7E3B', '#0E87BE']) +
+                theme_minimal() +
+                theme(
+                    axis_text=element_text(size=8, color="#423f3f"),
+                    plot_title=element_text(size=11, color="#423f3f",  face="bold", hjust=0.5),
+                    axis_title_y=element_text(size=10, colour="#423f3f"),
+                    plot_background = element_rect(fill = "white",color='white'),
+                    panel_background = element_rect(fill = "white",color='white')
+                    )
+                )
+    return genderplot
+
+genderplot = gender_plot(demographics)
 
 st.pyplot(ggplot.draw(genderplot))
 
