@@ -385,14 +385,19 @@ for year in years:
     filtered_data = chal[chal['year'] == year]
     chal_order = filtered_data['chal'].tolist()
 
+    # Convert ranking to a continuous scale between 0 and 1
+    max_ranking = filtered_data['ranking'].max()
+    filtered_data['color_scale'] = filtered_data['ranking'] / max_ranking
+
+
     # Create the bar chart
     fig = px.bar(filtered_data,
                  x='percentage',
                  y='chal',
-                 color='ranking',
+                 color='color_scale',
                  orientation='h',
                  category_orders={"chal": chal_order},
-                 color_discrete_map=color_map,
+                 color_continuous_scale='GnBu',
                  custom_data=[filtered_data['ranking']]
                  )
     fig.update_traces(hovertemplate="<b>%{y}</b> <br>" +
