@@ -423,7 +423,7 @@ for year in years:
         legend=dict(
             orientation="h",
             yanchor="bottom",
-            y=-0.35,
+            y=-0.36,
             xanchor="right",
             x=1)
     )
@@ -520,7 +520,7 @@ for year in years:
             yanchor="bottom",
             y=-0.56,
             xanchor="right",
-            x=1)
+            x=2)
     )
 
     # Store the plot to the dictionary with the key 'year'
@@ -618,9 +618,10 @@ for year in years:
         legend=dict(
             orientation="h",
             yanchor="bottom",
-            y=-0.55,
+            y=-0.56,
             xanchor="right",
-            x=1)
+            x=0
+            )
     )
 
     # Store the plot to the dictionary with the key 'year'
