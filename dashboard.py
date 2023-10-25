@@ -372,10 +372,10 @@ config_settings = {
 
 # Define custom order and color mapping
 
-# color_values = ['#E1E1E1', '#C7C7C7', '#B9B9B9', '#B0B0B0', '#A0A0A0', '#969696',  '#F42A00', '#D32A00', '#9F2A00']
-# ranking_order = chal['ranking'].unique().tolist()
+color_values = ['#E1E1E1', '#C7C7C7', '#B9B9B9', '#B0B0B0', '#A0A0A0', '#969696',  '#F42A00', '#D32A00', '#9F2A00']
+ranking_order = chal['ranking'].unique().tolist()
 
-# color_map = {ranking: color for ranking, color in zip(ranking_order, color_values)}
+color_map = {ranking: color for ranking, color in zip(ranking_order, color_values)}
 
 plots = {}  # Dictionary to store the plots
 
@@ -390,8 +390,7 @@ for year in years:
                  y='chal',
                  color='ranking',
                  orientation='h',
-                 category_orders={"chal": chal_order},
-                 color_continuous_scale="GnBu_r"
+                 category_orders={"chal": chal_order}
                  )
 
     # Update layout
@@ -666,7 +665,7 @@ st.markdown('**WILD**LABS is committed to making our global community and progra
 
 st.markdown('<div style="text-align: center;"><a href="https://colostate.az1.qualtrics.com/jfe/form/SV_e5kiopCmrZXX1KS" target="_blank">Take the WILDLABS Conservation Tech Survey 2023</a></div>', unsafe_allow_html=True)
 
-st.markdown('Beyond our State of Conservation Technology research, **WILD**LABS is also delivering a growing suite of programs that advance progress toward our vision of conservation efforts everywhere benefiting fully from accessible, affordable, and effective modern technology innovations. These programs span our three pillars: 1) Community, focused on bringing people together and making information discoverable, 2) Research, aiming to identify evolving needs and opportunities in the space, and 3) Resourcing, working to build strategic partnerships that unlock cross-sector resources that answer collective needs. Find out more about the evolution of **WILD**LABS’ work in our latest <a href="https://wildlabs.net/article/read-2022-wildlabs-annual-report" target="_blank">Annual Report</a> or by joining us in the <a href="https://wildlabs.net/" target="_blank">community</a>.  \n  \nWe are a non-profit partnership led by a dedicated global team and a Steering Committee comprised of representatives from Conservation International, Fauna & Flora, the Wildlife Conservation Society, and World Wildlife Fund. There are a number of ways to <a href="https://wildlabs.net/support-wildlabs" target="_blank">support our growing community</a>, including by joining it!', unsafe_allow_html=True)
+st.markdown('  \nBeyond our State of Conservation Technology research, **WILD**LABS is also delivering a growing suite of programs that advance progress toward our vision of conservation efforts everywhere benefiting fully from accessible, affordable, and effective modern technology innovations. These programs span our three pillars: 1) Community, focused on bringing people together and making information discoverable, 2) Research, aiming to identify evolving needs and opportunities in the space, and 3) Resourcing, working to build strategic partnerships that unlock cross-sector resources that answer collective needs. Find out more about the evolution of **WILD**LABS’ work in our latest <a href="https://wildlabs.net/article/read-2022-wildlabs-annual-report" target="_blank">Annual Report</a> or by joining us in the <a href="https://wildlabs.net/" target="_blank">community</a>.  \n  \nWe are a non-profit partnership led by a dedicated global team and a Steering Committee comprised of representatives from Conservation International, Fauna & Flora, the Wildlife Conservation Society, and World Wildlife Fund. There are a number of ways to <a href="https://wildlabs.net/support-wildlabs" target="_blank">support our growing community</a>, including by joining it!', unsafe_allow_html=True)
 
 st.divider()
 st.header(':blue[Acknowledgments]')\
