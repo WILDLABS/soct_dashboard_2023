@@ -1,0 +1,161 @@
+year,dconst,ranking,count,percentage,order
+2020,Continued funding,Critical constraint,25,24.3,1.0
+2020,Continued funding,Major constraint,44,42.7,1.0
+2020,Continued funding,Moderate constraint,17,16.5,1.0
+2020,Continued funding,Minor constraint,8,7.8,1.0
+2020,Continued funding,Not a constraint,9,8.7,1.0
+2020,Seed funding,Critical constraint,25,24.0,2.0
+2020,Seed funding,Major constraint,40,38.5,2.0
+2020,Seed funding,Moderate constraint,22,21.2,2.0
+2020,Seed funding,Minor constraint,10,9.6,2.0
+2020,Seed funding,Not a constraint,7,6.7,2.0
+2020,Understanding landscape,Critical constraint,10,9.3,3.0
+2020,Understanding landscape,Major constraint,24,22.4,3.0
+2020,Understanding landscape,Moderate constraint,37,34.6,3.0
+2020,Understanding landscape,Minor constraint,24,22.4,3.0
+2020,Understanding landscape,Not a constraint,12,11.2,3.0
+2020,Engineering challenges,Critical constraint,7,6.6,4.0
+2020,Engineering challenges,Major constraint,20,18.9,4.0
+2020,Engineering challenges,Moderate constraint,35,33.0,4.0
+2020,Engineering challenges,Minor constraint,30,28.3,4.0
+2020,Engineering challenges,Not a constraint,14,13.2,4.0
+2020,Lack of standards,Critical constraint,10,9.6,5.0
+2020,Lack of standards,Major constraint,20,19.2,5.0
+2020,Lack of standards,Moderate constraint,27,26.0,5.0
+2020,Lack of standards,Minor constraint,29,27.9,5.0
+2020,Lack of standards,Not a constraint,18,17.3,5.0
+2020,Accessing data,Critical constraint,10,9.5,6.0
+2020,Accessing data,Major constraint,13,12.4,6.0
+2020,Accessing data,Moderate constraint,32,30.5,6.0
+2020,Accessing data,Minor constraint,34,32.4,6.0
+2020,Accessing data,Not a constraint,16,15.2,6.0
+2020,Testing sites,Critical constraint,5,4.8,7.0
+2020,Testing sites,Major constraint,21,20.2,7.0
+2020,Testing sites,Moderate constraint,26,25.0,7.0
+2020,Testing sites,Minor constraint,31,29.8,7.0
+2020,Testing sites,Not a constraint,21,20.2,7.0
+2020,Conservation connections,Critical constraint,9,8.7,8.0
+2020,Conservation connections,Major constraint,19,18.3,8.0
+2020,Conservation connections,Moderate constraint,23,22.1,8.0
+2020,Conservation connections,Minor constraint,24,23.1,8.0
+2020,Conservation connections,Not a constraint,29,27.9,8.0
+2020,User data concerns,Critical constraint,4,3.8,9.0
+2020,User data concerns,Major constraint,16,15.2,9.0
+2020,User data concerns,Moderate constraint,29,27.6,9.0
+2020,User data concerns,Minor constraint,35,33.3,9.0
+2020,User data concerns,Not a constraint,21,20.0,9.0
+2020,Conservation challenges,Critical constraint,5,4.7,10.0
+2020,Conservation challenges,Major constraint,12,11.3,10.0
+2020,Conservation challenges,Moderate constraint,29,27.4,10.0
+2020,Conservation challenges,Minor constraint,35,33.0,10.0
+2020,Conservation challenges,Not a constraint,25,23.6,10.0
+2021,Continued funding,Critical constraint,20,28.6,1.0
+2021,Continued funding,Major constraint,18,25.7,1.0
+2021,Continued funding,Moderate constraint,21,30.0,1.0
+2021,Continued funding,Minor constraint,4,5.7,1.0
+2021,Continued funding,Not a constraint,7,10.0,1.0
+2021,Seed funding,Critical constraint,16,22.9,2.0
+2021,Seed funding,Major constraint,22,31.4,2.0
+2021,Seed funding,Moderate constraint,19,27.1,2.0
+2021,Seed funding,Minor constraint,5,7.1,2.0
+2021,Seed funding,Not a constraint,8,11.4,2.0
+2021,Engineering challenges,Critical constraint,4,5.7,3.0
+2021,Engineering challenges,Major constraint,18,25.7,3.0
+2021,Engineering challenges,Moderate constraint,31,44.3,3.0
+2021,Engineering challenges,Minor constraint,11,15.7,3.0
+2021,Engineering challenges,Not a constraint,6,8.6,3.0
+2021,Understanding landscape,Critical constraint,7,10.1,4.0
+2021,Understanding landscape,Major constraint,11,15.9,4.0
+2021,Understanding landscape,Moderate constraint,30,43.5,4.0
+2021,Understanding landscape,Minor constraint,11,15.9,4.0
+2021,Understanding landscape,Not a constraint,10,14.5,4.0
+2021,Lack of standards,Critical constraint,5,7.1,5.0
+2021,Lack of standards,Major constraint,14,20.0,5.0
+2021,Lack of standards,Moderate constraint,24,34.3,5.0
+2021,Lack of standards,Minor constraint,21,30.0,5.0
+2021,Lack of standards,Not a constraint,6,8.6,5.0
+2021,Supply chain,Critical constraint,5,7.1,6.0
+2021,Supply chain,Major constraint,8,11.4,6.0
+2021,Supply chain,Moderate constraint,25,35.7,6.0
+2021,Supply chain,Minor constraint,21,30.0,6.0
+2021,Supply chain,Not a constraint,11,15.7,6.0
+2021,User data concerns,Critical constraint,4,5.7,7.0
+2021,User data concerns,Major constraint,8,11.4,7.0
+2021,User data concerns,Moderate constraint,21,30.0,7.0
+2021,User data concerns,Minor constraint,26,37.1,7.0
+2021,User data concerns,Not a constraint,11,15.7,7.0
+2021,Accessing data,Critical constraint,3,4.3,8.0
+2021,Accessing data,Major constraint,5,7.2,8.0
+2021,Accessing data,Moderate constraint,30,43.5,8.0
+2021,Accessing data,Minor constraint,18,26.1,8.0
+2021,Accessing data,Not a constraint,13,18.8,8.0
+2021,Conservation connections,Critical constraint,9,12.9,9.0
+2021,Conservation connections,Major constraint,9,12.9,9.0
+2021,Conservation connections,Moderate constraint,10,14.3,9.0
+2021,Conservation connections,Minor constraint,23,32.9,9.0
+2021,Conservation connections,Not a constraint,19,27.1,9.0
+2021,Conservation challenges,Critical constraint,6,8.6,10.0
+2021,Conservation challenges,Major constraint,8,11.4,10.0
+2021,Conservation challenges,Moderate constraint,13,18.6,10.0
+2021,Conservation challenges,Minor constraint,24,34.3,10.0
+2021,Conservation challenges,Not a constraint,19,27.1,10.0
+2021,Testing sites,Critical constraint,3,4.3,11.0
+2021,Testing sites,Major constraint,7,10.0,11.0
+2021,Testing sites,Moderate constraint,21,30.0,11.0
+2021,Testing sites,Minor constraint,17,24.3,11.0
+2021,Testing sites,Not a constraint,22,31.4,11.0
+2022,Continued funding,Critical constraint,6,10.7,1.0
+2022,Continued funding,Major constraint,22,39.3,1.0
+2022,Continued funding,Moderate constraint,21,37.5,1.0
+2022,Continued funding,Minor constraint,3,5.4,1.0
+2022,Continued funding,Not a constraint,4,7.1,1.0
+2022,Seed funding,Critical constraint,11,19.6,2.0
+2022,Seed funding,Major constraint,13,23.2,2.0
+2022,Seed funding,Moderate constraint,18,32.1,2.0
+2022,Seed funding,Minor constraint,9,16.1,2.0
+2022,Seed funding,Not a constraint,5,8.9,2.0
+2022,Engineering challenges,Critical constraint,7,13.0,3.0
+2022,Engineering challenges,Major constraint,14,25.9,3.0
+2022,Engineering challenges,Moderate constraint,17,31.5,3.0
+2022,Engineering challenges,Minor constraint,12,22.2,3.0
+2022,Engineering challenges,Not a constraint,4,7.4,3.0
+2022,Lack of standards,Critical constraint,5,9.1,4.0
+2022,Lack of standards,Major constraint,19,34.5,4.0
+2022,Lack of standards,Moderate constraint,9,16.4,4.0
+2022,Lack of standards,Minor constraint,14,25.5,4.0
+2022,Lack of standards,Not a constraint,8,14.5,4.0
+2022,Supply chain,Critical constraint,7,13.0,5.0
+2022,Supply chain,Major constraint,10,18.5,5.0
+2022,Supply chain,Moderate constraint,19,35.2,5.0
+2022,Supply chain,Minor constraint,11,20.4,5.0
+2022,Supply chain,Not a constraint,7,13.0,5.0
+2022,Accessing data,Critical constraint,6,10.9,6.0
+2022,Accessing data,Major constraint,11,20.0,6.0
+2022,Accessing data,Moderate constraint,14,25.5,6.0
+2022,Accessing data,Minor constraint,22,40.0,6.0
+2022,Accessing data,Not a constraint,2,3.6,6.0
+2022,Understanding landscape,Critical constraint,8,14.5,7.0
+2022,Understanding landscape,Major constraint,9,16.4,7.0
+2022,Understanding landscape,Moderate constraint,14,25.5,7.0
+2022,Understanding landscape,Minor constraint,13,23.6,7.0
+2022,Understanding landscape,Not a constraint,11,20.0,7.0
+2022,Testing sites,Critical constraint,2,3.8,8.0
+2022,Testing sites,Major constraint,12,22.6,8.0
+2022,Testing sites,Moderate constraint,11,20.8,8.0
+2022,Testing sites,Minor constraint,16,30.2,8.0
+2022,Testing sites,Not a constraint,12,22.6,8.0
+2022,Conservation connections,Critical constraint,3,5.5,9.0
+2022,Conservation connections,Major constraint,12,21.8,9.0
+2022,Conservation connections,Moderate constraint,6,10.9,9.0
+2022,Conservation connections,Minor constraint,21,38.2,9.0
+2022,Conservation connections,Not a constraint,13,23.6,9.0
+2022,Conservation challenges,Critical constraint,3,5.5,10.0
+2022,Conservation challenges,Major constraint,5,9.1,10.0
+2022,Conservation challenges,Moderate constraint,16,29.1,10.0
+2022,Conservation challenges,Minor constraint,15,27.3,10.0
+2022,Conservation challenges,Not a constraint,16,29.1,10.0
+2022,User data concerns,Critical constraint,4,7.3,11.0
+2022,User data concerns,Major constraint,7,12.7,11.0
+2022,User data concerns,Moderate constraint,6,10.9,11.0
+2022,User data concerns,Minor constraint,24,43.6,11.0
+2022,User data concerns,Not a constraint,14,25.5,11.0
