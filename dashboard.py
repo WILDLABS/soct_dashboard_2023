@@ -56,7 +56,7 @@ st.caption('*\*Note: incomplete answers below a certain threshold were filtered 
 filtered_df = demographics[demographics['sc_gender'].isin(['Male', 'Female'])]
 
 # Calculate the percentage of each gender value per year
-df_summary = demographics.groupby(['year', 'sc_gender']).size().reset_index(name='count')
+df_summary = filtered_df.groupby(['year', 'sc_gender']).size().reset_index(name='count')
 df_summary['percentage'] = df_summary.groupby('year')['count'].transform(lambda x: x / x.sum() * 100).round(1)
 df_summary['percentage2'] = df_summary['percentage'].astype(str) + '%'
 
