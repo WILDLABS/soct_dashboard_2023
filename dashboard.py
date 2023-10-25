@@ -13,6 +13,7 @@ from plotly.subplots import make_subplots
 def load_data(filename):
     return pd.read_csv(filename)
 demographics = load_data('Input files/demographics.csv')
+proficiency = load_data('Input files/proficiency.csv')
 
 @st.cache_data
 def load_geodata(filename):
@@ -21,7 +22,7 @@ def load_geodata(filename):
 map = load_geodata('Input files/map.gpkg')
 
 #demographics = pd.read_excel('Input files/demographics.xlsx')
-proficiency = pd.read_excel('Input files/proficiency.xlsx')
+#proficiency = pd.read_excel('Input files/proficiency.xlsx')
 percentage_pie = pd.read_excel('Input files/percentage_pie.xlsx')
 proficiency_pie = pd.read_excel('Input files/proficiency_pie.xlsx')
 uconst = pd.read_excel('Input files/uconst.xlsx')
