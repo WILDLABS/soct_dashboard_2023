@@ -684,6 +684,8 @@ st.header(':blue[How can you get involved?]')\
 
 st.markdown('**WILD**LABS is committed to making our global community and programs as inclusive as possible. For our research program, this means ensuring that the collective voice we convey is increasingly reflecting currently underrepresented user and developer communities. One important way you all can help us do that is by participating in our annual surveys and sharing them widely throughout your networks with folks we may not already be reaching.  \n  \nTo help us continue to capture the most accurate picture possible of where conservation technology stands and what is needed, please take a few minutes to complete and share this year’s survey: ')
 
+st.link_button("Go to gallery", "https://streamlit.io/gallery")
+
 st.markdown('<div style="text-align: center;"><a href="https://colostate.az1.qualtrics.com/jfe/form/SV_e5kiopCmrZXX1KS" target="_blank">Take the WILDLABS Conservation Tech Survey 2023</a></div>', unsafe_allow_html=True)
 
 st.link_button("Take the WILDLABS Conservation Tech Survey 2023",'https://colostate.az1.qualtrics.com/jfe/form/SV_e5kiopCmrZXX1KS')
