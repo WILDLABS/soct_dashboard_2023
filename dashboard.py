@@ -374,7 +374,9 @@ config_settings = {
 chal['ranking'] = chal['ranking'].astype(str)
 
 ranking_order = chal['ranking'].unique().tolist()
-color_values = px.colors.sequential.GnBu[len(ranking_order)]
+num_colors = len(ranking_order)
+color_values = [px.colors.sequential.GnBu[i * (len(px.colors.sequential.GnBu) - 1) // (num_colors - 1)] for i in range(num_colors)]
+
 
 color_map = {ranking: color for ranking, color in zip(ranking_order, color_values)}
 
