@@ -151,6 +151,7 @@ st.markdown('For all years, survey participants most frequently reported working
 #Per year
 # Filter the DataFrame by the specified years
 years = demographics['year'].unique()
+demographics['sc_organization'] = demographics['sc_organization'].fillna(0)
 
 # Create an empty DataFrame to store the org counts
 org_counts = pd.DataFrame(index=demographics['sc_organization'].unique(), columns=years)
