@@ -9,7 +9,7 @@ import matplotlib.patches as mpatches
 from plotly.subplots import make_subplots
 
 #import the data
-@st.cache_data
+
 def load_data(filename):
     return pd.read_csv(filename)
 demographics = load_data('Input files/demographics.csv')
@@ -148,6 +148,7 @@ st.markdown('For all years, survey participants most frequently reported working
 ############################################################
 ### Org plot
 ############################################################
+st.write(demographics.dtypes)
 #Per year
 # Filter the DataFrame by the specified years
 years = demographics['year'].unique()
