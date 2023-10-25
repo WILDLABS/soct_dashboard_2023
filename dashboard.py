@@ -419,7 +419,13 @@ for year in years:
         ),
         yaxis=dict(tickfont=dict(size=12)),
         title=f'Sector-wide challenges for {year}',
-        title_x=0.39
+        title_x=0.39,
+        legend=dict(
+            orientation="h",
+            yanchor="bottom",
+            y=-0.6,
+            xanchor="right",
+            x=1)
     )
 
     # Store the plot to the dictionary with the key 'year'
@@ -512,7 +518,7 @@ for year in years:
         legend=dict(
             orientation="h",
             yanchor="bottom",
-            y=-0.5,
+            y=-0.7,
             xanchor="right",
             x=1)
     )
