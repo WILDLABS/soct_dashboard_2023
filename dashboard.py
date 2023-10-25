@@ -423,7 +423,7 @@ for year in years:
         legend=dict(
             orientation="h",
             yanchor="bottom",
-            y=-0.52,
+            y=-0.4,
             xanchor="right",
             x=1)
     )
@@ -518,7 +518,7 @@ for year in years:
         legend=dict(
             orientation="h",
             yanchor="bottom",
-            y=-0.53,
+            y=-0.58,
             xanchor="right",
             x=1)
     )
@@ -618,7 +618,7 @@ for year in years:
         legend=dict(
             orientation="h",
             yanchor="bottom",
-            y=-0.51,
+            y=-0.6,
             xanchor="right",
             x=1)
     )
