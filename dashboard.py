@@ -51,7 +51,7 @@ st.caption('*\*Note: incomplete answers below a certain threshold were filtered 
 ### Gender plot
 ############################################################
 # Filter the DataFrame by gender values of 1 and 0
-#filtered_df = demographics[demographics['sc_gender'].isin(['Male', 'Female'])]
+filtered_df = demographics[demographics['sc_gender'].isin(['Male', 'Female'])]
 
 # Calculate the percentage of each gender value per year
 df_summary = demographics.groupby(['year', 'sc_gender']).size().reset_index(name='count')
