@@ -54,7 +54,7 @@ st.caption('*\*Note: incomplete answers below a certain threshold were filtered 
 ############################################################
 ### Gender plot
 ############################################################
-@st.cache_data
+
 def gender_plot(demographics):
 # Filter the DataFrame by gender values of 1 and 0
     filtered_df = demographics[demographics['sc_gender'].isin(['Male', 'Female'])]
