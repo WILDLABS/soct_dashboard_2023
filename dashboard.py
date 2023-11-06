@@ -35,7 +35,7 @@ st.image('Input images/cover.jpg')
 
 st.header(':blue[About the research]')
 
-st.markdown('As global environmental challenges continue to escalate, understanding how to most effectively leverage modern technology innovations for conservation impact becomes increasingly critical. Each year, **WILD**LABS surveys the global conservation tech community to find out what you all are working on, what challenges you\'re facing, what support you need, and what you foresee on the horizon. Our aims in this research are to build an evidence base to share back with and support the community, to use the insights produced to create more informed and effective **WILD**LABS programmes, and to communicate shared priorities to influence policy and funding decisions that will benefit our sector as a whole.  \n  \nFor the State of Conservation Technology 2023 report, we\'ve built on our 2021 results to coduct a three-year trends analysis,  bringing you insights for the first time into how dynamics have been evolving across the community over time. By highlighting shifting opinions as well as stabilizing trends in technology usage, user and developer challenges, opportunities for growth, and more, we aimed to illuminate the most useful information for advancing the sector together in a more effective and inclusive way. As always, our hope with this research is to amplify a united voice to drive progress toward impactful solutions for the planet.')
+st.markdown('As global environmental challenges continue to escalate, understanding how to most effectively leverage modern technology innovations for conservation impact becomes increasingly critical. Each year, **WILD**LABS surveys the global conservation tech community to find out what you all are working on, what challenges you\'re facing, what support you need, and what you foresee on the horizon. Our aims in this research are to build an evidence base to share back with and support the community, to use the insights produced to create more informed and effective **WILD**LABS programs, and to communicate shared priorities to influence policy and funding decisions that will benefit our sector as a whole.  \n  \nFor the State of Conservation Technology 2023 report, we\'ve built on our 2021 results to conduct a three-year trends analysis,  bringing you insights for the first time into how dynamics have been evolving across the community over time. By highlighting shifting opinions as well as stabilizing trends in technology usage, user and developer challenges, opportunities for growth, and more, we aimed to illuminate the most useful information for advancing the sector together in a more effective and inclusive way. As always, our hope with this research is to amplify a united voice to drive progress toward impactful solutions for the planet.')
 
 st.divider()
 
@@ -92,7 +92,7 @@ genderplot = (ggplot(df_summary, aes(y='percentage', x='factor(year)', fill='fac
 
 st.pyplot(ggplot.draw(genderplot))
 
-st.markdown('Regarding geographic reach, most respondents indicated residing in the United States, the United Kingdom, or other European countries across years. Alongside **WILD**LABS’ efforts to more effectively engagage regional communities, the reach of the survey improved incrementally over time, with the percentage of respondents in North America and Europe dropping from 63% in 2020 to 57% in 2022. The below graph illustrates the geographical expansion of the survey over the last three years by highlighting the first year a country appeared in the responses.')
+st.markdown('Regarding geographic reach, most respondents indicated residing in the United States, the United Kingdom, or other European countries across years. Alongside **WILD**LABS’ efforts to more effectively engage regional communities, the reach of the survey improved incrementally over time, with the percentage of respondents in North America and Europe dropping from 63% in 2020 to 57% in 2022. The below graph illustrates the geographical expansion of the survey over the last three years by highlighting the first year a country appeared in the responses.')
 
 ############################################################
 ### Map plot
@@ -279,7 +279,7 @@ st.markdown('*The tools respondents work with most haven\'t changed substantiall
 
 st.subheader(':blue[Usage and proficiency]')
 
-st.markdown('For all years investigated, most survey respondents indicated that they frequently engage with one or more of 11 core conservation technology groups. Notably, almost all respondents reported engaging with more than one technology type (92%), and the vast majority said they engage with more than two (79%). Out of these groups, Camera Traps, GIS and remote sensing, and AI tools were the most widely used. The average self-reported level of expertise was similar across these tools with the exception of eDNA and genomics, which had the smallest sample size and lower average level of expertise than other tools.')
+st.markdown('For all years investigated, most survey respondents indicated that they frequently engage with one or more of 11 core conservation technology groups. Notably, almost all respondents reported engaging with more than one technology type (92%), and the vast majority said they engage with more than two (79%). Camera Traps, GIS and remote sensing, and AI tools were the most widely used out of these groups. The average self-reported level of expertise was similar across these tools with the exception of eDNA and genomics, which had the smallest sample size and lower average level of expertise than other tools.')
 
 ############################################################
 ### Proficiency plot
@@ -378,12 +378,12 @@ fig.update_traces(hovertemplate="<b>%{label}</b> <br>" +
 
 fig.update_layout(
     title_text=f'<b>Share of users, {choice} (%)</b>',
-    title_font=dict(size=16, color='black')
+    title_font=dict(size=16)
 )
 
 # Add year annotations
-fig.add_annotation(x=0.00001, y=0.9999, text="2020", font=dict(size=18, color='black'), showarrow=False)
-fig.add_annotation(x=0.99999, y=0.9999, text=f"{filtered_data['year'].max()}", font=dict(size=18, color='black'), showarrow=False)
+fig.add_annotation(x=0.00001, y=0.9999, text="2020", font=dict(size=18), showarrow=False)
+fig.add_annotation(x=0.99999, y=0.9999, text=f"{filtered_data['year'].max()}", font=dict(size=18), showarrow=False)
 
 st.plotly_chart(fig, use_container_width=True)
 
@@ -436,12 +436,12 @@ fig.update_traces(hovertemplate="<b>%{label}</b> <br>" +
 
 fig.update_layout(
     title_text=f'<b>Share of highly proficient users, {choice} (%)</b>',
-    title_font=dict(size=16, color='black')
+    title_font=dict(size=16)
 )
 
 # Add year annotations
-fig.add_annotation(x=0.00001, y=0.9999, text="2020", font=dict(size=16, color='black'), showarrow=False)
-fig.add_annotation(x=0.99999, y=0.9999, text=f"{filtered_data['year'].max()}", font=dict(size=16, color='black'), showarrow=False)
+fig.add_annotation(x=0.00001, y=0.9999, text="2020", font=dict(size=18), showarrow=False)
+fig.add_annotation(x=0.99999, y=0.9999, text=f"{filtered_data['year'].max()}", font=dict(size=18), showarrow=False)
 
 st.plotly_chart(fig, use_container_width=True)
 
@@ -453,7 +453,7 @@ st.markdown('To understand how current tools are perceived more broadly, we aske
 
 st.image('Input images/potential2020.jpg')
 
-st.markdown('The landscape is somewhat different in 2022: while GIS and remote sensing is still the highest performing technology group, protected area management tools and bioacoustics have replaced drones and mobile apps as the othertop-rated groups. Regarding potential to advance conservation, eDNA and genomics moved from the top of the list to nearly the bottom, replaced by Biologgers alongside Networked sensors and AI tools.')
+st.markdown('The landscape is somewhat different in 2022: while GIS and remote sensing is still the highest performing technology group, protected area management tools and bioacoustics have replaced drones and mobile apps as the other top-rated groups. Regarding the potential to advance conservation, eDNA and genomics moved from the top of the list to nearly the bottom, replaced by Biologgers alongside Networked sensors and AI tools.')
 
 st.markdown('Keep in mind that, while interesting, changes like this in the perceived potential of emerging technologies are not particularly surprising. As reflected in the technology hype cycle, a framework for understanding evolving interest in technologies over time, it’s common for initial excitement to spike when a new tool emerges, which can then take a dramatic hit with early adoption challenges, and then usually grows to a productive place of iterative learning and effective application.')
 
@@ -565,7 +565,7 @@ else:
 
 st.subheader(':blue[User constraints]')
 
-st.markdown('Regarding specific constraints affecting engagement by conservation tech end-users and developers, a key finding reiterated from the 2021 report is that location matters: both users and developers in countries with developing economies were more likely to report multiple significant constraints. We also found that gender and professional role were  influential factors in reported constraints.')
+st.markdown('Regarding specific constraints affecting engagement by conservation tech end-users and developers, a key finding reiterated from the 2021 report is that location matters: both users and developers in countries with developing economies were more likely to report multiple significant constraints. We also found that gender and professional role were influential factors in reported constraints.')
 
 st.markdown('End-users in developing countries were 5x as likely to report being significantly constrained by local access to technology suppliers. They were also 2.5x as likely to do so for upfront costs, as well as access to training, advice, and mentoring, and 1.5x as likely to do so for maintenance costs.')
 
@@ -666,7 +666,7 @@ st.subheader(':blue[Developer constraints]')
 ### Dev constrainst
 ############################################################
 
-st.markdown('Tech developers in countries with developing economies were also more likely to report significant constraints compared to their deveopled country counterparts. They were 3.5x as likely to report sourcing supplies and accessing testing sites as primary constraints, and 2.5x as likely to do so for securing seed funding.')
+st.markdown('Tech developers in countries with developing economies were also more likely to report significant constraints compared to their developed country counterparts. They were 3.5x as likely to report sourcing supplies and accessing testing sites as primary constraints, and 2.5x as likely to do so for securing seed funding.')
 
 st.markdown('Female-identifying tech developers also reported disproportionate constraints, being 3.5x as likely as male developers to report significant constraints accessing testing sites, 2.5x as likely to do so for both securing funding throughout the development cycle and accessing relevant data, and 2x as likely to do so regarding overcoming user concerns about data security and privacy.')
 
@@ -745,12 +745,12 @@ selected_year = st.radio('Year:', ['2020 ', '2021 ', '2022 ' ], index=0)
 
 
 if selected_year == '2020 ':
-    st.write('In 2020, securing continued funding throughout the development cycle and securing seed funding were similarily significant constraints affecting engagement by conservation technology developers, followed by understanding the conservation tool landscape (who is doing what and where the gaps exist).')
+    st.write('In 2020, securing continued funding throughout the development cycle and securing seed funding were similarly significant constraints affecting engagement by conservation technology developers, followed by understanding the conservation tool landscape (who is doing what and where the gaps exist).')
     
     st.plotly_chart(plots2['constraints2020'], use_container_width=True, config=config_settings)
         
 elif selected_year == '2021 ':
-    st.write('In 2021, the top two constraints affecting developer engagement remained the same, but overcoming engineering challenges became the third most signifcant, moving above understanding the conservation tool landscape.  We also added a new ‘Supply chain’ category this year, reflecting constraints relating to sourcing materials given the significance of this issue at the time.')
+    st.write('In 2021, the top two constraints affecting developer engagement remained the same, but overcoming engineering challenges became the third most significant, moving above understanding the conservation tool landscape.  We also added a new ‘Supply chain’ category this year, reflecting constraints relating to sourcing materials given the significance of this issue at the time.')
     st.plotly_chart(plots2['constraints2021'], use_container_width=True, config=config_settings)
     
     
@@ -784,7 +784,7 @@ st.markdown('We’ve also found that WILDLABS had a measurable impact on members
 
 st.image('Input images/wildlabs.jpg')
 
-st.markdown('Although we have seen these trends develop and captured them anecdotally over the years, it is exciting to see data support them for the first time. Results like these are critical for helping us understand our impact and continue to develop programs, events, and tools that respond most effectively too the community and sector’s evolving needs.')
+st.markdown('Although we have seen these trends develop and captured them anecdotally over the years, it is exciting to see data support them for the first time. Results like these are critical for helping us understand our impact and continue to develop programs, events, and tools that respond most effectively to the community\'s and the sector’s evolving needs.')
 
 st.divider()
 st.header(':blue[How can you get involved?]')\
