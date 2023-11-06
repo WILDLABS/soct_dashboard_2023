@@ -798,6 +798,6 @@ st.markdown('Beyond our State of Conservation Technology research, **WILD**LABS 
 st.divider()
 st.header(':blue[Acknowledgments]')\
 
-st.markdown('First and foremost, we thank our survey respondents for their time and thoughtful contributions. This research program is led by Talia Speaker of **WILD**LABS with support from Stephanie O’Donnell of WILDLABS and Jennifer Solomon of Colorado State University. All analyses and graphics in this report and were conducted by Fanni Varhelyi as part of a **WILD**LABS internship at WWF.')
+st.markdown('First and foremost, we thank our survey respondents for their time and thoughtful contributions. This research program is led by Talia Speaker of **WILD**LABS with support from Stephanie O’Donnell of **WILD**LABS and Jennifer Solomon of Colorado State University. All analyses and graphics in this report and were conducted by Fanni Varhelyi as part of a **WILD**LABS internship at WWF.')
 
 st.caption('*For any questions regarding this research, please contact the WILDLABS team at community@wildlabs.net or Talia Speaker at talia.speaker@wildlabs.net.*')
