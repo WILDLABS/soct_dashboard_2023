@@ -796,6 +796,6 @@ st.markdown('<br><div style="text-align: center;"><a href="https://colostate.az1
 st.divider()
 st.header(':blue[Acknowledgments]')\
 
-st.markdown('First and foremost, we thank our survey respondents for their time and thoughtful contributions. This research program is led by Talia Speaker of **WILD**LABS with support from Stephanie O’Donnell of **WILD**LABS and Jennifer Solomon of Colorado State University. All analyses and graphics in this report and were conducted by Fanni Varhelyi as part of a **WILD**LABS internship at WWF.')
+st.markdown('First and foremost, we thank our survey respondents for their time and thoughtful contributions. This research program is led by Talia Speaker of **WILD**LABS with support from Stephanie O’Donnell of **WILD**LABS and Jennifer Solomon of Colorado State University. All analyses and graphics in this report and were conducted by Fanni Varhelyi as part of a **WILD**LABS internship at WWF. Header image credit © Emma Vogel.')
 
 st.caption('*For any questions regarding this research, please contact the WILDLABS team at community@wildlabs.net or Talia Speaker at talia.speaker@wildlabs.net.*')
